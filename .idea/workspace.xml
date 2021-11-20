@@ -46,23 +46,16 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="settings.editor.selected.configurable" value="AndroidSdkUpdater" />
   </component>
+  <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Project\Java\hnucisys\src\main\resources\templates" />
+    </key>
+  </component>
   <component name="RunManager" selected="Spring Boot.HnucisysApplication">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
     <configuration name="HnucisysApplicationTests.contextLoads" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
       <module name="hnucisys" />
       <extension name="coverage">
@@ -103,7 +96,10 @@
       <workItem from="1637118846105" duration="173000" />
       <workItem from="1637119105276" duration="3847000" />
       <workItem from="1637202173020" duration="4445000" />
-      <workItem from="1637209473173" duration="462000" />
+      <workItem from="1637209473173" duration="810000" />
+      <workItem from="1637302871467" duration="1400000" />
+      <workItem from="1637397183370" duration="593000" />
+      <workItem from="1637399504386" duration="399000" />
     </task>
     <servers />
   </component>

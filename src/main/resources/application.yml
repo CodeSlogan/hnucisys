@@ -28,5 +28,3 @@ spring:
 mybatis:
   type-aliases-package: com.codeslogan.pojo
   mapper-locations: classpath:mapper/*.xml
-
-
