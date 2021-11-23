@@ -1,5 +1,6 @@
 package com.codeslogan.mapper;
 
+import com.codeslogan.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -11,4 +12,6 @@ import org.springframework.stereotype.Repository;
 @Mapper
 @Repository
 public interface UserMapper {
+    public User queryUserByName(String name);
+
 }
