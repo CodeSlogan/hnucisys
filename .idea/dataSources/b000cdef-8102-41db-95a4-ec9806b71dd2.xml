@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost [2]">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.18">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.23">
     <root id="1">
       <ServerVersion>5.7.29</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -756,53 +756,45 @@
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="240" parent="234" name="name">
       <Position>2</Position>
       <Comment>比赛名称</Comment>
       <DataType>varchar(60)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="241" parent="234" name="url">
       <Position>3</Position>
       <Comment>比赛图片地址</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="242" parent="234" name="category">
       <Position>4</Position>
       <Comment>比赛类别</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="243" parent="234" name="time">
       <Position>5</Position>
       <Comment>比赛时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="244" parent="234" name="evaluation">
       <Position>6</Position>
       <Comment>比赛评价，1-5，5为等第最高</Comment>
       <DataType>int(11)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="245" parent="234" name="createtime">
       <Position>7</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="246" parent="234" name="updatetime">
       <Position>8</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="247" parent="234" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -814,26 +806,22 @@
       <Comment>比赛id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="249" parent="235" name="content">
       <Position>2</Position>
       <Comment>比赛内容</Comment>
       <DataType>mediumtext|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="250" parent="235" name="createtime">
       <Position>3</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="251" parent="235" name="updatetime">
       <Position>4</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="252" parent="235" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>
@@ -853,33 +841,28 @@
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="255" parent="236" name="team_name">
       <Position>2</Position>
       <Comment>队伍名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="256" parent="236" name="cptid">
       <Position>3</Position>
       <Comment>比赛id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="257" parent="236" name="createtime">
       <Position>4</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="258" parent="236" name="updatetime">
       <Position>5</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="259" parent="236" name="FORE_CPTID">
       <ColNames>cptid</ColNames>
@@ -902,42 +885,36 @@
       <Comment>team_user_id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="263" parent="237" name="teamid">
       <Position>2</Position>
       <Comment>队伍id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="264" parent="237" name="userid">
       <Position>3</Position>
       <Comment>队员id</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="265" parent="237" name="role">
       <Position>4</Position>
       <Comment>0代表队长，1代表队员</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="266" parent="237" name="createtime">
       <Position>5</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="267" parent="237" name="updatetime">
       <Position>6</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <index id="268" parent="237" name="FORE_TEAMID">
       <ColNames>teamid</ColNames>
@@ -972,67 +949,57 @@
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
       <SequenceIdentity>1</SequenceIdentity>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="274" parent="238" name="username">
       <Position>2</Position>
       <Comment>姓名</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="275" parent="238" name="password">
       <Position>3</Position>
       <Comment>密码</Comment>
       <DataType>varchar(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="276" parent="238" name="grade">
       <Position>4</Position>
       <Comment>年级</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="277" parent="238" name="major">
       <Position>5</Position>
       <Comment>专业</Comment>
       <DataType>varchar(255)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="278" parent="238" name="sex">
       <Position>6</Position>
       <Comment>性别，1为男，0为女</Comment>
       <DataType>int(11)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="279" parent="238" name="qq">
       <Position>7</Position>
       <Comment>QQ号</Comment>
       <DataType>varchar(12)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="280" parent="238" name="introduction">
       <Position>8</Position>
       <Comment>个人简介</Comment>
       <DataType>varchar(255)|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="281" parent="238" name="createtime">
       <Position>9</Position>
       <Comment>创建时间</Comment>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="282" parent="238" name="updatetime">
       <Position>10</Position>
       <Comment>更新时间</Comment>
       <DataType>datetime|0s</DataType>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="283" parent="238" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>

@@ -1,35 +1,36 @@
 <!DOCTYPE html>
-<html lang="zh-CN">
-	<head>
-		<meta charset="UTF-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
-		<title>用户登录</title>
-		<link rel="stylesheet" href="../static/css/login.css" />
-	</head>
-	<body>
-		<div class="login">
-			<h2>用户登录</h2>
-			<p th:text="${msg}" style="color:red"></p>
-			<form th:action="@{/login}">
-				<div class="login_box">
-				<!-- required就是不能为空 必须在css效果中有很大的作用 -->
-				<!-- 可以简写为required -->
-            	    <input type="text" required="required" name="username"/><label>用户名</label>
-				</div>
-				<div class="login_box">
-                	<input type="password" required="required" name="password" /><label>密码</label>
-			</div>
-				<input type="submit" value="登录" />
-		</form>
-				<a href="javascript:void(0)">
-				<span></span>
-				<span></span>
-				<span></span>
-				<span></span>
-<!--			</a>-->
-			<div class="signin">
-				<p>还没有账号?&nbsp;&nbsp;<a th:href="@{/signup}">立即注册</a></p>
-			</div>
-		</div>
-	</body>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+    <title>用户登录</title>
+    <link rel="stylesheet" th:href="@{/css/login.css}"/>
+</head>
+<body>
+<div class="login">
+    <!--    <button type="button">Click Me!</button>-->
+    <h2>用户登录</h2>
+    <p th:text="${msg}" style="color:red"></p>
+    <form th:action="@{/login}">
+        <div class="login_box">
+            <!-- required就是不能为空 必须在css效果中有很大的作用 -->
+            <!-- 可以简写为required -->
+            <input type="text" required="required" name="username"/><label>用户名</label>
+        </div>
+        <div class="login_box">
+            <input type="password" required="required" name="password"/><label>密码</label>
+        </div>
+        <input type="submit" value="登录"/>
+    </form>
+    <a href="javascript:void(0)">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </a>
+    <div class="signin">
+        <p>还没有账号?&nbsp;&nbsp;<a th:href="@{/signup}">立即注册</a></p>
+    </div>
+</div>
+</body>
 </html>

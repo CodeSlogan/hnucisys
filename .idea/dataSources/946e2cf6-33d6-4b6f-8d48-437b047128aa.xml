@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <dataSource name="@localhost">
-  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.18">
+  <database-model serializer="dbm" dbms="MYSQL" family-id="MYSQL" format-version="4.23">
     <root id="1">
       <ServerVersion>5.7.29</ServerVersion>
       <DefaultEngine>InnoDB</DefaultEngine>
@@ -3768,67 +3768,56 @@
       <Position>1</Position>
       <DataType>int(20) unsigned|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="902" parent="294" name="username">
       <Position>2</Position>
       <DataType>char(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="903" parent="294" name="password">
       <Position>3</Position>
       <DataType>char(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="904" parent="294" name="url">
       <Position>4</Position>
       <DataType>char(50)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="905" parent="294" name="grade">
       <Position>5</Position>
       <DataType>int(4) unsigned|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="906" parent="294" name="major">
       <Position>6</Position>
       <DataType>char(30)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="907" parent="294" name="sex">
       <Position>7</Position>
       <DataType>int(4) unsigned|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="908" parent="294" name="qq">
       <Position>8</Position>
       <DataType>char(20)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="909" parent="294" name="introduction">
       <Position>9</Position>
       <DataType>varchar(1000)|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="910" parent="294" name="createTime">
       <Position>10</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <column id="911" parent="294" name="updateTime">
       <Position>11</Position>
       <DataType>date|0s</DataType>
       <NotNull>1</NotNull>
-      <ColumnKind>normal</ColumnKind>
     </column>
     <key id="912" parent="294" name="PRIMARY">
       <NameSurrogate>1</NameSurrogate>

@@ -1,5 +1,8 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
   <component name="BranchesTreeState">
     <expand>
       <path>
@@ -19,7 +22,44 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1471056c-5a2a-4b4b-ae05-2cd4bb2025fe" name="Default Changelist" comment="update files" />
+    <list default="true" id="1471056c-5a2a-4b4b-ae05-2cd4bb2025fe" name="Default Changelist" comment="update files">
+      <change beforePath="$PROJECT_DIR$/.gitignore" beforeDir="false" afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/946e2cf6-33d6-4b6f-8d48-437b047128aa.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/946e2cf6-33d6-4b6f-8d48-437b047128aa.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/dataSources/b000cdef-8102-41db-95a4-ec9806b71dd2.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/dataSources/b000cdef-8102-41db-95a4-ec9806b71dd2.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/HnucisysApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/HnucisysApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/config/DruidConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/config/DruidConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/config/ShiroConfig.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/config/ShiroConfig.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/config/UserRealm.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/config/UserRealm.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/MyController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/Competition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/CptContent.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/CptContent.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/Team.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/Team.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/TeamUser.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/TeamUser.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/shiro.ini" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/shiro.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/signup.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/signup.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/log4j.properties" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/shiro.ini" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/login.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/signup.css" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/1.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/image/2.jpg" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/js/confirmpw.js" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/signup.html" beforeDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -40,9 +80,9 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Environment\apache-maven-3.8.1\maven-repo" />
-        <option name="mavenHome" value="D:\Environment\apache-maven-3.8.1" />
-        <option name="userSettingsFile" value="D:\Environment\apache-maven-3.8.1\conf\settings.xml" />
+        <option name="localRepository" value="D:/Maven/apache-maven-3.8.3\maven-repo" />
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.8.3" />
+        <option name="userSettingsFile" value="D:/Maven/apache-maven-3.8.3\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -66,12 +106,12 @@
     <property name="SHARE_PROJECT_CONFIGURATION_FILES" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="nodejs_package_manager_path" value="npm" />
     <property name="project.structure.last.edited" value="Project" />
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="project.propVCSSupport.Mappings" />
+    <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -122,7 +162,7 @@
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" BundledDictionaries="0" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" Dictionaries="0" CorrectionsLimit="5" DefaultDictionary="application-level" UseSingleDictionary="true" />
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="SvnConfiguration">
     <configuration />
   </component>
@@ -155,6 +195,7 @@
       <workItem from="1637547608289" duration="2577000" />
       <workItem from="1637569688785" duration="51000" />
       <workItem from="1637649642079" duration="4618000" />
+      <workItem from="1637672048900" duration="50000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <created>1637654423130</created>
@@ -167,7 +208,7 @@
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="2" />
+    <option name="version" value="3" />
   </component>
   <component name="Vcs.Log.Tabs.Properties">
     <option name="TAB_STATES">
@@ -184,67 +225,5 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update files" />
     <option name="LAST_COMMIT_MESSAGE" value="update files" />
-  </component>
-  <component name="WindowStateProjectService">
-    <state x="233" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1637652546908">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="233" y="39" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.0.1280.760@0.0.1280.760" timestamp="1637652546908" />
-    <state x="446" y="86" key="#com.intellij.ide.util.MemberChooser" timestamp="1637548889512">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="446" y="86" key="#com.intellij.ide.util.MemberChooser/0.0.1280.760@0.0.1280.760" timestamp="1637548889512" />
-    <state width="1238" height="221" key="GridCell.Tab.0.bottom" timestamp="1637653670793">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1238" height="221" key="GridCell.Tab.0.bottom/0.0.1280.760@0.0.1280.760" timestamp="1637653670793" />
-    <state width="1238" height="221" key="GridCell.Tab.0.center" timestamp="1637653670793">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1238" height="221" key="GridCell.Tab.0.center/0.0.1280.760@0.0.1280.760" timestamp="1637653670793" />
-    <state width="1238" height="221" key="GridCell.Tab.0.left" timestamp="1637653670793">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1238" height="221" key="GridCell.Tab.0.left/0.0.1280.760@0.0.1280.760" timestamp="1637653670793" />
-    <state width="1238" height="221" key="GridCell.Tab.0.right" timestamp="1637653670793">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1238" height="221" key="GridCell.Tab.0.right/0.0.1280.760@0.0.1280.760" timestamp="1637653670793" />
-    <state width="1238" height="221" key="GridCell.Tab.1.bottom" timestamp="1637653670793">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1238" height="221" key="GridCell.Tab.1.bottom/0.0.1280.760@0.0.1280.760" timestamp="1637653670793" />
-    <state width="1238" height="221" key="GridCell.Tab.1.center" timestamp="1637653670793">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1238" height="221" key="GridCell.Tab.1.center/0.0.1280.760@0.0.1280.760" timestamp="1637653670793" />
-    <state width="1238" height="221" key="GridCell.Tab.1.left" timestamp="1637653670793">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1238" height="221" key="GridCell.Tab.1.left/0.0.1280.760@0.0.1280.760" timestamp="1637653670793" />
-    <state width="1238" height="221" key="GridCell.Tab.1.right" timestamp="1637653670793">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state width="1238" height="221" key="GridCell.Tab.1.right/0.0.1280.760@0.0.1280.760" timestamp="1637653670793" />
-    <state x="121" y="0" key="SettingsEditor" timestamp="1637654660640">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="121" y="0" key="SettingsEditor/0.0.1280.760@0.0.1280.760" timestamp="1637654660640" />
-    <state x="233" y="100" key="Vcs.Push.Dialog.v2" timestamp="1637654441743">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="233" y="100" key="Vcs.Push.Dialog.v2/0.0.1280.760@0.0.1280.760" timestamp="1637654441743" />
-    <state x="438" y="293" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2" timestamp="1637653692438">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="438" y="293" key="com.intellij.openapi.vcs.update.UpdateOrStatusOptionsDialogupdate-v2/0.0.1280.760@0.0.1280.760" timestamp="1637653692438" />
-    <state x="344" y="167" key="git4idea.merge.GitPullDialog" timestamp="1637653516417">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="344" y="167" key="git4idea.merge.GitPullDialog/0.0.1280.760@0.0.1280.760" timestamp="1637653516417" />
-    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup" timestamp="1637649900838">
-      <screen x="0" y="0" width="1280" height="760" />
-    </state>
-    <state x="303" y="82" width="672" height="678" key="search.everywhere.popup/0.0.1280.760@0.0.1280.760" timestamp="1637649900838" />
   </component>
 </project>
