@@ -24,6 +24,6 @@ public class User {
     private int sex;
     private String qq;
     private String introduction;
-    private Date createTime;
-    private Date updateTime;
+    private Date createtime;
+    private Date updatetime;
 }
