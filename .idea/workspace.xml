@@ -22,7 +22,24 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1471056c-5a2a-4b4b-ae05-2cd4bb2025fe" name="Default Changelist" comment="" />
+    <list default="true" id="1471056c-5a2a-4b4b-ae05-2cd4bb2025fe" name="Default Changelist" comment="update signup files">
+      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/HnucisysApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/HnucisysApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/MyController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/UserController.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/signup.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/static/css/login.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/login.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/signup.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/signup.html" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -43,9 +60,8 @@
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:/Maven/apache-maven-3.8.3\maven-repo" />
-        <option name="mavenHome" value="D:/Maven/apache-maven-3.8.3" />
-        <option name="userSettingsFile" value="D:/Maven/apache-maven-3.8.3\conf\settings.xml" />
+        <option name="localRepository" value="D:\Environment\apache-maven-3.8.1\maven-repo" />
+        <option name="userSettingsFile" value="D:\Environment\apache-maven-3.8.1\conf\settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -79,6 +95,9 @@
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Project\Java\hnucisys\src\main\resources\templates" />
     </key>
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.codeslogan.controller" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.HnucisysApplication">
     <configuration name="Quickstart" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
@@ -90,6 +109,19 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="CLASS" />
+      <properties />
+      <listeners />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -158,6 +190,16 @@
       <workItem from="1637569688785" duration="51000" />
       <workItem from="1637649642079" duration="4618000" />
       <workItem from="1637672048900" duration="355000" />
+      <workItem from="1637675377957" duration="2449000" />
+      <workItem from="1637678173274" duration="735000" />
+      <workItem from="1637679693911" duration="1860000" />
+      <workItem from="1637936344536" duration="4098000" />
+      <workItem from="1638192337546" duration="931000" />
+      <workItem from="1638420067306" duration="1096000" />
+      <workItem from="1638422970538" duration="1398000" />
+      <workItem from="1638428872731" duration="65000" />
+      <workItem from="1638434322238" duration="2159000" />
+      <workItem from="1638451506250" duration="592000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <created>1637654423130</created>
@@ -173,7 +215,21 @@
       <option name="project" value="LOCAL" />
       <updated>1637672194878</updated>
     </task>
-    <option name="localTasksCounter" value="3" />
+    <task id="LOCAL-00003" summary="update signup files">
+      <created>1638192435102</created>
+      <option name="number" value="00003" />
+      <option name="presentableId" value="LOCAL-00003" />
+      <option name="project" value="LOCAL" />
+      <updated>1638192435102</updated>
+    </task>
+    <task id="LOCAL-00004" summary="update signup files">
+      <created>1638192453898</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1638192453898</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -194,6 +250,17 @@
   <component name="VcsManagerConfiguration">
     <MESSAGE value="update files" />
     <MESSAGE value="&quot;Fixed 'Failed to load *.css files'&quot;" />
-    <option name="LAST_COMMIT_MESSAGE" value="&quot;Fixed 'Failed to load *.css files'&quot;" />
+    <MESSAGE value="update signup files" />
+    <option name="LAST_COMMIT_MESSAGE" value="update signup files" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.sql.SQLSyntaxErrorException" package="java.sql" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

@@ -9,8 +9,9 @@
         select * from hnucisys.User where username = #{username}
     </select>
 
-    <insert id="addUser" parameterType="User">
-        insert into hnucisys.User (id, username, major, qq, password) values (#{id}, #{username}, #{major}, #{qq}, #{password})
+    <insert id="AddUser" parameterType="com.codeslogan.pojo.User" >
+        INSERT INTO hnucisys.user(username,PASSWORD,grade,major,sex,qq,introduction,createtime,updatetime)
+        VALUES(#{username},#{password},#{grade},#{major},#{sex},#{qq},#{introduction},#{createtime},#{updatetime});
     </insert>
 
 </mapper>

@@ -34,6 +34,8 @@ body {
     position: relative;
 }
 
+
+
 .login h2 {
     color: #fff;
     margin-bottom: 30px;
@@ -91,6 +93,7 @@ body {
     /* 同样加个过渡 */
     transition: all 0.5s;
 }
+
 
 .signin {
     color: white;

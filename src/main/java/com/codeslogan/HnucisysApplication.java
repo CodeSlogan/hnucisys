@@ -8,4 +8,5 @@ public class HnucisysApplication {
     public static void main(String[] args) {
         SpringApplication.run(HnucisysApplication.class, args);
     }
+
 }
