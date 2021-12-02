@@ -6,7 +6,11 @@
 <mapper namespace="com.codeslogan.mapper.UserMapper">
     <!--    查询语句 id相当与要重写的方法名-->
     <select id="queryUserByName" resultType="User" parameterType="String">
-        select * from mybatis.User where username = #{username}
+        select * from hnucisys.User where username = #{username}
     </select>
+
+    <insert id="addUser" parameterType="User">
+        insert into hnucisys.User (id, username, major, qq, password) values (#{id}, #{username}, #{major}, #{qq}, #{password})
+    </insert>
 
 </mapper>
