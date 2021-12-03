@@ -15,4 +15,9 @@ public class UserServiceImpl implements UserService{
     public User queryUserByName(String name) {
         return userMapper.queryUserByName(name);
     }
+
+    @Override
+    public void AddUser(User user) {
+        userMapper.AddUser(user);
+    }
 }

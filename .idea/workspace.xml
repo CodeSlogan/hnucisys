@@ -22,9 +22,7 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1471056c-5a2a-4b4b-ae05-2cd4bb2025fe" name="Default Changelist" comment="update signup files">
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" afterDir="false" />
-    </list>
+    <list default="true" id="1471056c-5a2a-4b4b-ae05-2cd4bb2025fe" name="Default Changelist" comment="update signup files" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
