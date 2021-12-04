@@ -22,5 +22,4 @@ class HnucisysApplicationTests {
         System.out.println(dataSource.getConnection());
     }
 
-    //testststst
 }
