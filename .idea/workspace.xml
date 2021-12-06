@@ -4,7 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="" />
+    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/RespBean.java" afterDir="false" />
+    </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -56,6 +58,11 @@
     <property name="project.structure.proportion" value="0.0" />
     <property name="project.structure.side.proportion" value="0.0" />
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
+  </component>
+  <component name="RecentsManager">
+    <key name="CopyClassDialog.RECENTS_KEY">
+      <recent name="com.codeslogan.pojo" />
+    </key>
   </component>
   <component name="RunManager" selected="Spring Boot.HnucisysApplication">
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
