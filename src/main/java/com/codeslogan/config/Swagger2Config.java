@@ -38,7 +38,7 @@ public class Swagger2Config {
         return new ApiInfoBuilder()
                 .title("竞赛信息系统")
                 .description("竞赛信息系统接口文档")
-                .contact(new Contact("影流之主", "http://localhost:8080/doc.html","mrchen40@163.com"))
+                .contact(new Contact("codeslogan", "http://localhost:8080/doc.html","mrchen40@163.com"))
                 .version("1.0")
                 .build();
     }
@@ -52,7 +52,7 @@ public class Swagger2Config {
     private List<SecurityContext> securityContexts() {
         // 设置需要登录认证的路径
         List<SecurityContext> result = new ArrayList<>();
-        result.add(getContextBypath("/login"));
+        result.add(getContextBypath("/login/.*"));
         return result;
     }
 
