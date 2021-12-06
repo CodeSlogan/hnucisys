@@ -4,4 +4,5 @@ import com.codeslogan.pojo.User;
 
 public interface UserService {
     public User queryUserByName(String name);
+    public void AddUser(User user);
 }

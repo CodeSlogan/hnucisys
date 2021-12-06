@@ -2,6 +2,7 @@ package com.codeslogan.controller;
 
 import com.codeslogan.mapper.UserMapper;
 import com.codeslogan.pojo.User;
+import com.codeslogan.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
 import org.apache.shiro.authc.UnknownAccountException;
@@ -17,7 +18,7 @@ import org.springframework.web.bind.annotation.RequestMapping;
 public class LoginController {
 
     @Autowired
-    UserMapper userMapper;
+    UserService userService;
 
     @RequestMapping({"/","/index"})
     public String toIndex(){
@@ -56,7 +57,7 @@ public class LoginController {
     @PostMapping("/adduser")
     public String AddUser(User user){
 
-        userMapper.AddUser(user);
+        userService.AddUser(user);
 
         return "redirect:/toLogin";         //成功插入，重定向返回到首页
 

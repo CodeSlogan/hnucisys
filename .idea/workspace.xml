@@ -22,11 +22,30 @@
     <select />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="1471056c-5a2a-4b4b-ae05-2cd4bb2025fe" name="Default Changelist" comment="test02">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/favicon.ico" afterDir="false" />
+    <list default="true" id="4e79e5c9-6e63-4836-b62a-8905d7b04d00" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/database/competition_data.md" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/detail.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/selfinformation.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/style.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/btn.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/hot.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/user.png" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/kico.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/paul.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/findMate.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/selfinformation.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserServiceImpl.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -84,8 +103,7 @@
       <recent name="D:\Project\Java\hnucisys\src\main\resources\templates" />
     </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\static" />
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources" />
+      <recent name="D:\Code\java\Springboot\hnucisys\database" />
     </key>
     <key name="CopyClassDialog.RECENTS_KEY">
       <recent name="com.codeslogan.controller" />
@@ -151,7 +169,7 @@
   </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
-      <changelist id="1471056c-5a2a-4b4b-ae05-2cd4bb2025fe" name="Default Changelist" comment="" />
+      <changelist id="4e79e5c9-6e63-4836-b62a-8905d7b04d00" name="默认变更列表" comment="" />
       <created>1637118841277</created>
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
@@ -189,9 +207,7 @@
       <workItem from="1638428872731" duration="65000" />
       <workItem from="1638434322238" duration="2159000" />
       <workItem from="1638451506250" duration="592000" />
-      <workItem from="1638458122138" duration="6000" />
-      <workItem from="1638488722669" duration="2262000" />
-      <workItem from="1638601301779" duration="2904000" />
+      <workItem from="1638753638280" duration="319000" />
     </task>
     <task id="LOCAL-00001" summary="update files">
       <created>1637654423130</created>
@@ -221,14 +237,7 @@
       <option name="project" value="LOCAL" />
       <updated>1638192453898</updated>
     </task>
-    <task id="LOCAL-00005" summary="test02">
-      <created>1638457920928</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1638457920928</updated>
-    </task>
-    <option name="localTasksCounter" value="6" />
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -251,8 +260,7 @@
     <MESSAGE value="&quot;Fixed 'Failed to load *.css files'&quot;" />
     <MESSAGE value="update signup files" />
     <MESSAGE value="test" />
-    <MESSAGE value="test02" />
-    <option name="LAST_COMMIT_MESSAGE" value="test02" />
+    <option name="LAST_COMMIT_MESSAGE" value="test" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
