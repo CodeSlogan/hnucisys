@@ -1,5 +1,6 @@
 package com.codeslogan;
 
+import com.codeslogan.service.UserService;
 import com.codeslogan.service.UserServiceImpl;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,5 +21,10 @@ class HnucisysApplicationTests {
     void contextLoads() throws SQLException {
         System.out.println(dataSource.getClass());
         System.out.println(dataSource.getConnection());
+    }
+
+    @Test
+    void findMates() throws SQLException {
+        System.out.println(userService.queryMatesByGrade(1));
     }
 }

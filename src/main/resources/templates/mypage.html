@@ -1,11 +1,13 @@
-<html><head>
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
     <meta charset="UTF-8">
     <title>个人主页</title>
     <meta name="theme-color" content="#ffc91d">
     <link rel="icon" href="static/img/favicon.ico">
     <link href="" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
-    <link rel="stylesheet" href="../static/css/index.css">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
 </head>
 <body>
 <!-- 1.头部区域开始啦 -->
@@ -17,9 +19,9 @@
     <!-- 导航栏部分 nav -->
     <div class="nav">
         <ul>
-            <li><a href="index.html">首页</a></li>
-            <li><a href="detail.html">竞赛</a></li>
-            <li><a href="findMate.html">队友</a></li>
+            <li><a th:href="@{/index}">首页</a></li>
+            <li><a th:href="@{/detail}">竞赛</a></li>
+            <li><a th:href="@{/findMate}">队友</a></li>
         </ul>
     </div>
     <!-- 搜索模块 -->
@@ -29,7 +31,7 @@
     </div>
     <!-- 用户模块 -->
     <div class="user">
-        <a href="mypage.html"> 我的主页</a>
+        <a th:href="@{/mypage}"> 我的主页</a>
     </div>
 </div>
 <aside class="sidebar">

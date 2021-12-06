@@ -37,6 +37,8 @@ public class ShiroConfig {
 
         filterMap.put("/index","authc");
         filterMap.put("/","authc");
+        //filterMap.put("/findmate","authc");
+        filterMap.put("/mypage","authc");
         bean.setFilterChainDefinitionMap(filterMap);
 
         //如果没有权限就调到登陆页面

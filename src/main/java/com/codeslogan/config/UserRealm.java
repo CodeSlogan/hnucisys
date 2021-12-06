@@ -2,7 +2,6 @@ package com.codeslogan.config;
 
 import com.codeslogan.pojo.User;
 import com.codeslogan.service.UserService;
-import com.codeslogan.service.UserServiceImpl;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.*;
 import org.apache.shiro.authz.AuthorizationInfo;
@@ -22,18 +21,19 @@ public class UserRealm extends AuthorizingRealm {
 
         return null;
     }
+
     //认证
     @Override
     protected AuthenticationInfo doGetAuthenticationInfo(AuthenticationToken token) throws AuthenticationException {
         System.out.println("执行了=》认证");
 
         UsernamePasswordToken userToken = (UsernamePasswordToken) token;
-        //连接真实的数据库
-        User user= userService.queryUserByName(userToken.getUsername());
+        //连接数据库
+        User user = userService.queryUserByName(userToken.getUsername());
 
-        if(user==null){
+        if (user == null) {
             return null;
         }
-        return new SimpleAuthenticationInfo("",user.getPassword(),"");
+        return new SimpleAuthenticationInfo(user, user.getPassword(), "");
     }
 }
