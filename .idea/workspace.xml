@@ -5,7 +5,16 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/RespBean.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/CompetitionMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/HnucisysApplication.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/HnucisysApplication.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/application.yml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/target/classes/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -16,6 +25,7 @@
     <option name="RECENT_TEMPLATES">
       <list>
         <option value="Class" />
+        <option value="Interface" />
       </list>
     </option>
   </component>
@@ -23,12 +33,20 @@
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
     <option name="RESET_MODE" value="HARD" />
   </component>
+  <component name="GitSEFilterConfiguration">
+    <file-type-list>
+      <filtered-out-file-type name="LOCAL_BRANCH" />
+      <filtered-out-file-type name="REMOTE_BRANCH" />
+      <filtered-out-file-type name="TAG" />
+      <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
+    </file-type-list>
+  </component>
   <component name="MavenImportPreferences">
     <option name="generalSettings">
       <MavenGeneralSettings>
-        <option name="localRepository" value="D:\Environment\apache-maven-3.8.1\maven-repo" />
-        <option name="mavenHome" value="D:\Environment\apache-maven-3.8.1" />
-        <option name="userSettingsFile" value="D:\Environment\apache-maven-3.8.1\conf\settings.xml" />
+        <option name="localRepository" value="$MAVEN_REPOSITORY$" />
+        <option name="mavenHome" value="/usr/local/Cellar/maven/3.8.3/libexec" />
+        <option name="userSettingsFile" value="$USER_HOME$/.m2/settings.xml" />
       </MavenGeneralSettings>
     </option>
   </component>
@@ -65,6 +83,17 @@
     </key>
   </component>
   <component name="RunManager" selected="Spring Boot.HnucisysApplication">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
+      <option name="TEST_OBJECT" value="class" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="CodeGenerator" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="com.codeslogan.generator.CodeGenerator" />
       <module name="huncisys-generator" />
@@ -78,12 +107,16 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
-      <option name="arquillianRunConfiguration">
-        <value>
-          <option name="containerStateName" value="" />
-        </value>
-      </option>
+    <configuration name="HnucisysApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hnucisys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeslogan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeslogan" />
+      <option name="MAIN_CLASS_NAME" value="com.codeslogan.HnucisysApplicationTests" />
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
@@ -105,6 +138,38 @@
         <option name="Make" enabled="true" />
       </method>
     </configuration>
+    <configuration name="HnucisysApplicationTests.selectCompetition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hnucisys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeslogan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeslogan" />
+      <option name="MAIN_CLASS_NAME" value="com.codeslogan.HnucisysApplicationTests" />
+      <option name="METHOD_NAME" value="selectCompetition" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="HnucisysApplicationTests.staticDate" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+      <module name="hnucisys" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="com.codeslogan.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <option name="PACKAGE_NAME" value="com.codeslogan" />
+      <option name="MAIN_CLASS_NAME" value="com.codeslogan.HnucisysApplicationTests" />
+      <option name="METHOD_NAME" value="staticDate" />
+      <option name="TEST_OBJECT" value="method" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
     <configuration name="HnucisysApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
       <module name="hnucisys" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.codeslogan.HnucisysApplication" />
@@ -118,10 +183,16 @@
     <list>
       <item itemvalue="Application.CodeGenerator" />
       <item itemvalue="JUnit.HnucisysApplicationTests.findMates" />
+      <item itemvalue="JUnit.HnucisysApplicationTests.staticDate" />
+      <item itemvalue="JUnit.HnucisysApplicationTests.selectCompetition" />
+      <item itemvalue="JUnit.HnucisysApplicationTests" />
       <item itemvalue="Spring Boot.HnucisysApplication" />
     </list>
     <recent_temporary>
       <list>
+        <item itemvalue="JUnit.HnucisysApplicationTests" />
+        <item itemvalue="JUnit.HnucisysApplicationTests.selectCompetition" />
+        <item itemvalue="JUnit.HnucisysApplicationTests.staticDate" />
         <item itemvalue="Application.CodeGenerator" />
         <item itemvalue="JUnit.HnucisysApplicationTests.findMates" />
       </list>
@@ -138,6 +209,11 @@
       <workItem from="1638717530102" duration="7855000" />
       <workItem from="1638758428969" duration="5135000" />
       <workItem from="1638776934839" duration="4608000" />
+      <workItem from="1638854224446" duration="1967000" />
+      <workItem from="1638876768666" duration="8427000" />
+      <workItem from="1638921496267" duration="4385000" />
+      <workItem from="1638971121645" duration="6269000" />
+      <workItem from="1639041233116" duration="1769000" />
     </task>
     <servers />
   </component>
@@ -172,5 +248,15 @@
       </map>
     </option>
     <option name="oldMeFiltersMigrated" value="true" />
+  </component>
+  <component name="XDebuggerManager">
+    <breakpoint-manager>
+      <breakpoints>
+        <breakpoint enabled="true" type="java-exception">
+          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
+          <option name="timeStamp" value="1" />
+        </breakpoint>
+      </breakpoints>
+    </breakpoint-manager>
   </component>
 </project>

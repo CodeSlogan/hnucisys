@@ -16,6 +16,10 @@ li {
     list-style: none;
 }
 
+ul {
+    list-style: none;
+}
+
 a {
     text-decoration: none;
 }
@@ -49,6 +53,7 @@ a {
     text-align: center;
     line-height: 42px;
 }
+
 
 .nav {
     float: left;
@@ -111,20 +116,103 @@ a {
 }
 
 /* banner区域 */
-.banner {
+.banner1 {
     height: 420px;
     background-color: aquamarine;
 }
 
-.banner .w {
-    height: 421px;
-    background: url(#) no-repeat top center; /*此处需要添加图片背景*/
+/*轮番图css样式*/
+/*对整体部分的控制，浏览图片的窗口*/
+.banner{
+    width: 1024px;
+    height: 420px;
+    border: 0px solid #ccc;
+    position: relative;
+    overflow: hidden;
 }
+.banner .w{
+    height: 420px;
+}
+/*图片的初步设置后面的动态内容会在js中实现*/
+.img {
+    width: 1024px;
+    height: 420px;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+/*修改一下图片的大小，使之符合容器的大小*/
+.pic {
+    width: 1024px;
+    height: 420px;
+}
+/*让没长图片向左浮动*/
+.img li{
+    float: left;
+}
+/*圆点承载部分的设计*/
+.num{
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+    font-size: 0;
+}
+/*圆点设计*/
+.num li{
+    width: 10px;
+    height: 10px;
+    background:rgba(0,0,0,0.5);
+    border-radius: 100%;
+    display: inline-block;
+    margin: 0 5px;
+    cursor: pointer;
+}
+/*按钮部分初始不可见*/
+.btn{
+    display: none;
+}
+/*按钮形状设计*/
+.btn span{
+    display: block;
+    width: 50px;
+    height: 100px;
+    background: rgba(0,0,0,0.6);
+    color: #fff;
+    font-size: 40px;
+    line-height: 100px;
+    text-align: center;
+    cursor:pointer;
+}
+/*上一个设计*/
+.btn .prev{
+    position: absolute;
+    left: 0;
+    top: 50%;
+    margin-top: -50px;
+}
+/*下一个设计*/
+.btn .next{
+    position: absolute;
+    right: 0;
+    top: 50%;
+    margin-top: -50px;
+}
+/*对按妞动态呈现的变换进行类选择器的设计为js代码部分进行铺垫*/
+.num .active{
+    background-color: #fff;
+}
+.hide{
+    display: none;
+}
+
+
 
 .subnav {
     float: left;
-    width: 190px;
+    width: 170px;
     height: 421px;
+    
     background: rgba(0, 0, 0, 0.3);
 }
 

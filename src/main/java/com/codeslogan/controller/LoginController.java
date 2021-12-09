@@ -23,10 +23,6 @@ public class LoginController {
     @Autowired
     UserService userService;
 
-    @RequestMapping({"/", "/index"})
-    public String toIndex() {
-        return "index";
-    }
 
     @RequestMapping({"/signup"})
     public String toSignUp() {
@@ -52,7 +48,7 @@ public class LoginController {
             User user = (User) SecurityUtils.getSubject().getPrincipal();
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-            return "index";
+            return "redirect:/index";
         } catch (UnknownAccountException e) {//用户名不存在
             model.addAttribute("msg", "用户名不存在");
             return "login";
