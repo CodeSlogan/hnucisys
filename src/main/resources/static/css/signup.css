@@ -116,20 +116,7 @@ body {
 .login a span {
     position: absolute;
 }
-
 /*.login a span:first-child {*/
-.first{
-    top: 0;
-    left: -100%;
-    width: 100%;
-    height: 2px;
-    /* to right 就是往右边 下面的同理 */
-    background: linear-gradient(to right, transparent, #03e9f4);
-    /* 动画 名称 时长 linear是匀速运动 infinite是无限次运动 */
-    animation: move1 1s linear infinite;
-}
-
-/*.login a span:nth-child(2) */
 .first{
     top: 0;
     left: -100%;
@@ -174,7 +161,6 @@ body {
     animation: move4 1s linear 0.75s infinite;
 
 }
-
 
 /* 写一下动画 再坚持一下 视频马上就完了 */
 @keyframes move1 {
