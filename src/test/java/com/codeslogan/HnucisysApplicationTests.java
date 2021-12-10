@@ -39,4 +39,5 @@ class HnucisysApplicationTests {
         competitionMapper.delById(26);
     }
 
+
 }

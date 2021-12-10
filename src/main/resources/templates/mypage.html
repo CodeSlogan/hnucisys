@@ -5,8 +5,8 @@
     <title>个人主页</title>
     <meta name="theme-color" content="#ffc91d">
     <link rel="icon" href="static/img/favicon.ico">
-    <link href="../static/css/kico.css" rel="stylesheet" type="text/css">
-    <link href="../static/css/paul.css" rel="stylesheet" type="text/css">
+    <link th:href="@{css/kico.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/paul.css}" rel="stylesheet" type="text/css">
     <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
     <link rel="stylesheet" th:href="@{/css/index.css}">
 </head>
@@ -37,12 +37,11 @@
 </div>
 <aside class="sidebar">
     <div class="avatar">
-        <img src="static/image/user.png" title="user">
+        <img src="image/user.png" title="user">
     </div>
     <nav class="nav">
         <a href="index.html">首页</a>
         <a href="#info">资料</a>
-        <a href="#skills">技能</a>
         <a href="#story">经历</a>
         <a href="#team">队伍</a>
     </nav>
@@ -53,52 +52,18 @@
             <h2 class="title">个人资料</h2>
             <div class="row">
                 <div class="col-l-4">
-                    <p>姓名：</p>
-                    <p>性别：</p>
-                    <p>年龄：</p>
-                    <p>专业：</p>
+                    <p th:text="'姓名：'+${user.getUsername()}"></p>
+                    <p th:text="${user.getSex() == 1}?'性别：男':'性别：女'"></p>
+                    <p th:text="'年级：'+${user.getGrade()}"></p>
+                    <p th:text="'专业：'+${user.getMajor()}"></p>
                 </div>
                 <div class="col-l-4">
-                    <p>QQ：</p>
-                    <p>邮箱：<a href="#"></a></p>
-                    <p>手机号：</p>
+                    <p th:text="'QQ：'+${user.getQq()}"></p>
+                    <p th:text="'邮箱：'+${user.getQq()}+'@qq.com'"><a href="#"></a></p>
+                    <p th:text="'手机号：'+${user.getUserId()} + '123465'"></p>
                 </div>
                 <div class="col-l-4">
                     <p></p>
-                </div>
-            </div>
-        </div>
-    </section>
-    <section id="skills">
-        <div class="wrap">
-            <h2 class="title">掌握的技能</h2>
-            <div class="row scrollable">
-                <div class="col-s-6 col-m-4 center-fixed">
-                    <div class="skills-icon">
-                        <i class="fa fa-html5"></i>
-                    </div>
-                    <div class="skills-title">
-                        <h3>##</h3>
-                        <p>...</p>
-                    </div>
-                </div>
-                <div class="col-s-6 col-m-4 center-fixed">
-                    <div class="skills-icon">
-                        <i class="fa fa-css3"></i>
-                    </div>
-                    <div class="skills-title">
-                        <h3>##</h3>
-                        <p>...</p>
-                    </div>
-                </div>
-                <div class="col-s-6 col-m-4 center-fixed">
-                    <div class="skills-icon">
-                        <i class="fa fa-code"></i>
-                    </div>
-                    <div class="skills-title">
-                        <h3>##</h3>
-                        <p>...</p>
-                    </div>
                 </div>
             </div>
         </div>
@@ -110,13 +75,7 @@
             <div class="row">
                 <div class="col-m-8">
                     <ul class="timeline">
-                        <li># </li>
-                        <li># </li>
-                        <li># </li>
-                        <li># </li>
-                        <li># </li>
-                        <li># </li>
-                        <li>---</li>
+                        <p th:text="${user.getIntroduction()}"> </p>
                     </ul>
                 </div>
                 <div class="col-m-4 center-fixed">

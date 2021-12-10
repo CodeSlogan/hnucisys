@@ -5,13 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/web/WEB-INF/web.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/pom.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/MyPageController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/login.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/login.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/application.yml" beforeDir="false" />
-      <change beforePath="$PROJECT_DIR$/target/classes/templates/index.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -21,8 +20,8 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
+        <option value="Class" />
       </list>
     </option>
   </component>
@@ -177,20 +176,18 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="Application.CodeGenerator" />
-      <item itemvalue="JavaScript Debug.mypage.html" />
+      <item itemvalue="JavaScript 调试.mypage.html" />
       <item itemvalue="JUnit.HnucisysApplicationTests.staticDate" />
       <item itemvalue="JUnit.HnucisysApplicationTests.selectCompetition" />
       <item itemvalue="JUnit.HnucisysApplicationTests" />
       <item itemvalue="Spring Boot.HnucisysApplication" />
+      <item itemvalue="应用程序.CodeGenerator" />
     </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JavaScript Debug.mypage.html" />
         <item itemvalue="JUnit.HnucisysApplicationTests" />
         <item itemvalue="JUnit.HnucisysApplicationTests.selectCompetition" />
         <item itemvalue="JUnit.HnucisysApplicationTests.staticDate" />
-        <item itemvalue="Application.CodeGenerator" />
       </list>
     </recent_temporary>
   </component>
