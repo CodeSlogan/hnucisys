@@ -4,13 +4,9 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="">
+    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="增加个人详情页、修改图片无法导入Bug(导入资源的时候路径不要有static)">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/MyPageController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/MyPageController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/test/java/com/codeslogan/HnucisysApplicationTests.java" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -217,7 +213,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639063037854</updated>
     </task>
-    <option name="localTasksCounter" value="2" />
+    <task id="LOCAL-00002" summary="增加个人详情页、修改图片无法导入Bug(导入资源的时候路径不要有static)">
+      <created>1639123219598</created>
+      <option name="number" value="00002" />
+      <option name="presentableId" value="LOCAL-00002" />
+      <option name="project" value="LOCAL" />
+      <updated>1639123219598</updated>
+    </task>
+    <option name="localTasksCounter" value="3" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -254,7 +257,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
-    <option name="LAST_COMMIT_MESSAGE" value="123" />
+    <MESSAGE value="增加个人详情页、修改图片无法导入Bug(导入资源的时候路径不要有static)" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加个人详情页、修改图片无法导入Bug(导入资源的时候路径不要有static)" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
