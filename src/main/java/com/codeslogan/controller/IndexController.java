@@ -1,8 +1,8 @@
 package com.codeslogan.controller;
 
 import com.codeslogan.mapper.CompetitionMapper;
-import com.codeslogan.pojo.Competition;
 import org.springframework.beans.factory.annotation.Autowired;
+import com.codeslogan.pojo.Competition;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
@@ -31,4 +31,5 @@ public class IndexController {
         return "index";
 
     }
+
 }
