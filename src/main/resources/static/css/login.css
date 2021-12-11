@@ -83,7 +83,7 @@ body {
     font-size: 12px;
 }
 
-.login a {
+.login a  {
     overflow: hidden;
     position: relative;
     padding: 10px 20px;
@@ -94,7 +94,6 @@ body {
     transition: all 0.5s;
 }
 
-
 .signin {
     color: white;
     position: absolute;
@@ -102,7 +101,6 @@ body {
     right: 93px;
     margin: auto;
     padding-bottom: 10px;
-
 }
 
 .login a:hover {
@@ -112,8 +110,9 @@ body {
     box-shadow: 0 0 5px #03e9f4, 0 0 25px #03e9f4, 0 0 50px #03e9f4,
     0 0 100px #03e9f4;
 }
+
 .login a span {
-    position: absolute;
+    position:relative;
 }
 
 /*.login a span:first-child {*/
