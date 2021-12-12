@@ -6,6 +6,7 @@
   <component name="ChangeListManager">
     <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="123">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/login.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/login.css" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/findmate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/findmate.html" afterDir="false" />
@@ -152,11 +153,11 @@
     </configuration>
     <list>
       <item itemvalue="JavaScript Debug.mypage.html" />
+      <item itemvalue="JavaScript Debug.findmate.html" />
+      <item itemvalue="JavaScript Debug.findmate.html (1)" />
       <item itemvalue="JUnit.HnucisysApplicationTests.selectCompetition" />
       <item itemvalue="JUnit.HnucisysApplicationTests" />
       <item itemvalue="Spring Boot.HnucisysApplication" />
-      <item itemvalue="JavaScript Debug.findmate.html" />
-      <item itemvalue="JavaScript Debug.findmate.html (1)" />
     </list>
     <recent_temporary>
       <list>
@@ -188,6 +189,8 @@
       <workItem from="1639108144196" duration="2704000" />
       <workItem from="1639185603233" duration="36000" />
       <workItem from="1639213357427" duration="1522000" />
+      <workItem from="1639217291893" duration="703000" />
+      <workItem from="1639280207558" duration="861000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1639063037854</created>
@@ -232,7 +235,7 @@
                   <entry key="branch">
                     <value>
                       <list>
-                        <option value="origin/dev" />
+                        <option value="dev" />
                       </list>
                     </value>
                   </entry>
