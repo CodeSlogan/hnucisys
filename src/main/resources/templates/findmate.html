@@ -7,6 +7,15 @@
     <title>Document</title>
     <title>寻找队友</title>
     <link rel="stylesheet" th:href="@{/css/index.css}">
+<!--    <script src="../static/js/findmatetext.js"></script>-->
+    <script>
+        window.onload=function ()
+        {
+            document.getElementById("showBtn").onclick=function (){
+                document.getElementById("showTe").style.display='block';
+            }
+        }
+    </script>
 </head>
 <body>
 <div class="header w">
@@ -55,7 +64,12 @@
                     <div class="info">
                         <span>高级</span> • 1125人浏览
                     </div>
-                    <button class="inviteBtn">邀请</button>
+                    <button class="inviteBtn" id="showBtn">邀请</button>
+                    <div id="showTe" >
+                        <textarea rows="2" cols="20"></textarea>
+                        <button class="inviteBtn">发送</button>
+                    </div>
+
                 </li>
             </tr>
         </ul>
@@ -77,7 +91,7 @@
                 <div class="info">
                     <span>高级</span> • 1125人浏览
                 </div>
-                <button class="inviteBtn" >申请加入</button>
+                <button class="inviteBtn" >加入</button>
             </li>
         </ul>
     </div>

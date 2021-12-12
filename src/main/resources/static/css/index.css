@@ -118,7 +118,6 @@ a {
 /* banner区域 */
 .banner1 {
     height: 420px;
-    background-color: aquamarine;
 }
 
 /*轮番图css样式*/
@@ -212,8 +211,7 @@ a {
     float: left;
     width: 170px;
     height: 421px;
-    
-    background: rgba(0, 0, 0, 0.3);
+    background:url("../image/indexbac.png") no-repeat ;
 }
 
 .subnav ul li {
@@ -479,4 +477,16 @@ a {
     opacity: 1;
     transition: 0s
 }
+textarea{
+    resize: none;
+}
+#showTe{
+    background-color: #c1e2f8;
+    position:relative;
+    left:50%;
+    top:50%;
+    z-index: 6;
+    display: none;
+}
+
 
