@@ -118,6 +118,7 @@ a {
 /* banner区域 */
 .banner1 {
     height: 420px;
+    background-image: url("/image/background.png");
 }
 
 /*轮番图css样式*/
