@@ -34,11 +34,11 @@ class HnucisysApplicationTests {
         System.out.println(userService.queryMatesByGrade(1));
     }
 
-    @Test
-    void selectCompetition(){
-        System.out.println(competitionMapper.getById(26));
-        competitionMapper.delById(26);
-    }
+//    @Test
+//    void selectCompetition(){
+//        System.out.println(competitionMapper.getCompetitionById(26));
+//        competitionMapper.delCompetitionById(26);
+//    }
     @Test
     void test02(){
         System.out.println();

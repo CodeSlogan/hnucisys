@@ -1,14 +1,13 @@
-package com.codeslogan.mapper;
-
-import com.codeslogan.pojo.Competition;
-import org.apache.ibatis.annotations.Mapper;
-import org.springframework.stereotype.Repository;
+package com.codeslogan.service;
 
 import java.util.List;
+import com.codeslogan.pojo.Competition;
 
-@Mapper
-@Repository
-public interface CompetitionMapper {
+/**
+ * @Author: codeslogan
+ * @Date: 2021-12-12 16:15
+ */
+public interface CompetitionService {
     // 获取所有的竞赛信息，根据时间顺序，取出一定条数的比赛信息
     List<Competition> getAll(int offset, int maxResults);
 

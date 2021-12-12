@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.codeslogan.mapper.CompetitionMapper">
+<!--    获取所有的竞赛信息，根据时间顺序，取出一定条数的比赛信息-->
+    <select id="getAll" resultType="Competition" parameterType="int">
+        select * from competition order by time desc limit #{offset}, #{maxResults}
+    </select>
+
+<!--    根据分类获取比赛信息-->
+    <select id="getCompetitionByCategory" resultType="Competition" >
+        select * from competition where category = #{category} order by time desc limit #{offset}, #{maxResults}
+    </select>
+
+<!--    通过id获取竞赛信息-->
+    <insert id="save" parameterType="Competition">
+        insert into competition(name, url, category, time, evaluation, createtime, updatetime)
+            values(#{name}, #{url}, #{category}, #{time},  #{evaluation}, #{createTime}, #{updateTime})
+    </insert>
+
+    <select id="getCompetitionById" resultType="Competition" parameterType="int">
+        select * from competition where cptid = #{id}
+    </select>
+
+    <delete id="delCompetitionById" parameterType="int">
+        delete from competition where cptid = #{id}
+    </delete>
+
+    <select id="getCategory" resultType="String">
+        select distinct(category) from competition order by category asc
+    </select>
+
+</mapper>
