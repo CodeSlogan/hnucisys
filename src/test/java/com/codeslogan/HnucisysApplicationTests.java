@@ -4,6 +4,7 @@ import com.codeslogan.mapper.CompetitionMapper;
 import com.codeslogan.pojo.Competition;
 import com.codeslogan.service.UserService;
 import com.codeslogan.service.UserServiceImpl;
+import com.mysql.cj.Session;
 import org.junit.jupiter.api.Test;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.boot.test.context.SpringBootTest;
@@ -38,6 +39,9 @@ class HnucisysApplicationTests {
         System.out.println(competitionMapper.getById(26));
         competitionMapper.delById(26);
     }
-
+    @Test
+    void test02(){
+        System.out.println();
+    }
 
 }

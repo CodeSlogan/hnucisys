@@ -7,6 +7,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 
 import java.util.Collection;
 
@@ -30,6 +31,17 @@ public class IndexController {
         model.addAttribute("interests", interests);
         return "index";
 
+    }
+
+    @RequestMapping("/tocpt")
+    public String ToCompetition(){
+        return "cpt";
+    }
+
+    @RequestMapping("/noauthor")
+    @ResponseBody
+    public String Unauthorize(){
+        return "抱歉 您没有权限！";
     }
 
 }
