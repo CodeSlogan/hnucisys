@@ -37,10 +37,18 @@ public class ShiroConfig {
 
         filterMap.put("/index","authc");
         filterMap.put("/","authc");
+        //filterMap.put("/findmate","authc");
+        filterMap.put("/mypage","authc");
+
+        filterMap.put("/tocpt","perms[admin]");
+
         bean.setFilterChainDefinitionMap(filterMap);
 
         //如果没有权限就调到登陆页面
         bean.setLoginUrl("/toLogin");
+
+        //未授权页面
+        bean.setUnauthorizedUrl("/noauthor");
         return bean;
     }
 }

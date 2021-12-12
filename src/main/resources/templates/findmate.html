@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>寻找队友</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<div class="header w">
+    <!-- logo部分 -->
+    <div class="logo">
+        竞赛信息系统
+    </div>
+    <!-- 导航栏部分 nav -->
+    <div class="nav">
+        <ul>
+            <li><a th:href="@{/index}">首页</a></li>
+            <li><a href="@{/detail}">竞赛管理</a></li>
+            <li><a href="#">队友</a></li>
+        </ul>
+    </div>
+    <!-- 搜索模块 -->
+    <div class="search">
+        <input type="text" placeholder="输入关键词">
+        <button></button>
+    </div>
+    <!-- 用户模块 -->
+    <div class="user">
+        <a th:href="@{/mypage}"> 我的主页</a>
+    </div>
+</div>
+<div class="box w">
+    <div class="box-hd">
+        <h3>队友推荐</h3>
+        <a href="#">查看全部</a>
+    </div>
+    <div class="box-bd">
+        <ul class="clearfix">
+            <tr th:each="mate:${mates}">
+                <li>
+                    <em>
+                        <img th:src="@{/image/hot.png}" alt="">
+                    </em>
+                    <img src="#" alt="">
+                    <h4 th:text="'姓名:'+${mate.getUsername()}"></h4>
+                    <h4 th:text="'等级:'+${mate.getGrade()}"></h4>
+                    <h4 th:text="'专业:'+${mate.getMajor()}"></h4>
+                    <div th:switch="${mate.getSex()}">
+                        <h4 th:case=1>性别:男</h4>
+                        <h4 th:case=0>性别:女</h4>
+                    </div>
+                    <div class="info">
+                        <span>高级</span> • 1125人浏览
+                    </div>
+                    <button class="inviteBtn">邀请</button>
+                </li>
+            </tr>
+        </ul>
+    </div>
+
+    <div class="box-hd">
+        <h3>队伍推荐</h3>
+        <a href="#">查看全部</a>
+    </div>
+    <div class="box-bd">
+        <ul class="clearfix">
+            <li>
+                <em>
+                    <img src="..static/image/hot.png" alt="">
+                </em>
+                <h4>队伍名称：</h4>
+                <h4>队伍成员：</h4>
+                <h4>队伍介绍：</h4>
+                <div class="info">
+                    <span>高级</span> • 1125人浏览
+                </div>
+                <button class="inviteBtn" >申请加入</button>
+            </li>
+        </ul>
+    </div>
+</div>
+</body>
+</html>

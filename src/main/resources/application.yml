@@ -1,4 +1,14 @@
 spring:
+  devtools:
+    restart:
+      enabled: true
+      # 设置重启的目录
+      additional-paths: src/main/java
+      # 解决接口报404的问题
+      poll-interval: 3000
+      quiet-period: 1000
+  thymeleaf:
+    cache: false
   datasource:
     username: root
     password: 123456

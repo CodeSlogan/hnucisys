@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>个人主页</title>
+    <meta name="theme-color" content="#ffc91d">
+    <link rel="icon" href="static/img/favicon.ico">
+    <link th:href="@{css/kico.css}" rel="stylesheet" type="text/css">
+    <link th:href="@{/css/paul.css}" rel="stylesheet" type="text/css">
+    <meta name="viewport" content="width=device-width, maximum-scale=1, initial-scale=1">
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+</head>
+<body>
+<!-- 1.头部区域开始啦 -->
+<div class="header w">
+    <!-- logo部分 -->
+    <div class="logo">
+        竞赛信息系统
+    </div>
+    <!-- 导航栏部分 nav -->
+    <div class="nav">
+        <ul>
+            <li><a th:href="@{/index}">首页</a></li>
+            <li><a th:href="@{/detail}">竞赛管理</a></li>
+            <li><a th:href="@{/findmate}">队友</a></li>
+        </ul>
+    </div>
+    <!-- 搜索模块 -->
+    <div class="search">
+        <input type="text" placeholder="输入关键词">
+        <button></button>
+    </div>
+    <!-- 用户模块 -->
+    <div class="user">
+        <a th:href="@{/mypage}"> 我的主页</a>
+    </div>
+</div>
+<aside class="sidebar">
+    <div class="avatar">
+        <img src="image/user.png" title="user">
+    </div>
+    <nav class="nav">
+        <a href="index.html">首页</a>
+        <a href="#info">资料</a>
+        <a href="#story">经历</a>
+        <a href="#team">队伍</a>
+    </nav>
+</aside>
+<main>
+    <section id="info">
+        <div class="wrap">
+            <h2 class="title">个人资料</h2>
+            <div class="row">
+                <div class="col-l-4">
+                    <p th:text="'姓名：'+${user.getUsername()}"></p>
+                    <p th:text="${user.getSex() == 1}?'性别：男':'性别：女'"></p>
+                    <p th:text="'年级：'+${user.getGrade()}"></p>
+                    <p th:text="'专业：'+${user.getMajor()}"></p>
+                </div>
+                <div class="col-l-4">
+                    <p th:text="'QQ：'+${user.getQq()}"></p>
+                    <p th:text="'邮箱：'+${user.getQq()}+'@qq.com'"><a href="#"></a></p>
+                    <p th:text="'手机号：'+${user.getUserId()} + '123465'"></p>
+                </div>
+                <div class="col-l-4">
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </section>
+    </section>
+    <section id="story">
+        <div class="wrap">
+            <h2 class="title">个人经历</h2>
+            <div class="row">
+                <div class="col-m-8">
+                    <ul class="timeline">
+                        <p th:text="${user.getIntroduction()}"> </p>
+                    </ul>
+                </div>
+                <div class="col-m-4 center-fixed">
+                    <img alt="" src="" bk-image="active">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section id="team">
+        <div class="wrap">
+            <h2 class="title">我的队伍</h2>
+            <div class="row">
+                <div class="col-s-6">
+                    <div class="works-item">
+                        <img alt="" src="" bk-image="active">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer>
+        <p>
+            @2021 By hnucisys
+        </p>
+    </footer>
+</main>
+<script src="static/kico.js"></script>
+<script src="static/paul.js"></script>
+</body></html>

@@ -27,7 +27,7 @@ body {
     /* 让弹性项目在交叉轴方向水平居中 现在主轴的方向是向下 交叉轴的方向是与主轴垂直 交叉轴的方向是向右 */
     align-items: center;
     width: 400px;
-    padding: 80px 60px;
+    padding: 70px 60px;
     background-color: rgba(0, 0, 0, 0.2);
     box-shadow: 0 15px 25px rgba(0, 0, 0, 0.4);
     background: linear-gradient(#141e30, #243b55);
@@ -42,7 +42,7 @@ body {
 .login .login_box {
     /* 相对定位 */
     position: relative;
-    width: 100%;
+    width: 110%;
 }
 
 .login .login_box input {
@@ -95,9 +95,10 @@ body {
 .signup {
     color: white;
     position: relative;
-    left: 10%;
-    bottom: -60px;
+    left: 6%;
+    bottom: -40px;
     right: 0;
+    margin-bottom: 10px;
 }
 
 .login a:hover {
@@ -112,7 +113,11 @@ body {
     position: absolute;
 }
 
-.login a span:first-child {
+.login a span {
+    position: absolute;
+}
+/*.login a span:first-child {*/
+.first{
     top: 0;
     left: -100%;
     width: 100%;
@@ -123,7 +128,8 @@ body {
     animation: move1 1s linear infinite;
 }
 
-.login a span:nth-child(2) {
+/*.login a span:nth-child(2) */
+.second{
     right: 0;
     top: -100%;
     width: 2px;
@@ -133,22 +139,27 @@ body {
     animation: move2 1s linear 0.25s infinite;
 }
 
-.login a span:nth-child(3) {
-    right: -100%;
+/*.login a span:nth-child(3) */
+.third{
+
     bottom: 0;
+    right: -100%;
     width: 100%;
     height: 2px;
-    background: linear-gradient(to left, transparent, #03e9f4);
+    background: linear-gradient(to right, transparent, #03e9f4);
+    /* 动画 名称 时长 linear是匀速运动 infinite是无限次运动 */
     animation: move3 1s linear 0.5s infinite;
 }
 
-.login a span:last-child {
+/*.login a span:last-child */
+.forth{
     left: 0;
     bottom: -100%;
     width: 2px;
     height: 100%;
     background: linear-gradient(#03e9f4, transparent);
     animation: move4 1s linear 0.75s infinite;
+
 }
 
 /* 写一下动画 再坚持一下 视频马上就完了 */
