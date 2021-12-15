@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.codeslogan.mapper.TeamMapper">
+    <!--
+        <select id="queryTeamById" resultType="TeamExhibition" parameterType="int">
+            select teamname, name, username
+            from hnucisys.Team,
+                 hnucisys.Competition,
+                 hnucisys.User,
+                 hnucisys.team_user
+            where team.cptid = competition.cptid
+              and team.teamid = team_user.teamid
+              and team_user.userid = user.userid
+              and team.teamid >= #{teamid}
+        </select>
+        -->
+    <select id="queryTeamById" resultType="TeamExhibition" parameterType="int">
+        select teamid, teamname, name
+        from hnucisys.Team,
+             hnucisys.Competition
+        where team.cptid = competition.cptid
+          and team.teamid >= #{teamid}
+    </select>
+</mapper>

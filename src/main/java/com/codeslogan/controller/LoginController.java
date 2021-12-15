@@ -1,9 +1,7 @@
 package com.codeslogan.controller;
 
 import com.codeslogan.mapper.UserMapper;
-import com.codeslogan.pojo.Competition;
 import com.codeslogan.pojo.User;
-import com.codeslogan.service.CompetitionService;
 import com.codeslogan.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
