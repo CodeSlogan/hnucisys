@@ -3,20 +3,40 @@
   <component name="AutoImportSettings">
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
+  <component name="BranchesTreeState">
+    <expand>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="LOCAL_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+      <path>
+        <item name="ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="REMOTE_ROOT" type="e8cecc67:BranchNodeDescriptor" />
+        <item name="GROUP_NODE:origin" type="e8cecc67:BranchNodeDescriptor" />
+      </path>
+    </expand>
+    <select />
+  </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="增加首页背景图">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.css" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/Chart.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/feather.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.2.1.slim.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/popper.min.js" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" afterDir="false" />
+    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="修改首页bug">
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/TeamMapper.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/TeamExhibition.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/TeamService.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/TeamServiceImpl.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/TeamMapper.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/FindMateController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/FindMateController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/UserMapper.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/UserMapper.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/User.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/User.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserServiceImpl.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/UserServiceImpl.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/mapper/UserMapper.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/findmate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/findmate.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -26,9 +46,11 @@
   <component name="FileTemplateManagerImpl">
     <option name="RECENT_TEMPLATES">
       <list>
-        <option value="Class" />
         <option value="Interface" />
         <option value="HTML File" />
+        <option value="FxmlFile" />
+        <option value="Class" />
+        <option value="JavaFXApplication" />
       </list>
     </option>
   </component>
@@ -55,6 +77,15 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
+  <component name="MavenImportPreferences">
+    <option name="generalSettings">
+      <MavenGeneralSettings>
+        <option name="localRepository" value="D:/Maven/apache-maven-3.8.3\maven-repo" />
+        <option name="mavenHome" value="D:/Maven/apache-maven-3.8.3" />
+        <option name="userSettingsFile" value="D:\Maven\apache-maven-3.8.3\conf\settings.xml" />
+      </MavenGeneralSettings>
+    </option>
+  </component>
   <component name="ProjectId" id="21s6cG69cjDdeNVubJrdjxNrMYM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
@@ -76,7 +107,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Springboot-04-web" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -88,13 +119,7 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
-    <key name="CopyFile.RECENT_KEYS">
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\static\js" />
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\static\css" />
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\templates" />
-    </key>
     <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\templates\CptMng" />
       <recent name="D:\Project\Java\cisys\hnucisys\database" />
       <recent name="C:\Users\86189\Desktop\hnucisys\src\main\resources\static\css" />
       <recent name="C:\Users\86189\Desktop\hnucisys\src\main\resources\static\image" />
@@ -155,9 +180,9 @@
       </method>
     </configuration>
     <list>
-      <item itemvalue="JavaScript 调试.findmate.html" />
-      <item itemvalue="JavaScript 调试.findmate.html (1)" />
-      <item itemvalue="JavaScript 调试.mypage.html" />
+      <item itemvalue="JavaScript Debug.findmate.html" />
+      <item itemvalue="JavaScript Debug.findmate.html (1)" />
+      <item itemvalue="JavaScript Debug.mypage.html" />
       <item itemvalue="JUnit.HnucisysApplicationTests.selectCompetition" />
       <item itemvalue="JUnit.HnucisysApplicationTests" />
       <item itemvalue="Spring Boot.HnucisysApplication" />
@@ -170,6 +195,9 @@
     </recent_temporary>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="SvnConfiguration">
+    <configuration />
+  </component>
   <component name="TaskManager">
     <task active="true" id="Default" summary="Default task">
       <changelist id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="" />
@@ -191,10 +219,21 @@
       <workItem from="1639213357427" duration="1522000" />
       <workItem from="1639217291893" duration="703000" />
       <workItem from="1639280207558" duration="861000" />
-      <workItem from="1639359807728" duration="3321000" />
-      <workItem from="1639445188935" duration="25000" />
-      <workItem from="1639462569522" duration="2762000" />
-      <workItem from="1639542764091" duration="2202000" />
+      <workItem from="1639385091528" duration="502000" />
+      <workItem from="1639394408407" duration="588000" />
+      <workItem from="1639397569345" duration="4147000" />
+      <workItem from="1639401834104" duration="33000" />
+      <workItem from="1639446196532" duration="3766000" />
+      <workItem from="1639450101139" duration="16000" />
+      <workItem from="1639471605716" duration="918000" />
+      <workItem from="1639472773368" duration="184000" />
+      <workItem from="1639473012695" duration="26000" />
+      <workItem from="1639483485985" duration="3420000" />
+      <workItem from="1639491368896" duration="231000" />
+      <workItem from="1639492274937" duration="112000" />
+      <workItem from="1639529408784" duration="11000" />
+      <workItem from="1639529714163" duration="234000" />
+      <workItem from="1639554122347" duration="5428000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1639063037854</created>
@@ -217,14 +256,7 @@
       <option name="project" value="LOCAL" />
       <updated>1639064031568</updated>
     </task>
-    <task id="LOCAL-00004" summary="增加首页背景图">
-      <created>1639323193337</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1639323193337</updated>
-    </task>
-    <option name="localTasksCounter" value="5" />
+    <option name="localTasksCounter" value="4" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -261,8 +293,7 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
-    <MESSAGE value="增加首页背景图" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加首页背景图" />
+    <option name="LAST_COMMIT_MESSAGE" value="123" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>

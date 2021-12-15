@@ -48,10 +48,7 @@ public class LoginController {
             User user = (User) SecurityUtils.getSubject().getPrincipal();
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-            if (user.getPerms() == "user")
-                return "redirect:/index";
-            else
-                return "redirect:/tocpt";
+            return "redirect:/index";
         } catch (UnknownAccountException e) {//用户名不存在
             model.addAttribute("msg", "用户名不存在");
             return "login";

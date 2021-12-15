@@ -24,6 +24,11 @@ public class UserServiceImpl implements UserService{
     }
 
     @Override
+    public Collection<User> queryTeamUsersByTeamID(int id) {
+        return userMapper.queryTeamUsersByTeamID(id);
+    }
+
+    @Override
     public void AddUser(User user) {
         userMapper.AddUser(user);
     }
