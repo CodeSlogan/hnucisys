@@ -40,7 +40,9 @@ public class IndexController {
     }
 
     @RequestMapping("/tocpt")
-    public String ToCompetition(){
+    public String ToCompetition(Model model){
+        Collection<Competition> competitions = competitionService.getAll(0,10);
+        model.addAttribute("cpts",competitions);            //传入竞赛信息
         return "CptMng/list";
     }
 
