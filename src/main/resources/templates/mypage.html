@@ -33,7 +33,12 @@
     <div class="user">
         <a th:href="@{/mypage}"> 我的主页</a>
     </div>
+    <!-- 编辑资料 -->
+    <div class="file">
+        <a href="" onclick="edit">编辑资料</a>
+    </div>
 </div>
+
 <aside class="sidebar">
     <div class="avatar">
         <img src="image/user.png" title="user">
@@ -46,6 +51,7 @@
     </nav>
 </aside>
 <main>
+    <div class="white-box">
     <section id="info">
         <div class="wrap">
             <h2 class="title">个人资料</h2>
@@ -61,13 +67,10 @@
                     <p th:text="'邮箱：'+${user.getQq()}+'@qq.com'"><a href="#"></a></p>
                     <p th:text="'手机号：'+${user.getUserId()} + '123465'"></p>
                 </div>
-                <div class="col-l-4">
-                    <p></p>
-                </div>
             </div>
         </div>
     </section>
-    </section>
+
     <section id="story">
         <div class="wrap">
             <h2 class="title">个人经历</h2>
@@ -75,6 +78,9 @@
                 <div class="col-m-8">
                     <ul class="timeline">
                         <p th:text="${user.getIntroduction()}"> </p>
+                        <p></p>
+                        <p></p>
+                        <p></p>
                     </ul>
                 </div>
                 <div class="col-m-4 center-fixed">
@@ -88,6 +94,9 @@
             <h2 class="title">我的队伍</h2>
             <div class="row">
                 <div class="col-s-6">
+                    <p></p>
+                    <p></p>
+                    <p></p>
                     <div class="works-item">
                         <img alt="" src="" bk-image="active">
                     </div>
@@ -95,12 +104,14 @@
             </div>
         </div>
     </section>
+</div>
     <footer>
         <p>
             @2021 By hnucisys
         </p>
     </footer>
 </main>
+
 <script src="static/kico.js"></script>
 <script src="static/paul.js"></script>
 </body></html>

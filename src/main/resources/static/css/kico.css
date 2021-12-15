@@ -127,10 +127,11 @@ body::-webkit-scrollbar-track:hover{
 /* 2 - 元素
 -------------------------------- */
 h1{
-    font-size: 2em;
+    font-size: 3em;
 }
 
 h1, h2, h3, h4, h5, h6{
+    font-size: 1.5em;
     margin-bottom: 1rem;
 }
 
@@ -141,6 +142,7 @@ h1:last-child, h2:last-child, h3:last-child, h4:last-child, h5:last-child, h6:la
 p{
     line-height: 1.8em;
     margin-bottom: 1em;
+    font-size: 1.2em;
 }
 
 a{
