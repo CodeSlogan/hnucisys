@@ -4,11 +4,19 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="增加了管理员身份验证，admin身份可以进入竞赛信息管理界面，user则没有权限，修改登录和注册按钮bug">
-      <change afterPath="$PROJECT_DIR$/src/main/resources/static/image/background.png" afterDir="false" />
+    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="增加首页背景图">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/feather.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.2.1.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/static/css/index.css" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/static/css/index.css" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -68,7 +76,7 @@
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
     <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../Springboot-04-web" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.selected.package.eslint" value="(autodetect)" />
@@ -80,7 +88,13 @@
     <property name="settings.editor.selected.configurable" value="MavenSettings" />
   </component>
   <component name="RecentsManager">
+    <key name="CopyFile.RECENT_KEYS">
+      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\static\js" />
+      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\static\css" />
+      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\templates" />
+    </key>
     <key name="MoveFile.RECENT_KEYS">
+      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\templates\CptMng" />
       <recent name="D:\Project\Java\cisys\hnucisys\database" />
       <recent name="C:\Users\86189\Desktop\hnucisys\src\main\resources\static\css" />
       <recent name="C:\Users\86189\Desktop\hnucisys\src\main\resources\static\image" />
@@ -177,6 +191,10 @@
       <workItem from="1639213357427" duration="1522000" />
       <workItem from="1639217291893" duration="703000" />
       <workItem from="1639280207558" duration="861000" />
+      <workItem from="1639359807728" duration="3321000" />
+      <workItem from="1639445188935" duration="25000" />
+      <workItem from="1639462569522" duration="2762000" />
+      <workItem from="1639542764091" duration="2202000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1639063037854</created>
@@ -199,7 +217,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639064031568</updated>
     </task>
-    <option name="localTasksCounter" value="4" />
+    <task id="LOCAL-00004" summary="增加首页背景图">
+      <created>1639323193337</created>
+      <option name="number" value="00004" />
+      <option name="presentableId" value="LOCAL-00004" />
+      <option name="project" value="LOCAL" />
+      <updated>1639323193337</updated>
+    </task>
+    <option name="localTasksCounter" value="5" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -236,7 +261,8 @@
   </component>
   <component name="VcsManagerConfiguration">
     <MESSAGE value="123" />
-    <option name="LAST_COMMIT_MESSAGE" value="123" />
+    <MESSAGE value="增加首页背景图" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加首页背景图" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
