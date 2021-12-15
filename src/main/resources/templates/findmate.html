@@ -7,14 +7,7 @@
     <title>Document</title>
     <title>寻找队友</title>
     <link rel="stylesheet" th:href="@{/css/index.css}">
-    <!--    <script src="../static/js/findmatetext.js"></script>-->
-    <script>
-        window.onload = function () {
-            document.getElementById("showBtn").onclick = function () {
-                document.getElementById("showTe").style.display = 'block';
-            }
-        }
-    </script>
+    <script src="../static/js/findmatetext.js"></script>
 </head>
 <body>
 <div class="header w">
@@ -63,22 +56,23 @@
                         <span>高级</span> • 1125人浏览
                     </div>
                     <button class="inviteBtn" id="showBtn">邀请</button>
-                    <div id="showTe">
-                        <textarea rows="2" cols="20"></textarea>
-                        <button class="inviteBtn">发送</button>
-                    </div>
-
                 </li>
             </tr>
+            <div id="showTe">
+                <textarea rows="2" cols="20"></textarea>
+                <button class="inviteBtn">发送</button>
+            </div>
         </ul>
     </div>
 
     <div class="box-hd">
-        <h3>队伍推荐</h3>
+        <h3>队伍推荐
+            <button class="creatTeam" id="showH">创建队伍</button>
+        </h3>
         <a href="#">查看全部</a>
     </div>
     <div class="box-bd">
-        <ul class="clearfix">
+        <ul class="clearfix liteam">
             <tr th:each="team:${teams}">
                 <li>
                     <em>
@@ -87,20 +81,12 @@
                     <h4 th:text="'队伍编号：'+${team.getTeamid()}"></h4>
                     <h4 th:text="'队伍名称：'+${team.getTeamName()}"></h4>
                     <h4 th:text="'比赛名称：'+${team.getName()}"></h4>
-                    <div class="divTablecss1">
-                        <table>
-                            <tr>
-                                <th>编号</th>
-                                <th>名称</th>
-                            </tr>
-                            <tr th:each="user:${team.getTeamUsers()}">
-                                <td>
-                                    <td th:text="${user.getUserId()}"></td>
-                                    <td th:text="${user.getUsername()}"></td>
-                                </td>
-                            </tr>
-                        </table>
-                    </div>
+                    <h4 class="mate">队伍成员:
+                        <ul>
+                            <li>sim</li>
+                            <li>li</li>
+                        </ul>
+                    </h4>
                     <div class="info">
                         <span>高级</span> • 1125人浏览
                     </div>
@@ -108,6 +94,13 @@
                 </li>
             </tr>
         </ul>
+        <div id="showIn">
+            <label>队伍编号</label><input type="text">
+            <label>队伍名称</label><input type="text">
+            <label>比赛名称</label><input type="text">
+            <label>队伍成员</label><input type="text">
+            <button class="inviteBtn">确定</button>
+        </div>
     </div>
 </div>
 </body>
