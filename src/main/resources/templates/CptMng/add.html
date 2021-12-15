@@ -69,55 +69,51 @@
 								</a>
 							</li>
 						</ul>
-
-
-
 					</div>
 				</nav>
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
 
-					<form th:action="@{/updateCpt}" method="post">
+					<form th:action="@{/submitCpt}" method="post">
 
-						<input type="hidden" name="cptId" th:value="${cpt.getCptId()}">
 						<div class="form-group">
 							<label>比赛名称</label>
-							<input th:value="${cpt.getName()}" type="text" name="name" class="form-control">
+							<input value="" type="text" name="name" class="form-control">
 						</div>
 						<div class="form-group">
 							<label>图片链接</label>
-							<input th:value="${cpt.getUrl()}" type="text" name="url" class="form-control" >
+							<input value="" type="text" name="url" class="form-control" >
 						</div>
 						<div class="form-group">
 
 						</div>
 						<div class="form-group">
 							<label>比赛类别</label>
-							<input th:value="${cpt.getCategory()}" type="text" name="category" class="form-control" >
+							<input value="" type="text" name="category" class="form-control" >
 						</div>
 
 						<div class="form-group">
 							<label>比赛评级(1-5)</label>
-							<input th:value="${cpt.getEvaluation()}" type="number" name="evaluation" class="form-control" >
+							<input value="" type="number" name="evaluation" class="form-control" >
 						</div>
 
 						<div class="form-group">
 							<label>比赛时间</label>
-							<input th:value="${#dates.format(cpt.getTime(),'yyyy-MM-dd HH:mm:ss')}" type="text" name="time" class="form-control" placeholder="">
+							<input value="" type="text" name="time" class="form-control" placeholder="">
 						</div>
 						<div class="form-group">
 							<label>创建时间</label>
-							<input th:value="${#dates.format(cpt.getCreateTime(),'yyyy-MM-dd HH:mm:ss')}" type="text" name="createTime" class="form-control" placeholder="">
+							<input value="" type="text" name="createTime" class="form-control" placeholder="">
 						</div>
 
 						<div class="form-group">
 							<label>更改时间</label>
-							<input th:value="${#dates.format(cpt.getUpdateTime(),'yyyy-MM-dd HH:mm:ss')}" type="text" name="updateTime" class="form-control" placeholder="">
-							<p></p>
+							<input value="" type="text"  name="updateTime" class="form-control" placeholder="">
+							<p>ps 时间格式：yyyy-MM-dd HH:mm:ss</p>
 							<p></p>
 							<p></p>
 
-							<button type="submit" class="btn btn-primary">修改</button>
+							<button type="submit" class="btn btn-primary">提交</button>
 						</div>
 					</form>
 				</main>

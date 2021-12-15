@@ -4,37 +4,36 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="增加后台增删改查">
+    <list default="true" id="72d19ab6-5fb3-4b30-b40f-f439d607ae88" name="默认变更列表" comment="">
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/bootstrap.min.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/css/dashboard.css" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/Chart.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/bootstrap.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/feather.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/jquery-3.2.1.slim.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/static/js/popper.min.js" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/add.html" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/CptMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/CptMngController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/Competition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/Competition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/TeamExhibition.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/pojo/TeamExhibition.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/CompetitionService.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/CompetitionService.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CptMng/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/cpt.html" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/findmate.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/findmate.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/mypage.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
     <option name="LAST_RESOLUTION" value="IGNORE" />
   </component>
-  <component name="FileTemplateManagerImpl">
-    <option name="RECENT_TEMPLATES">
-      <list>
-        <option value="Interface" />
-        <option value="HTML File" />
-        <option value="Class" />
-      </list>
-    </option>
-  </component>
   <component name="Git.Settings">
-    <option name="PUSH_TAGS">
-      <GitPushTagMode>
-        <option name="argument" value="--tags" />
-        <option name="title" value="All" />
-      </GitPushTagMode>
-    </option>
-    <option name="RECENT_BRANCH_BY_REPOSITORY">
-      <map>
-        <entry key="$PROJECT_DIR$" value="dev" />
-      </map>
-    </option>
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
-    <option name="RESET_MODE" value="HARD" />
   </component>
   <component name="GitSEFilterConfiguration">
     <file-type-list>
@@ -44,72 +43,34 @@
       <filtered-out-file-type name="COMMIT_BY_MESSAGE" />
     </file-type-list>
   </component>
-  <component name="ProjectId" id="21s6cG69cjDdeNVubJrdjxNrMYM" />
   <component name="ProjectLevelVcsManager" settingsEditedManually="true">
     <ConfirmationsSetting value="2" id="Add" />
   </component>
-  <component name="ProjectViewState">
-    <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showLibraryContents" value="true" />
-  </component>
   <component name="PropertiesComponent">
-    <property name="ASKED_ADD_EXTERNAL_FILES" value="true" />
-    <property name="DatabaseDriversLRU" value="mysql" />
-    <property name="DefaultHtmlFileTemplate" value="HTML File" />
-    <property name="ExpandSpringBootJavaOptionsPanel" value="true" />
     <property name="RequestMappingsPanelOrder0" value="0" />
     <property name="RequestMappingsPanelOrder1" value="1" />
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
-    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
-    <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
-    <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="aspect.path.notification.shown" value="true" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/../竞赛信息系统/hnucisys/src/main/java/com/codeslogan/controller/CptMngController.java" />
-    <property name="node.js.detected.package.eslint" value="true" />
-    <property name="node.js.detected.package.tslint" value="true" />
-    <property name="node.js.selected.package.eslint" value="(autodetect)" />
-    <property name="node.js.selected.package.tslint" value="(autodetect)" />
-    <property name="nodejs_package_manager_path" value="npm" />
-    <property name="project.structure.last.edited" value="Modules" />
-    <property name="project.structure.proportion" value="0.0" />
-    <property name="project.structure.side.proportion" value="0.0" />
-    <property name="settings.editor.selected.configurable" value="MavenSettings" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/CptMng" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
       <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\templates\CptMng" />
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\static\js" />
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\static\css" />
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\templates" />
-    </key>
-    <key name="MoveFile.RECENT_KEYS">
-      <recent name="D:\Code\java\Springboot\hnucisys\src\main\resources\templates\CptMng" />
-      <recent name="D:\Project\Java\cisys\hnucisys\database" />
-      <recent name="C:\Users\86189\Desktop\hnucisys\src\main\resources\static\css" />
-      <recent name="C:\Users\86189\Desktop\hnucisys\src\main\resources\static\image" />
-    </key>
-    <key name="CopyClassDialog.RECENTS_KEY">
-      <recent name="com.codeslogan.pojo" />
     </key>
   </component>
-  <component name="RunManager" selected="Spring Boot.HnucisysApplication">
-    <configuration name="HnucisysApplicationTests" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
-      <module name="hnucisys" />
-      <extension name="coverage">
-        <pattern>
-          <option name="PATTERN" value="com.codeslogan.*" />
-          <option name="ENABLED" value="true" />
-        </pattern>
-      </extension>
-      <option name="PACKAGE_NAME" value="com.codeslogan" />
-      <option name="MAIN_CLASS_NAME" value="com.codeslogan.HnucisysApplicationTests" />
+  <component name="RunManager">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
+      <option name="arquillianRunConfiguration">
+        <value>
+          <option name="containerStateName" value="" />
+        </value>
+      </option>
       <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <configuration name="HnucisysApplicationTests.selectCompetition" type="JUnit" factoryName="JUnit" temporary="true" nameIsGenerated="true">
+    <configuration name="HnucisysApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot" temporary="true" nameIsGenerated="true">
       <module name="hnucisys" />
       <extension name="coverage">
         <pattern>
@@ -117,171 +78,21 @@
           <option name="ENABLED" value="true" />
         </pattern>
       </extension>
-      <option name="PACKAGE_NAME" value="com.codeslogan" />
-      <option name="MAIN_CLASS_NAME" value="com.codeslogan.HnucisysApplicationTests" />
-      <option name="METHOD_NAME" value="selectCompetition" />
-      <option name="TEST_OBJECT" value="method" />
-      <method v="2">
-        <option name="Make" enabled="true" />
-      </method>
-    </configuration>
-    <configuration name="findmate.html (1)" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hnucisys/templates/findmate.html?_ij_reload" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="findmate.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hnucisys/templates/findmate.html?_ij_reload" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="mypage.html" type="JavascriptDebugType" temporary="true" nameIsGenerated="true" uri="http://localhost:63342/hnucisys/templates/mypage.html?_ij_reload" useBuiltInWebServerPort="true">
-      <method v="2" />
-    </configuration>
-    <configuration name="HnucisysApplication" type="SpringBootApplicationConfigurationType" factoryName="Spring Boot">
-      <module name="hnucisys" />
       <option name="SPRING_BOOT_MAIN_CLASS" value="com.codeslogan.HnucisysApplication" />
-      <option name="ALTERNATIVE_JRE_PATH_ENABLED" value="true" />
-      <option name="ALTERNATIVE_JRE_PATH" value="1.8" />
-      <option name="SHORTEN_COMMAND_LINE" value="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
     </configuration>
-    <list>
-      <item itemvalue="JavaScript 调试.findmate.html" />
-      <item itemvalue="JavaScript 调试.findmate.html (1)" />
-      <item itemvalue="JavaScript 调试.mypage.html" />
-      <item itemvalue="JUnit.HnucisysApplicationTests.selectCompetition" />
-      <item itemvalue="JUnit.HnucisysApplicationTests" />
-      <item itemvalue="Spring Boot.HnucisysApplication" />
-    </list>
     <recent_temporary>
       <list>
-        <item itemvalue="JUnit.HnucisysApplicationTests" />
-        <item itemvalue="JUnit.HnucisysApplicationTests.selectCompetition" />
+        <item itemvalue="Spring Boot.HnucisysApplication" />
       </list>
     </recent_temporary>
   </component>
-  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
   <component name="TaskManager">
-    <task active="true" id="Default" summary="Default task">
-      <changelist id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="" />
-      <created>1638717528245</created>
-      <option name="number" value="Default" />
-      <option name="presentableId" value="Default" />
-      <updated>1638717528245</updated>
-      <workItem from="1638717530102" duration="7855000" />
-      <workItem from="1638758428969" duration="5135000" />
-      <workItem from="1638776934839" duration="4608000" />
-      <workItem from="1638854224446" duration="1967000" />
-      <workItem from="1638876768666" duration="8427000" />
-      <workItem from="1638921496267" duration="4385000" />
-      <workItem from="1638971121645" duration="6269000" />
-      <workItem from="1639041233116" duration="1769000" />
-      <workItem from="1639058487305" duration="5649000" />
-      <workItem from="1639108144196" duration="2704000" />
-      <workItem from="1639185603233" duration="36000" />
-      <workItem from="1639213357427" duration="1522000" />
-      <workItem from="1639217291893" duration="703000" />
-      <workItem from="1639280207558" duration="861000" />
-      <workItem from="1639359807728" duration="3321000" />
-      <workItem from="1639445188935" duration="25000" />
-      <workItem from="1639462569522" duration="2762000" />
-      <workItem from="1639542764091" duration="3124000" />
-      <workItem from="1639558552860" duration="5154000" />
-      <workItem from="1639567102418" duration="4044000" />
-      <workItem from="1639571733933" duration="1264000" />
-      <workItem from="1639573014595" duration="338000" />
-    </task>
-    <task id="LOCAL-00001" summary="123">
-      <created>1639063037854</created>
-      <option name="number" value="00001" />
-      <option name="presentableId" value="LOCAL-00001" />
-      <option name="project" value="LOCAL" />
-      <updated>1639063037854</updated>
-    </task>
-    <task id="LOCAL-00002" summary="123">
-      <created>1639063730370</created>
-      <option name="number" value="00002" />
-      <option name="presentableId" value="LOCAL-00002" />
-      <option name="project" value="LOCAL" />
-      <updated>1639063730370</updated>
-    </task>
-    <task id="LOCAL-00003" summary="123">
-      <created>1639064031568</created>
-      <option name="number" value="00003" />
-      <option name="presentableId" value="LOCAL-00003" />
-      <option name="project" value="LOCAL" />
-      <updated>1639064031568</updated>
-    </task>
-    <task id="LOCAL-00004" summary="增加首页背景图">
-      <created>1639323193337</created>
-      <option name="number" value="00004" />
-      <option name="presentableId" value="LOCAL-00004" />
-      <option name="project" value="LOCAL" />
-      <updated>1639323193337</updated>
-    </task>
-    <task id="LOCAL-00005" summary="管理员、用户登录入口差异化">
-      <created>1639545044827</created>
-      <option name="number" value="00005" />
-      <option name="presentableId" value="LOCAL-00005" />
-      <option name="project" value="LOCAL" />
-      <updated>1639545044827</updated>
-    </task>
-    <task id="LOCAL-00006" summary="增加后台增删改查">
-      <created>1639571400491</created>
-      <option name="number" value="00006" />
-      <option name="presentableId" value="LOCAL-00006" />
-      <option name="project" value="LOCAL" />
-      <updated>1639571400491</updated>
-    </task>
-    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
-  <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="3" />
-  </component>
   <component name="Vcs.Log.Tabs.Properties">
-    <option name="TAB_STATES">
-      <map>
-        <entry key="MAIN">
-          <value>
-            <State>
-              <option name="CUSTOM_BOOLEAN_PROPERTIES">
-                <map>
-                  <entry key="Show.Git.Branches" value="true" />
-                </map>
-              </option>
-              <option name="FILTERS">
-                <map>
-                  <entry key="branch">
-                    <value>
-                      <list>
-                        <option value="origin/dev" />
-                      </list>
-                    </value>
-                  </entry>
-                </map>
-              </option>
-            </State>
-          </value>
-        </entry>
-      </map>
-    </option>
     <option name="oldMeFiltersMigrated" value="true" />
-  </component>
-  <component name="VcsManagerConfiguration">
-    <MESSAGE value="123" />
-    <MESSAGE value="增加首页背景图" />
-    <MESSAGE value="管理员、用户登录入口差异化" />
-    <MESSAGE value="增加后台增删改查" />
-    <option name="LAST_COMMIT_MESSAGE" value="增加后台增删改查" />
-  </component>
-  <component name="XDebuggerManager">
-    <breakpoint-manager>
-      <breakpoints>
-        <breakpoint enabled="true" type="java-exception">
-          <properties class="java.lang.ExceptionInInitializerError" package="java.lang" />
-          <option name="timeStamp" value="1" />
-        </breakpoint>
-      </breakpoints>
-    </breakpoint-manager>
   </component>
 </project>

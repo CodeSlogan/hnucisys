@@ -20,11 +20,28 @@ public class CptMngController {
         model.addAttribute("cpt",competition);
         return "CptMng/update";
     }
-    @RequestMapping("updateCpt")
+    @RequestMapping("/updateCpt")
     public String updateCompetition(Competition competition){       //先删除再保存
         competitionService.delCompetitionById(competition.getCptId());
         competitionService.save(competition);
-        return "2" ;
+        System.out.println("debug================================================>");
+        return "redirect:/tocpt" ;
+    }
+    @RequestMapping("/delCpt/{cptId}")
+    public String delCompetition (@PathVariable int cptId, Model model){
+        competitionService.delCompetitionById(cptId);
+        return "redirect:/tocpt";
     }
 
-}
+    @RequestMapping("/toAddCpt")
+    public String addCompetition(){
+        return "CptMng/add";
+    }
+
+    @RequestMapping("/submitCpt")
+    public String submitCompetition(Competition competition){
+        competitionService.save(competition);
+        return "redirect:/tocpt";
+    }
+
+    }
