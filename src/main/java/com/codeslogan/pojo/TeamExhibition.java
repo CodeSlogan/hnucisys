@@ -1,7 +1,5 @@
 package com.codeslogan.pojo;
 
-import javafx.application.Application;
-import javafx.stage.Stage;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;

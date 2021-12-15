@@ -2,6 +2,7 @@ package com.codeslogan.controller;
 
 import com.codeslogan.mapper.UserMapper;
 import com.codeslogan.pojo.User;
+import com.codeslogan.service.CompetitionService;
 import com.codeslogan.service.UserService;
 import org.apache.shiro.SecurityUtils;
 import org.apache.shiro.authc.IncorrectCredentialsException;
@@ -16,12 +17,16 @@ import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpSession;
+import java.util.Collection;
 
 @Controller
 public class LoginController {
 
     @Autowired
     UserService userService;
+
+    @Autowired
+    CompetitionService competitionService;
 
 
     @RequestMapping({"/signup"})
@@ -36,6 +41,7 @@ public class LoginController {
 
     @RequestMapping("/login")
     public String login(String username, String password, Model model, HttpServletRequest request) {
+
         //获取当前的用户
         Subject subject = SecurityUtils.getSubject();
 
@@ -48,7 +54,13 @@ public class LoginController {
             User user = (User) SecurityUtils.getSubject().getPrincipal();
             HttpSession session = request.getSession();
             session.setAttribute("user", user);
-            return "redirect:/index";
+            if (user.getPerms() == "user")
+                return "redirect:/index";
+            else{
+
+                return "redirect:/tocpt";
+            }
+
         } catch (UnknownAccountException e) {//用户名不存在
             model.addAttribute("msg", "用户名不存在");
             return "login";
