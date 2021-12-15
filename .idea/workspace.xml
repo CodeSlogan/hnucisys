@@ -4,11 +4,7 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="修改首页bug">
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/CptMngController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/CptMngController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" afterDir="false" />
-    </list>
+    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="修改首页bug" />
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
     <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
@@ -35,6 +31,7 @@
     <property name="RequestMappingsPanelWidth0" value="75" />
     <property name="RequestMappingsPanelWidth1" value="75" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$/src/main/resources/templates/CptMng" />
+    <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
     <key name="CopyFile.RECENT_KEYS">
@@ -80,7 +77,19 @@
       <map>
         <entry key="MAIN">
           <value>
-            <State />
+            <State>
+              <option name="FILTERS">
+                <map>
+                  <entry key="branch">
+                    <value>
+                      <list>
+                        <option value="origin/dev" />
+                      </list>
+                    </value>
+                  </entry>
+                </map>
+              </option>
+            </State>
           </value>
         </entry>
       </map>
