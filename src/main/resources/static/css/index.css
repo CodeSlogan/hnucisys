@@ -377,6 +377,9 @@ a {
     margin-bottom: 15px;
 
 }
+.box-bd .liteam li{
+    height:300px;
+}
 
 .box-bd ul li > img {
     width: 100%;
@@ -517,11 +520,45 @@ textarea {
 
 #showTe {
     background-color: #c1e2f8;
-    position: relative;
-    left: 50%;
-    top: 50%;
+    position: absolute;
+    margin:auto;
+    width:200px;
+    height:100px;
     z-index: 6;
     display: none;
 }
+#showTe button{
+    margin-left: 50px;
+}
 
+.box-bd .clearfix .mate li{
+    display: inline;
+    width: 30px;
+    height: 12px;
+    padding:0;
+    margin:0;
+}
+.creatTeam{
+    position: relative;
+    background-color: #f3f5f7;
+    border: none;
+    font-size: 20px;
+    color: #494949;
+    text-align: center;
+    margin-left: 20px;
+    text-decoration: none;
+    cursor: pointer;
+    font-weight: bold;
+    vertical-align: center;
+}
+
+#showIn{
+    background-color: #c1e2f8;
+    position: relative;
+    margin:auto;
+    width:200px;
+    height:200px;
+    z-index: 6;
+    display: none;
+}
 
