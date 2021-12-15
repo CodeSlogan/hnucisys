@@ -35,7 +35,7 @@ public class CptMngController {
 
     @RequestMapping("/toAddCpt")
     public String addCompetition(){
-        return "CptMng/add";
+            return "CptMng/add";
     }
 
     @RequestMapping("/submitCpt")
@@ -44,4 +44,4 @@ public class CptMngController {
         return "redirect:/tocpt";
     }
 
-    }
+}
