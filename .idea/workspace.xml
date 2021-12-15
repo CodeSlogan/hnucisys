@@ -4,13 +4,8 @@
     <option name="autoReloadType" value="SELECTIVE" />
   </component>
   <component name="ChangeListManager">
-    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="管理员、用户登录入口差异化">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/CptMngController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/update.html" afterDir="false" />
+    <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="增加后台增删改查">
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/IndexController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/LoginController.java" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -191,7 +186,9 @@
       <workItem from="1639462569522" duration="2762000" />
       <workItem from="1639542764091" duration="3124000" />
       <workItem from="1639558552860" duration="5154000" />
-      <workItem from="1639567102418" duration="3742000" />
+      <workItem from="1639567102418" duration="4044000" />
+      <workItem from="1639571733933" duration="1264000" />
+      <workItem from="1639573014595" duration="338000" />
     </task>
     <task id="LOCAL-00001" summary="123">
       <created>1639063037854</created>
@@ -228,7 +225,14 @@
       <option name="project" value="LOCAL" />
       <updated>1639545044827</updated>
     </task>
-    <option name="localTasksCounter" value="6" />
+    <task id="LOCAL-00006" summary="增加后台增删改查">
+      <created>1639571400491</created>
+      <option name="number" value="00006" />
+      <option name="presentableId" value="LOCAL-00006" />
+      <option name="project" value="LOCAL" />
+      <updated>1639571400491</updated>
+    </task>
+    <option name="localTasksCounter" value="7" />
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
@@ -267,7 +271,8 @@
     <MESSAGE value="123" />
     <MESSAGE value="增加首页背景图" />
     <MESSAGE value="管理员、用户登录入口差异化" />
-    <option name="LAST_COMMIT_MESSAGE" value="管理员、用户登录入口差异化" />
+    <MESSAGE value="增加后台增删改查" />
+    <option name="LAST_COMMIT_MESSAGE" value="增加后台增删改查" />
   </component>
   <component name="XDebuggerManager">
     <breakpoint-manager>
