@@ -47,27 +47,12 @@
     </div>
     <!--下划线-->
     <div class="line"></div>
+
+<!--    图片-->
+    <img class="pic"  src="http://cdn4.52jingsai.com/211102/20211102111503820.jpg" alt="我爱竞赛网校园大使精英社招募令">
+
     <!--信息-->
-    <div class="w infor">
-        <h1> 大标题</h1>
-        <h2 id="1">竞赛信息</h2>
-        <h3>竞赛介绍</h3>
-        <p>#</p>
-        <h3>一.组织机构</h3>
-        <p>#</p>
-        <h3>二.参赛对象</h3>
-        <p>#</p>
-        <h3>三.参赛形式,规则和纪律</h3>
-        <p>#</p>
-        <h3>四.时间及具体安排</h3>
-        <p>#</p>
-        <h3>五.评测标准</h3>
-        <p>#</p>
-        <h3>六.大赛奖励</h3>
-        <p>#</p>
-        <h3>七.参赛费用</h3>
-        <p>#</p>
-        <h2 id="2">招募信息</h2>
+    <div class="w infor" th:text="${cptContent.getContent()}">
 
     </div>
 </body>

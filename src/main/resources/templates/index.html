@@ -97,7 +97,8 @@
                     <img src="/image/hot.png" alt="">
                 </em>
                 <img src="#" alt="">
-                <p><span style="font-size: medium" th:text="${cpt.getName()}">Sebastian</span></p>
+<!--                <p><span style="font-size: medium" th:text="${cpt.getName()}">Sebastian</span></p>-->
+                <a th:href = "@{'/detail/' + ${cpt.getCptId()}}" th:text="${cpt.getName()}"></a>
                 <h4 th:text="'报名截止时间：'+${#calendars.format(cpt.getTime(),'yyyy-MM-dd')}"></h4>
                 <h4 th:text="'推荐指数：'+${cpt.getEvaluation()}" ></h4>
                 <h4 th:text="'分类：'+${cpt.getCategory()}"></h4>
