@@ -49,8 +49,9 @@
     <div class="line"></div>
 
 <!--    图片-->
-    <img class="pic"  src="http://cdn4.52jingsai.com/211102/20211102111503820.jpg" alt="我爱竞赛网校园大使精英社招募令">
+    <img class="pic"  th:src="${cpt.getUrl()}" th:alt="${cpt.getName()}">
 
+<!--    -->
     <!--信息-->
     <div class="w infor" th:text="${cptContent.getContent()}">
 

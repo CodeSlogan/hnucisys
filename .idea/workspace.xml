@@ -5,17 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="51d9b65f-c0a7-4d89-94b4-11a5de30ef5c" name="Changes" comment="修改首页bug">
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/DetailController.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/mapper/CptContentMapper.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/CptContentService.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/service/CptContentServiceImpl.java" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/mapper/CptContentMapper.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/application.yml" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/application.yml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CptMng/add.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/add.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/list.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/CptMng/update.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/CptMng/update.html" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/DetailController.java" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/java/com/codeslogan/controller/DetailController.java" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/resources/templates/detail.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/detail.html" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/resources/templates/index.html" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/resources/templates/index.html" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -106,7 +97,7 @@
       <option name="presentableId" value="Default" />
       <updated>1639621000480</updated>
       <workItem from="1639621007356" duration="929000" />
-      <workItem from="1639720643455" duration="6425000" />
+      <workItem from="1639720643455" duration="8407000" />
     </task>
     <servers />
   </component>
