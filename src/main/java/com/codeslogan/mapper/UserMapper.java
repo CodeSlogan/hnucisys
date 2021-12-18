@@ -20,6 +20,8 @@ public interface UserMapper {
     //查找等级大于等于grade的队友
     public Collection<User> queryMatesByGrade(int grade);
 
+    //查找属于同一个队伍的成员
+    public Collection<User> queryTeamUsersByTeamID(int id);
     //注册添加新用户
     public void AddUser(User user);
 }

@@ -18,7 +18,7 @@ public class User {
     private int userId;
     private String username;
     private String password;
-    private String url;
+    private String perms;
     private int grade;
     private String major;
     private int sex;

@@ -6,16 +6,28 @@
 <mapper namespace="com.codeslogan.mapper.UserMapper">
     <!--    查询语句 id相当与要重写的方法名-->
     <select id="queryUserByName" resultType="User" parameterType="String">
-        select * from hnucisys.User where username = #{username}
+        select *
+        from hnucisys.User
+        where username = #{username}
     </select>
 
     <select id="queryMatesByGrade" resultType="User" parameterType="int">
-        select * from hnucisys.User where grade >= #{grade}
+        select *
+        from hnucisys.User
+        where grade >= #{grade}
     </select>
 
-    <insert id="AddUser" parameterType="User" >
-        INSERT INTO hnucisys.user(username,PASSWORD,grade,major,sex,qq,introduction,createtime,updatetime,perms)
-        VALUES(#{username},#{password},#{grade},#{major},#{sex},#{qq},#{introduction},#{createtime},#{updatetime},'user');
+    <select id="queryTeamUsersByTeamID" resultType="User" parameterType="int">
+        select User.*
+        from hnucisys.User, hnucisys.team_user
+        where User.userid = team_user.userid and team_user.teamid = #{id}
+    </select>
+
+    <insert id="AddUser" parameterType="User">
+        INSERT INTO hnucisys.user(username, PASSWORD, grade, major, sex, qq, introduction, createtime, updatetime,
+                                  perms)
+        VALUES (#{username}, #{password}, #{grade}, #{major}, #{sex}, #{qq}, #{introduction}, #{createtime},
+                #{updatetime}, 'user');
     </insert>
 
 </mapper>

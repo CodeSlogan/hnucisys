@@ -7,6 +7,7 @@
     <title>Document</title>
     <title>寻找队友</title>
     <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script src="../static/js/findmatetext.js"></script>
 </head>
 <body>
 <div class="header w">
@@ -18,7 +19,6 @@
     <div class="nav">
         <ul>
             <li><a th:href="@{/index}">首页</a></li>
-            <li><a href="@{/detail}">竞赛管理</a></li>
             <li><a href="#">队友</a></li>
         </ul>
     </div>
@@ -55,31 +55,52 @@
                     <div class="info">
                         <span>高级</span> • 1125人浏览
                     </div>
-                    <button class="inviteBtn">邀请</button>
+                    <button class="inviteBtn" id="showBtn">邀请</button>
                 </li>
             </tr>
+            <div id="showTe">
+                <textarea rows="2" cols="20"></textarea>
+                <button class="inviteBtn">发送</button>
+            </div>
         </ul>
     </div>
 
     <div class="box-hd">
-        <h3>队伍推荐</h3>
+        <h3>队伍推荐
+            <button class="creatTeam" id="showH">创建队伍</button>
+        </h3>
         <a href="#">查看全部</a>
     </div>
     <div class="box-bd">
-        <ul class="clearfix">
-            <li>
-                <em>
-                    <img src="..static/image/hot.png" alt="">
-                </em>
-                <h4>队伍名称：</h4>
-                <h4>队伍成员：</h4>
-                <h4>队伍介绍：</h4>
-                <div class="info">
-                    <span>高级</span> • 1125人浏览
-                </div>
-                <button class="inviteBtn" >申请加入</button>
-            </li>
+        <ul class="clearfix liteam">
+            <tr th:each="team:${teams}">
+                <li>
+                    <em>
+                        <img src="..static/image/hot.png" alt="">
+                    </em>
+                    <h4 th:text="'队伍编号：'+${team.getTeamid()}"></h4>
+                    <h4 th:text="'队伍名称：'+${team.getTeamName()}"></h4>
+                    <h4 th:text="'比赛名称：'+${team.getName()}"></h4>
+                    <h4 class="mate">队伍成员:
+                        <ul>
+                            <li>sim</li>
+                            <li>li</li>
+                        </ul>
+                    </h4>
+                    <div class="info">
+                        <span>高级</span> • 1125人浏览
+                    </div>
+                    <button class="inviteBtn">加入</button>
+                </li>
+            </tr>
         </ul>
+        <div id="showIn">
+            <label>队伍编号</label><input type="text">
+            <label>队伍名称</label><input type="text">
+            <label>比赛名称</label><input type="text">
+            <label>队伍成员</label><input type="text">
+            <button class="inviteBtn">确定</button>
+        </div>
     </div>
 </div>
 </body>
