@@ -15,4 +15,9 @@ public class TeamServiceImpl implements TeamService{
     public Collection<TeamExhibition> queryTeamById(int teamid) {
         return teamMapper.queryTeamById(teamid);
     }
+
+    @Override
+    public Collection<TeamExhibition> queryAllTeam() {
+        return teamMapper.queryAllTeam();
+    }
 }

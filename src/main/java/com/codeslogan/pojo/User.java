@@ -26,5 +26,4 @@ public class User {
     private String introduction;
     private Date createtime;
     private Date updatetime;
-    private String perms;
 }

@@ -49,8 +49,7 @@
     <div class="line"></div>
 
 <!--    图片-->
-    <img class="pic"  th:src="${cpt.getUrl()}" th:alt="${cpt.getName()}">
-
+    <img th:src="${cpt.getUrl()}" th:alt="${cpt.getName()}">
 <!--    -->
     <!--信息-->
     <div class="w infor" th:text="${cptContent.getContent()}">

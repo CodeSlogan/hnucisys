@@ -10,4 +10,6 @@ import java.util.Collection;
 @Repository
 public interface TeamMapper {
     public Collection<TeamExhibition> queryTeamById(int teamid);
+
+    public Collection<TeamExhibition> queryAllTeam();
 }

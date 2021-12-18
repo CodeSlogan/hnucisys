@@ -55,29 +55,26 @@
 
 
 				<main role="main" class="col-md-9 ml-sm-auto col-lg-10 pt-3 px-4">
-					<h2><a class="btn btn-sm btn-success" th:href="@{/toAddCpt}">添加竞赛</a></h2>
 					<div class="table-responsive">
 						<table class="table table-striped table-sm">
 							<thead>
 							<tr>
+								<th>队伍id</th>
+								<th>队伍名称</th>
 								<th>比赛名称</th>
-								<th>比赛分类</th>
-								<th>重要等级</th>
-								<th>上传时间</th>
 								<th></th>
 								<th></th>
 
 							</tr>
 							</thead>
 							<tbody>
-								<tr th:each="cpt:${cpts}">
-								<td th:text="${cpt.getName()}"></td>
-								<td th:text="${cpt.getCategory()}"></td>
-								<td th:text="${cpt.getEvaluation()}"></td>
-								<td th:text="${#dates.format(cpt.getCreateTime(),'yyyy-MM-dd HH:mm:ss')}"></td>
+								<tr th:each="tm:${team}">
+								<td th:text="${tm.getTeamid()}"></td>
+								<td th:text="${tm.getTeamName()}"></td>
+								<td th:text="${tm.getName()}"></td>
+<!--								<td th:text="${tm.getTeamUsers().size()}"></td>-->
 								<td>
-									<a class="btn btn-sm btn-primary" th:href="@{'/cptMng/'+${cpt.getCptId()}}">编辑</a>
-									<a class="btn btn-sm btn-danger" th:href="@{'/delCpt/'+${cpt.getCptId()}}">删除</a>
+
 								</td>
 
 							</tr>
