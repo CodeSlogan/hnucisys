@@ -18,6 +18,8 @@ public class CptMngController {
     public String editCompetition (@PathVariable int cptId, Model model){
         Competition competition = competitionService.getCompetitionById(cptId);
         model.addAttribute("cpt",competition);
+        model.addAttribute("active","cpt");
+
         return "CptMng/update";
     }
     @RequestMapping("/updateCpt")
@@ -34,8 +36,9 @@ public class CptMngController {
     }
 
     @RequestMapping("/toAddCpt")
-    public String addCompetition(){
-            return "CptMng/add";
+    public String addCompetition(Model model){
+        model.addAttribute("active","cpt");
+        return "CptMng/add";
     }
 
     @RequestMapping("/submitCpt")

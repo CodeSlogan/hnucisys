@@ -6,4 +6,7 @@ import java.util.Collection;
 
 public interface TeamService {
     public Collection<TeamExhibition> queryTeamById(int teamid);
+
+    public Collection<TeamExhibition> queryAllTeam();
+
 }
