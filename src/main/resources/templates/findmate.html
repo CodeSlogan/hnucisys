@@ -7,7 +7,8 @@
     <title>Document</title>
     <title>寻找队友</title>
     <link rel="stylesheet" th:href="@{/css/index.css}">
-    <script src="../static/js/findmatetext.js"></script>
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/findmatetext.js"></script>
 </head>
 <body>
 <div class="header w">
@@ -90,7 +91,7 @@
                     <div class="info">
                         <span>高级</span> • 1125人浏览
                     </div>
-                    <button class="inviteBtn">加入</button>
+                    <button th:teamid="${team.getTeamid()}" class="joinBtn inviteBtn">加入</button>
                 </li>
             </tr>
         </ul>

@@ -1,7 +1,9 @@
 package com.codeslogan;
 
 import com.codeslogan.mapper.CompetitionMapper;
+import com.codeslogan.mapper.TeamUserMapper;
 import com.codeslogan.pojo.Competition;
+import com.codeslogan.pojo.TeamUser;
 import com.codeslogan.service.UserService;
 import com.codeslogan.service.UserServiceImpl;
 import com.mysql.cj.Session;
@@ -20,7 +22,7 @@ class HnucisysApplicationTests {
     UserServiceImpl userService;
 
     @Autowired
-    CompetitionMapper competitionMapper;
+    TeamUserMapper teamUserMapper;
     @Autowired
     DataSource dataSource;
     @Test
@@ -43,5 +45,4 @@ class HnucisysApplicationTests {
     void test02(){
         System.out.println();
     }
-
 }

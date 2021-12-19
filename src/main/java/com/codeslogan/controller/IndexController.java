@@ -19,7 +19,7 @@ public class IndexController {
     @Autowired
     CompetitionService competitionService;
 
-    @RequestMapping({"/index","/"})
+    @RequestMapping({"/index","/","/index.html"})
     public String showIndex(Model model, HttpServletRequest request){
         Collection<Competition> competitions = competitionService.getAll(0,10);
         Collection<String> interests = competitionService.getCategory();

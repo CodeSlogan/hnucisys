@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.codeslogan.mapper.TeamUserMapper">
+    <!--查询所有的组队信息-->
+    <select id="queryAll" resultType="TeamUser" >
+        select * from hnucisys.team_user;
+    </select>
+
+    <!--根据队伍id查询组队信息-->
+    <select id="queryByTeamId" resultType="TeamUser" parameterType="int">
+        select * from hnucisys.team_user where teamid = #{teamId};
+    </select>
+
+    <!--根据用户id查询组队信息-->
+    <select id="queryByUserId" resultType="TeamUser" parameterType="int">
+        select * from hnucisys.team_user where userid = #{userId};
+    </select>
+
+    <!--插入组队信息-->
+    <insert id="save" parameterType="TeamUser">
+        insert into hnucisys.team_user(teamid, userid, role, createtime, updatetime)
+        values(#{teamId}, #{userId}, #{role}, #{createTime}, #{updateTime});
+    </insert>
+
+    <!--删除组队信息-->
+    <delete id="delTeamUserById" parameterType="int">
+        delete from hnucisys.team_user where tuid = #{tuId};
+    </delete>
+
+</mapper>
