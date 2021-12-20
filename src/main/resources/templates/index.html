@@ -22,7 +22,6 @@
     <div class="nav">
         <ul>
             <li><a th:href="@{/index}">首页</a></li>
-            <li><a th:href="@{/tocpt}">竞赛管理</a></li>
             <li><a th:href="@{/findmate}">队友</a></li>
         </ul>
     </div>
@@ -43,24 +42,32 @@
         <!-- 导航栏 -->
         <div class="subnav">
             <ul>
-                <li><a href="#" class="li1"># <span> &gt; </span></a></li>
-                <li><a href="#" class="li2"># <span> &gt; </span> </a></li>
-                <li><a href="#" class="li3"># <span> &gt; </span> </a></li>
-                <li><a href="#" class="li4"># <span> &gt; </span> </a></li>
-                <li><a href="#" class="li5"># <span> &gt; </span> </a></li>
-                <li><a href="#" class="li6"># <span> > </span> </a></li>
-                <li><a href="#" class="li7"># <span> &gt; </span> </a></li>
-                <li><a href="#" class="li8"># <span> &gt; </span> </a></li>
-                <li><a href="#" class="li9"># <span> &gt; </span> </a></li>
+                <li><a href="#" class="li1">商业创业 <span> &gt; </span></a></li>
+                <li><a href="#" class="li2">兴趣爱好 <span> &gt; </span> </a></li>
+                <li><a href="#" class="li3">广告公益 <span> &gt; </span> </a></li>
+                <li><a href="#" class="li4">科技创新 <span> &gt; </span> </a></li>
+                <li><a href="#" class="li5">学科技能 <span> &gt; </span> </a></li>
+                <li><a href="#" class="li6">其他比赛 <span> > </span> </a></li>
+                <li><a href="#" class="li7">公益征集 <span> &gt; </span> </a></li>
+                <li><a href="#" class="li8">青年机遇 <span> &gt; </span> </a></li>
+                <li><a href="#" class="li9">期末冲刺 <span> &gt; </span> </a></li>
             </ul>
         </div>
         <!--轮番图-->
         <div class="banner">
             <!--无序列表承载轮播的图片-->
             <ul class="img" >
+                <li><a href="http://www.nciecc.com/words.php" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Spencer6-7/tupic/202112191308671.png"/></a></li>
+                <li><a href="http://data.sd.gov.cn/cmpt/sd/home.html" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Spencer6-7/tupic/202112191309545.png"/></a></li>
+                <li><a href="http://www.aids0.com/index.php" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Spencer6-7/tupic/202112191311261.png"/></a></li>
+                <li><a href="http://www.52jingsai.com/article-15846-1.html" target="_blank"><img src="http://cdn4.52jingsai.com/211214/20211214142307610.png" alt="期末帮"></a></li>
+                <li><a href="http://data.sd.gov.cn/cmpt/sd/home.html" target="_blank"><img src="http://cdn4.52jingsai.com/211217/20211217140621243.png" alt="DC"></a></li>
+                <li><a href="http://www.52jingsai.com/article-11144-1.html" target="_blank"><img src="http://cdn4.52jingsai.com/211201/20211201163458606.gif" alt="7天新媒体实训营"></a></li>
+                <!--
                 <li><a href="http://www.52jingsai.com/article-15568-1.html" target="_blank"><img class="pic" src="http://cdn4.52jingsai.com/211102/20211102111503820.jpg" alt="我爱竞赛网校园大使精英社招募令"></a></li>
                 <li><a href="http://www.52jingsai.com/article-14940-1.html" target="_blank"><img class="pic" src="http://cdn4.52jingsai.com/211111/20211111154925830.jpg" alt="2021年第三届全国高校创新英语翻译赛"></a></li>
                 <li><a href="http://www.52jingsai.com/article-15030-1.html" target="_blank"><img class="pic" src="http://cdn4.52jingsai.com/210902/20210902165016555.jpg" alt="第三届全国大学生语言文字能力大赛"></a></li>
+                -->
             </ul>
             <!--用来放置圆点具体实施在js代码中呈现-->
             <ul class="num"></ul>
@@ -93,15 +100,17 @@
     </div>
     <div class="box-bd">
         <ul class="clearfix" >
-            <li th:each="cpt : ${cpts}">
+            <li th:each="cpt : ${cpts}" class="cptrecd">
                 <em>
-                    <img src="/image/hot.png" alt="">
+                    <img src="/image/hot.png">
                 </em>
                 <img src="#" alt="">
-                <p><span style="font-size: medium" th:text="${cpt.getName()}">Sebastian</span></p>
-                <h4 th:text="'报名截止时间：'+${#calendars.format(cpt.getTime(),'yyyy-MM-dd')}"></h4>
-                <h4 th:text="'推荐指数：'+${cpt.getEvaluation()}" ></h4>
-                <h4 th:text="'分类：'+${cpt.getCategory()}"></h4>
+                <a class="hd" th:href = "@{'/detail/' + ${cpt.getCptId()}}" th:text="${cpt.getName()}"></a>
+                <div class="ct">
+                    <h4 th:text="'报名截止时间：'+${#calendars.format(cpt.getTime(),'yyyy-MM-dd')}"></h4>
+                    <h4 th:text="'推荐指数：'+${cpt.getEvaluation()}" ></h4>
+                    <h4 th:text="'分类：'+${cpt.getCategory()}"></h4>
+                </div>
                 <div class="info">
                     <span>高级</span> • 1125人关注
                 </div>

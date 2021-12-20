@@ -2,6 +2,7 @@ package com.codeslogan.service;
 
 import java.util.List;
 import com.codeslogan.pojo.Competition;
+import org.springframework.stereotype.Service;
 
 /**
  * @Author: codeslogan

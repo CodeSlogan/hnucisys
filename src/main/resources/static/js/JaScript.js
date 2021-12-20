@@ -34,7 +34,7 @@ $(function(){
         }else{
             $('.num li').eq(i).addClass('active').siblings().removeClass('active');
         }
-    },1000);
+    },1500);
     //鼠标移入，暂停自动播放，移出，开始自动播放
     $('.banner').hover(function(){
         clearInterval(timer);
