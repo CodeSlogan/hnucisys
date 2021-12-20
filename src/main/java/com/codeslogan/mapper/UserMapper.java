@@ -5,6 +5,7 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
+import java.util.List;
 
 /**
  * @Author: codeslogan
@@ -24,4 +25,17 @@ public interface UserMapper {
     public Collection<User> queryTeamUsersByTeamID(int id);
     //注册添加新用户
     public void AddUser(User user);
+
+    // 根据Id查询用户
+    public User queryUserById(int id);
+
+    // 根据id删除用户
+    public int delUserById(int id);
+
+    // 查询出所有的用户
+    public List<User> queryAllUser();
+
+    // 后台保存用户
+    int saveUser(User user);
+
 }

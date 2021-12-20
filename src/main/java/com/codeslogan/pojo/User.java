@@ -3,6 +3,7 @@ package com.codeslogan.pojo;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
+import org.springframework.format.annotation.DateTimeFormat;
 
 import java.util.Date;
 
@@ -24,6 +25,8 @@ public class User {
     private int sex;
     private String qq;
     private String introduction;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date createtime;
+    @DateTimeFormat(pattern = "yyyy-MM-dd")
     private Date updatetime;
 }
