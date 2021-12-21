@@ -21,6 +21,10 @@ window.onload = function () {
 $(document).ready(function () {
     $(".joinBtn").click(function (e) {
         let target = $(e.currentTarget);
+        var r = confirm("确认加入？");
+        if (r !== true) {
+            return;
+        }
         $.ajax({
             type: "GET",
             url: "jointeam/" + target.attr("teamid"),
@@ -36,20 +40,28 @@ $(document).ready(function () {
             }
         })
     })
+
+    $('.invBtn').click(function (e) {
+        let target = $(e.currentTarget);
+        var userId = target.attr("userId");
+
+        $.ajax({
+            type: "POST",
+            url: "/invitemate",
+            dataType: "json",
+            data: JSON.stringify(userId),
+            contentType: "application/json",
+            success: function (data) {
+                console.log(data)
+            },
+            error: function (e) {
+                console.log(e)
+            }
+        })
+    })
 })
 
-$("#renameClick").click(function (e) {
-    e.stopPropagation();   // 阻止冒泡
-    $('#back').css("display", "block");   // 显示
-    $("#showRename").css("display", "block");
-
-    $("#back").bind("click", function (e) {   // 相当于点击空白消失
-        $('#back').css("display", "none");
-        $("#showRename").css("display", "none");
-    });
-});
-
-function invitationConfirm(){
+function invitationConfirm() {
     var r = confirm("邀请确认？")
     if (r == true) {
 
