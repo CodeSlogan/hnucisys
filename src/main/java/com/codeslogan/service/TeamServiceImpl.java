@@ -20,4 +20,9 @@ public class TeamServiceImpl implements TeamService{
     public Collection<TeamExhibition> queryAllTeam() {
         return teamMapper.queryAllTeam();
     }
+
+    @Override
+    public int createNewTeam(Team team) {
+        return teamMapper.createNewTeam(team);
+    }
 }
