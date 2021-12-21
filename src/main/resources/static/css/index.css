@@ -318,6 +318,14 @@ a {
     color: #00a4ff;
 }
 
+.goods .nav-link-active {
+    color: #00a4ff;
+}
+
+.goods .nav-link {
+    color: #333333;
+}
+
 .goods ul {
     float: left;
     margin-left: 30px;
