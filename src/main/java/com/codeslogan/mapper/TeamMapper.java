@@ -12,4 +12,6 @@ public interface TeamMapper {
     public Collection<TeamExhibition> queryTeamById(int teamid);
 
     public Collection<TeamExhibition> queryAllTeam();
+
+    public int createNewTeam(Team team);
 }
