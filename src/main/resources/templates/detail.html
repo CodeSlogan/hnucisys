@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>详情页</title>
-    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/detail.css}">
 </head>
 <body>
     <!-- 1.头部区域开始啦 -->
@@ -34,7 +34,10 @@
     <!--下划线-->
     <div class="line"></div>
     <!--竞赛大图-->
-    <div class="w picture"></div>
+    <div class="w picture">
+        <!--    图片-->
+        <img th:src="${cpt.getUrl()}" th:alt="${cpt.getName()}">
+    </div>
     <!--下划线-->
     <div class="line"></div>
     <!--信息选择-->
@@ -48,8 +51,7 @@
     <!--下划线-->
     <div class="line"></div>
 
-<!--    图片-->
-    <img th:src="${cpt.getUrl()}" th:alt="${cpt.getName()}">
+
 <!--    -->
     <!--信息-->
     <div class="w infor" th:text="${cptContent.getContent()}">
