@@ -83,7 +83,7 @@ body {
 
 .login a {
     overflow: hidden;
-    left: 30%;
+    position: relative;
     padding: 10px 20px;
     color: #03e9f4;
     /* 取消a表现原有的下划线 */
@@ -113,6 +113,9 @@ body {
     position: absolute;
 }
 
+.login a span {
+    position: absolute;
+}
 /*.login a span:first-child {*/
 .first{
     top: 0;
