@@ -34,6 +34,10 @@
     <div class="user">
         <a th:href="@{/mypage}"> 我的主页</a>
     </div>
+
+    <div class="user">
+        <a th:href="@{/news}" target="_blank"><img src="image/bell.jpg" alt="消息"></a>
+    </div>
 </div>
 <!-- 头部区域结束啦 -->
 <!-- 2. banner部分start -->
@@ -86,7 +90,7 @@
     <h3>比赛分类</h3>
     <ul>
         <li th:each="interest : ${interests}">
-            <a th:href = "@{'/index/'+ ${interest}}" th:text="${interest}"></a>
+            <a th:class="${active == interest? 'nav-link-active':'nav-link'}" th:href = "@{'/index/'+ ${interest}}" th:text="${interest}"></a>
         </li>
     </ul>
     <a href="#" class="mod">修改兴趣</a>
