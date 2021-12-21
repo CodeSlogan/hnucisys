@@ -9,6 +9,7 @@
     <link rel="stylesheet" th:href="@{/css/index.css}">
     <script src="/js/jquery-3.6.0.js"></script>
     <script src="/js/findmatetext.js"></script>
+
 </head>
 <body>
 <div class="header w">
@@ -39,7 +40,7 @@
         <a href="#">查看全部</a>
     </div>
     <div class="box-bd">
-        <ul class="clearfix">
+        <ul class="clearfix  liteam">
             <tr th:each="mate:${mates}">
                 <li>
                     <em>
@@ -61,7 +62,7 @@
             </tr>
             <div id="showTe">
                 <textarea rows="2" cols="20"></textarea>
-                <button class="inviteBtn">发送</button>
+                <button class="inviteBtn" id="sent">发送</button>
             </div>
         </ul>
     </div>
@@ -100,7 +101,7 @@
             <label>队伍名称</label><input type="text">
             <label>比赛名称</label><input type="text">
             <label>队伍成员</label><input type="text">
-            <button class="inviteBtn">确定</button>
+            <button class="inviteBtn" id="sure">确定</button>
         </div>
     </div>
 </div>

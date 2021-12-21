@@ -4,12 +4,17 @@ window.onload = function () {
     document.getElementById("showBtn").onclick = function () {
         document.getElementById("showTe").style.display = 'block';
     }
-}
-window.onload = function () {
+    document.getElementById("sent").onclick = function () {
+        document.getElementById("showTe").style.display = 'none';
+    }
     document.getElementById("showH").onclick = function () {
         document.getElementById("showIn").style.display = 'block';
     }
+    document.getElementById("sure").onclick = function () {
+        document.getElementById("showIn").style.display = 'none';
+    }
 }
+
 
 //加入功能
 

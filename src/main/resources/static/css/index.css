@@ -395,9 +395,8 @@ a {
 }
 
 
-.box-bd ul li>div{
+.box-bd ul li .info{
     width: 228px;
-    height: 120px;
     margin-bottom: 5px;
 }
 
@@ -541,10 +540,12 @@ textarea {
 }
 
 #showTe {
-    background-color: #c1e2f8;
-    position: absolute;
+    backface-visibility: hidden;
+    position:fixed;
+    top: 50%;
+    right: 50%;
     margin:auto;
-    width:200px;
+    width:300px;
     height:100px;
     z-index: 6;
     display: none;
@@ -573,13 +574,17 @@ textarea {
     font-weight: bold;
     vertical-align: center;
 }
-
+#showIn input{
+    display:block;
+}
 #showIn{
-    background-color: #c1e2f8;
-    position: relative;
+    backface-visibility: hidden;
+    position:fixed;
+    top: 50%;
+    right: 50%;
     margin:auto;
-    width:200px;
-    height:200px;
+    width:150px;
+    height:230px;
     z-index: 6;
     display: none;
 }
