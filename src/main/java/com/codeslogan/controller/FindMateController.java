@@ -70,7 +70,6 @@ public class FindMateController {
         String msg = "";
         //根据队伍Id查询数据
         Collection<TeamUser> teamUsers = teamUserService.queryByTeamId(teamId);
-
         //获取队长所在的队伍信息
         TeamUser teamLeader = teamUsers.iterator().next(); //如果没有队长，则为第一个成员
         for (TeamUser teamuser : teamUsers) {
