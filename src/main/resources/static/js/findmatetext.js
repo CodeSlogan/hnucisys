@@ -48,3 +48,12 @@ $("#renameClick").click(function (e) {
         $("#showRename").css("display", "none");
     });
 });
+
+function invitationConfirm(){
+    var r = confirm("邀请确认？")
+    if (r == true) {
+
+    } else {
+
+    }
+}
