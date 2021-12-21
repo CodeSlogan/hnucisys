@@ -34,6 +34,9 @@
     <div class="user">
         <a th:href="@{/mypage}"> 我的主页</a>
     </div>
+    <div class="user">
+        <a th:href="@{/news}" target="_blank"><img src="image/bell.jpg" alt="消息"></a>
+    </div>
 </div>
 <div class="box w">
     <div class="box-hd">
@@ -85,10 +88,9 @@
                     <h4 th:text="'队伍编号：'+${team.getTeamid()}"></h4>
                     <h4 th:text="'队伍名称：'+${team.getTeamName()}"></h4>
                     <h4 th:text="'比赛名称：'+${team.getName()}"></h4>
-                    <h4 class="mate">队伍成员:
+                    <h4 class="mate">
                         <ul>
-                            <li>sim</li>
-                            <li>li</li>
+                            <li th:each="individual:${team.getTeamUsers()}" th:text="'队员：' + ${individual.getUsername()}"></li>
                         </ul>
                     </h4>
                     <div class="info">
