@@ -56,7 +56,7 @@ a {
 
 
 .nav {
-    float: left;
+    /*float: left;*/
     margin-left: 60px;
 }
 
@@ -120,7 +120,7 @@ a {
 /* banner区域 */
 .banner1 {
     height: 420px;
-    background-image: url("/image/background.png");
+    background-image: url("../image/background.png");
 }
 
 /*轮番图css样式*/
@@ -220,12 +220,11 @@ a {
     display: none;
 }
 
-
 .subnav {
     float: left;
     width: 170px;
     height: 421px;
-    background: url("../image/indexbac.png") no-repeat;
+    background: url("../image/background.png") no-repeat;
 }
 
 .subnav ul li {

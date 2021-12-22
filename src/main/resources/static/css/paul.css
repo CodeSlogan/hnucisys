@@ -44,6 +44,7 @@ a{ color: #c40b00; }
     display: flex;
     list-style: none;
     flex-direction: column;
+    text-align: center;
 }
 .sidebar .nav a{
     color: #fff;
