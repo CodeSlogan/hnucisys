@@ -23,4 +23,10 @@ public interface TeamUserMapper {
 
     //通过tuid删除比赛信息
     int delTeamUserById(int tuId);
+
+    // tuid查对应信息
+    TeamUser queryBytuid(int tuid);
+
+    // 更新role
+    int updateRoleBytuid(int tuid);
 }

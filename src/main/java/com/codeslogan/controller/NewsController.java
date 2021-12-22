@@ -7,6 +7,7 @@ import com.codeslogan.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -49,8 +50,23 @@ public class NewsController {
         }
         model.addAttribute("users", zeroUsers);
 
-
         return "news";
+    }
+
+    @RequestMapping("/news/acceptMate/{tuid}")
+    public String acceptMate(@PathVariable int tuid) {
+
+        // 若接受，根据tuid更新role为1
+        teamUserService.updateRoleBytuid(tuid);
+        return "redirect:/news";
+    }
+
+    @RequestMapping("/news/refuseMate/{tuid}")
+    public String refuseMate(@PathVariable int tuid) {
+
+        // 若拒绝，直接删除这条记录
+        teamUserService.delTeamUserById(tuid);
+        return "redirect:/news";
     }
 
 }

@@ -1,5 +1,6 @@
 package com.codeslogan.service;
 
+import com.codeslogan.pojo.TeamUser;
 import com.codeslogan.pojo.User;
 import com.codeslogan.pojo.UserRole;
 

@@ -39,4 +39,14 @@ public class TeamUserServiceImpl implements TeamUserService{
     public int delTeamUserById(int tuId) {
         return delTeamUserById(tuId);
     }
+
+    @Override
+    public TeamUser queryBytuid(int tuid) {
+        return teamUserMapper.queryBytuid(tuid);
+    }
+
+    @Override
+    public int updateRoleBytuid(int tuid) {
+        return teamUserMapper.updateRoleBytuid(tuid);
+    }
 }
