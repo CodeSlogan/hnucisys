@@ -1,24 +1,22 @@
 //import "/static/js/jquery-3.6.0"
 
 window.onload = function () {
-    document.getElementById("showBtn").onclick = function () {
+/*    document.getElementById("invBtn1").onclick = function () {
         document.getElementById("showTe").style.display = 'block';
-    }
-    document.getElementById("sent").onclick = function () {
+    }*/
+/*    document.getElementById("sent").onclick = function () {
         document.getElementById("showTe").style.display = 'none';
-    }
-    document.getElementById("showH").onclick = function () {
-        document.getElementById("showIn").style.display = 'block';
-    }
+    }*/
     document.getElementById("sure").onclick = function () {
         document.getElementById("showIn").style.display = 'none';
     }
 }
 
-
-//加入功能
+var targetUserId = 0;
 
 $(document).ready(function () {
+
+    //加入功能
     $(".joinBtn").click(function (e) {
         let target = $(e.currentTarget);
         var r = confirm("确认加入？");
@@ -43,13 +41,29 @@ $(document).ready(function () {
 
     $('.invBtn').click(function (e) {
         let target = $(e.currentTarget);
-        var userId = target.attr("userId");
-
+        console.log(target.attr("userId"));
+        targetUserId = target.attr("userId");
+        document.getElementById("showTe").style.display = 'block';
+    })
+    $('.cancelBtn').click(function () {
+        document.getElementById("showTe").style.display = 'none';
+    })
+    //发送邀请消息功能
+    $('.sentBtn').click(function (e) {
+        let target = $(e.currentTarget);
+        console.log(targetUserId);
+        var txt = document.getElementById("messageTxt").value;
+        console.log(txt);
+        document.getElementById("showTe").style.display = 'none';
+        var userMessage = {
+            guid: targetUserId,
+            messagetext : txt,
+        };
         $.ajax({
             type: "POST",
             url: "/invitemate",
             dataType: "json",
-            data: JSON.stringify(userId),
+            data: JSON.stringify(userMessage),
             contentType: "application/json",
             success: function (data) {
                 console.log(data)
@@ -60,12 +74,3 @@ $(document).ready(function () {
         })
     })
 })
-
-function invitationConfirm() {
-    var r = confirm("邀请确认？")
-    if (r == true) {
-
-    } else {
-
-    }
-}

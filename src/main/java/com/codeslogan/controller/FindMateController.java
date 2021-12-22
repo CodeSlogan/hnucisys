@@ -106,16 +106,13 @@ public class FindMateController {
 
     @PostMapping("/invitemate")
     @ResponseBody
-    public String inviteMate(@RequestBody int userId, HttpServletRequest request) {
-        System.out.println(userId);
+    public String inviteMate(@RequestBody UserMessage userMessage, HttpServletRequest request) {
+        //System.out.println(userMessage);
         User user = (User) request.getSession().getAttribute("user");
         if(user == null) {
             return "redirect:/login";
         }
-        UserMessage userMessage = new UserMessage();
         userMessage.setWuid(user.getUserId());
-        userMessage.setGuid(userId);
-        userMessage.setMessagetext("test test test");
         userMessage.setCreatetime(new Date());
         userMessageService.addMessage(userMessage);
         return "success";

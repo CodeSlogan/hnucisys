@@ -36,13 +36,16 @@
                     <div class="info">
                         <span>高级</span> • 1125人浏览
                     </div>
-                    <button class="invBtn inviteBtn" th:userId="${mate.getUserId()}" onclick="invitationConfirm()">邀请</button>
+                    <button class="invBtn inviteBtn" id="invBtn1" th:userId="${mate.getUserId()}">邀请</button>
                 </li>
+
+                <div id="showTe">
+                    <textarea id="messageTxt" rows="2" cols="20"></textarea><br>
+                    <button class="sentBtn inviteBtn" id="sent">发送</button>
+                    <button class="cancelBtn inviteBtn" id="cancel">取消</button>
+                </div>
             </tr>
-           <div id="showTe">
-                <textarea rows="2" cols="20"></textarea>
-                <button class="invBtn inviteBtn" id="sent">发送</button>
-            </div>
+
         </ul>
     </div>
 
