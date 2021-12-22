@@ -12,28 +12,7 @@
 
 </head>
 <body>
-<div class="header w">
-    <!-- logo部分 -->
-    <div class="logo">
-        竞赛信息系统
-    </div>
-    <!-- 导航栏部分 nav -->
-    <div class="nav">
-        <ul>
-            <li><a th:href="@{/index}">首页</a></li>
-            <li><a href="#">队友</a></li>
-        </ul>
-    </div>
-    <!-- 搜索模块 -->
-    <div class="search">
-        <input type="text" placeholder="输入关键词">
-        <button></button>
-    </div>
-    <!-- 用户模块 -->
-    <div class="user">
-        <a th:href="@{/mypage}"> 我的主页</a>
-    </div>
-</div>
+<div th:replace="~{Commens/commens::Main_siderbar}"></div>
 <div class="box w">
     <div class="box-hd">
         <h3>队友推荐</h3>
@@ -57,24 +36,25 @@
                     <div class="info">
                         <span>高级</span> • 1125人浏览
                     </div>
-                    <button class="inviteBtn" id="showBtn">邀请</button>
+                    <button class="invBtn inviteBtn" th:userId="${mate.getUserId()}" onclick="invitationConfirm()">邀请</button>
                 </li>
             </tr>
-            <div id="showTe">
+           <div id="showTe">
                 <textarea rows="2" cols="20"></textarea>
-                <button class="inviteBtn" id="sent">发送</button>
+                <button class="invBtn inviteBtn" id="sent">发送</button>
             </div>
         </ul>
     </div>
 
     <div class="box-hd">
         <h3>队伍推荐
-            <button class="creatTeam" id="showH">创建队伍</button>
+            <!--            <button class="creatTeam" id="showH">创建队伍</button>-->
         </h3>
         <a href="#">查看全部</a>
     </div>
     <div class="box-bd">
         <ul class="clearfix liteam">
+
             <tr th:each="team:${teams}">
                 <li>
                     <em>
@@ -83,15 +63,16 @@
                     <h4 th:text="'队伍编号：'+${team.getTeamid()}"></h4>
                     <h4 th:text="'队伍名称：'+${team.getTeamName()}"></h4>
                     <h4 th:text="'比赛名称：'+${team.getName()}"></h4>
-                    <h4 class="mate">队伍成员:
-                        <ul>
-                            <li>sim</li>
-                            <li>li</li>
-                        </ul>
-                    </h4>
-                    <div class="info">
-                        <span>高级</span> • 1125人浏览
+                    <div>
+                        <h4 th:each="individual:${team.getTeamUsers()}"
+                            th:text="'成员：'+ ${individual.getUsername()}">
+
+                        </h4>
                     </div>
+
+<!--                    <div class="info">-->
+<!--                        <span>高级</span> • 1125人浏览-->
+<!--                    </div>-->
                     <button th:teamid="${team.getTeamid()}" class="joinBtn inviteBtn">加入</button>
                 </li>
             </tr>

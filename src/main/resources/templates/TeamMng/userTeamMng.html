@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <title>寻找队友</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script src="/js/jquery-3.6.0.js"></script>
+    <script src="/js/findmatetext.js"></script>
+
+</head>
+<body>
+<div th:replace="~{Commens/commens::Main_siderbar}"></div>
+<div class="box w">
+    <div class="box-hd">
+        <form th:action="@{/submitNewTeam}" method="post">
+            <label>队伍名称</label>
+            <input type="text" name="teamName" placeholder="队伍名称..">
+
+            <label>竞赛编号</label>
+            <input type="text" name="cptId" placeholder="竞赛编号..">
+
+            <input type="submit" value="创建">
+        </form>
+        <p th:text="${msg}" style="color:#ff0000"></p>
+    </div>
+</div>
+</body>
+</html>

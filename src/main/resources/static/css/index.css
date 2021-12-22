@@ -99,9 +99,11 @@ a {
 }
 
 .search button {
-    float: left;
+    position: relative;
+    top: -50px;
+    left: -59px;
     width: 50px;
-    height: 42px;
+    height: 45px;
     /* 按钮button默认有个边框需要手动去掉 */
     border: 0;
     background: url(../image/btn.png);
@@ -318,6 +320,14 @@ a {
     color: #00a4ff;
 }
 
+.goods .nav-link-active {
+    color: #00a4ff;
+}
+
+.goods .nav-link {
+    color: #333333;
+}
+
 .goods ul {
     float: left;
     margin-left: 30px;
@@ -379,11 +389,12 @@ a {
     margin-bottom: 15px;
 
 }
-.box-bd .liteam li{
-    height:300px;
+
+.box-bd .liteam li {
+    height: 300px;
 }
 
-.box-bd ul li>a{
+.box-bd ul li > a {
     display: block;
     text-decoration: none;
     color: black;
@@ -395,7 +406,7 @@ a {
 }
 
 
-.box-bd ul li .info{
+.box-bd ul li .info {
     width: 228px;
     margin-bottom: 5px;
 }
@@ -541,27 +552,29 @@ textarea {
 
 #showTe {
     backface-visibility: hidden;
-    position:fixed;
+    position: fixed;
     top: 50%;
     right: 50%;
-    margin:auto;
-    width:300px;
-    height:100px;
+    margin: auto;
+    width: 300px;
+    height: 100px;
     z-index: 6;
     display: none;
 }
-#showTe button{
+
+#showTe button {
     margin-left: 50px;
 }
 
-.box-bd .clearfix .mate li{
+.box-bd .clearfix .mate li {
     display: inline;
     width: 30px;
     height: 12px;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
-.creatTeam{
+
+.creatTeam {
     position: relative;
     background-color: #f3f5f7;
     border: none;
@@ -574,18 +587,48 @@ textarea {
     font-weight: bold;
     vertical-align: center;
 }
-#showIn input{
-    display:block;
+
+#showIn input {
+    display: block;
 }
-#showIn{
+
+#showIn {
     backface-visibility: hidden;
-    position:fixed;
+    position: fixed;
     top: 50%;
     right: 50%;
-    margin:auto;
-    width:150px;
-    height:230px;
+    margin: auto;
+    width: 150px;
+    height: 230px;
     z-index: 6;
     display: none;
 }
 
+
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #ff7c2d;
+    color: white;
+    padding: 20px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+    background-color: #f4511e;
+}

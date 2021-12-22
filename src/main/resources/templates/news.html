@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>首页</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/JaScript.js"></script>
+</head>
+
+<body>
+<!-- 1.头部区域开始啦 -->
+<div th:replace="~{Commens/commens::Main_siderbar}"></div>
+<!-- 头部区域结束啦 -->
+<!-- 请求入队信息展示-->
+<thead>
+<tr>
+    <th>用户名</th>
+    <th>年级</th>
+    <th>专业</th>
+    <th>性别</th>
+    <th>qq</th>
+    <th>自我介绍</th>
+    <th></th>
+    <th></th>
+
+</tr>
+</thead>
+<tbody>
+<tr th:each="user:${users}">
+    <td th:text="${user.getUsername()}"></td>
+    <td th:text="${user.getGrade()}"></td>
+    <td th:text="${user.getMajor()}"></td>
+    <td th:text="${user.getSex() == 1}?'男':'女'"></td>
+    <td th:text="${user.getQq()}"></td>
+    <td th:text="${user.getIntroduction()}"></td>
+    <td>
+        <a class="btn btn-sm btn-primary" th:href="@{'/userMng/'+${user.getUserId()}}">接受</a>
+        <a class="btn btn-sm btn-danger" th:href="@{'/delUser/'+${user.getUserId()}}">拒绝</a>
+    </td>
+
+</tr>
+
+</tbody>
+
+
+</body>
+</html>

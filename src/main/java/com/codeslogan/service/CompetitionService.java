@@ -26,4 +26,5 @@ public interface CompetitionService {
 
     //获取分类，当成兴趣
     List<String> getCategory();
+
 }
