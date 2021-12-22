@@ -2,10 +2,7 @@ package com.codeslogan;
 
 import com.codeslogan.mapper.CompetitionMapper;
 import com.codeslogan.mapper.TeamUserMapper;
-import com.codeslogan.pojo.Competition;
-import com.codeslogan.pojo.Team;
-import com.codeslogan.pojo.TeamExhibition;
-import com.codeslogan.pojo.TeamUser;
+import com.codeslogan.pojo.*;
 import com.codeslogan.service.UserService;
 import com.codeslogan.service.UserServiceImpl;
 import com.mysql.cj.Session;
@@ -47,14 +44,13 @@ class HnucisysApplicationTests {
 //    }
     @Test
     void test02(){
-        System.out.println();
+        List<User> users = teamUserMapper.queryMatesInfoByTeamId(1111);
+        System.out.println(users);
     }
 
     @Test
     void text03(){
-        List<TeamExhibition> teams = teamUserMapper.queryTeamInfoByUserId(1001);
-
-        System.out.println(teams);
-
+        List<User> users = teamUserMapper.queryMatesInfoByTeamId(1111);
+        System.out.println(users);
     }
 }

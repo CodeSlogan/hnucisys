@@ -7,6 +7,7 @@ import com.codeslogan.pojo.User;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
@@ -23,8 +24,21 @@ public class MyPageController {
 
         User user = (User) request.getSession().getAttribute("user");
         List<TeamExhibition> teams = teamUserMapper.queryTeamInfoByUserId(user.getUserId());
+        List<User> users = teamUserMapper.queryMatesInfoByTeamId(0);
         model.addAttribute("teams",teams);
         model.addAttribute("user",user);
+        model.addAttribute("mates",users);
+        return "mypage";
+    }
+    @RequestMapping("/getMates/{teamId}")
+    public String GetMate(@PathVariable int teamId,Model model, HttpServletRequest request){
+
+        User user = (User) request.getSession().getAttribute("user");
+        List<TeamExhibition> teams = teamUserMapper.queryTeamInfoByUserId(user.getUserId());
+        List<User> users = teamUserMapper.queryMatesInfoByTeamId(teamId);
+        model.addAttribute("teams",teams);
+        model.addAttribute("user",user);
+        model.addAttribute("mates",users);
         return "mypage";
     }
 }

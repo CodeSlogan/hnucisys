@@ -3,6 +3,7 @@ package com.codeslogan.service;
 import com.codeslogan.pojo.Team;
 import com.codeslogan.pojo.TeamExhibition;
 import com.codeslogan.pojo.TeamUser;
+import com.codeslogan.pojo.User;
 
 import java.util.List;
 
@@ -23,6 +24,8 @@ public interface TeamUserService {
     int delTeamUserById(int tuId);
 
     List<TeamExhibition> queryTeamInfoByUserId(int userId);
+
+    List<User> queryMatesInfoByTeamId(int teamid);
 
     // tuid查对应信息
     TeamUser queryBytuid(int tuid);
