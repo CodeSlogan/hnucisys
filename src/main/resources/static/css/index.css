@@ -99,9 +99,11 @@ a {
 }
 
 .search button {
-    float: left;
+    position: relative;
+    top: -50px;
+    left: -59px;
     width: 50px;
-    height: 42px;
+    height: 45px;
     /* 按钮button默认有个边框需要手动去掉 */
     border: 0;
     background: url(../image/btn.png);
