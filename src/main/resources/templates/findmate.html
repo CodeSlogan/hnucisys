@@ -35,7 +35,7 @@
         <a th:href="@{/mypage}"> 我的主页</a>
     </div>
     <div class="user">
-        <a th:href="@{/news}" target="_blank"><img src="image/bell.jpg" alt="消息"></a>
+        <a th:href="@{/news}" target="_blank"><img src="image/bell.jpg" height="48" width="48" alt="消息"></a>
     </div>
 </div>
 <div class="box w">
@@ -61,13 +61,13 @@
                     <div class="info">
                         <span>高级</span> • 1125人浏览
                     </div>
-                    <button class="inviteBtn" onclick="invitationConfirm()">邀请</button>
+                    <button class="invBtn inviteBtn" th:userId="${mate.getUserId()}" onclick="invitationConfirm()">邀请</button>
                 </li>
             </tr>
-<!--            <div id="showTe">
+           <div id="showTe">
                 <textarea rows="2" cols="20"></textarea>
-                <button class="inviteBtn" id="sent">发送</button>
-            </div>-->
+                <button class="invBtn inviteBtn" id="sent">发送</button>
+            </div>
         </ul>
     </div>
 
@@ -90,7 +90,8 @@
                     <h4 th:text="'比赛名称：'+${team.getName()}"></h4>
                     <h4 class="mate">
                         <ul>
-                            <li th:each="individual:${team.getTeamUsers()}" th:text="'队员：' + ${individual.getUsername()}"></li>
+                            <li th:each="individual:${team.getTeamUsers()}"
+                                th:text="'队员：' + ${individual.getUsername()}"></li>
                         </ul>
                     </h4>
                     <div class="info">
