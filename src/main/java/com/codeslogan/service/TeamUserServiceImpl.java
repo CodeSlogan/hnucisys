@@ -1,6 +1,7 @@
 package com.codeslogan.service;
 
 import com.codeslogan.mapper.TeamUserMapper;
+import com.codeslogan.pojo.Team;
 import com.codeslogan.pojo.TeamExhibition;
 import com.codeslogan.pojo.TeamUser;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,5 +39,10 @@ public class TeamUserServiceImpl implements TeamUserService{
     @Override
     public int delTeamUserById(int tuId) {
         return delTeamUserById(tuId);
+    }
+
+    @Override
+    public List<TeamExhibition> queryTeamInfoByUserId(int userId) {
+        return teamUserMapper.queryTeamInfoByUserId(userId);
     }
 }

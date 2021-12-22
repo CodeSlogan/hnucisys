@@ -1,5 +1,7 @@
 package com.codeslogan.service;
 
+import com.codeslogan.pojo.Team;
+import com.codeslogan.pojo.TeamExhibition;
 import com.codeslogan.pojo.TeamUser;
 
 import java.util.List;
@@ -19,4 +21,6 @@ public interface TeamUserService {
 
     //删除组队信息
     int delTeamUserById(int tuId);
+
+    List<TeamExhibition> queryTeamInfoByUserId(int userId);
 }

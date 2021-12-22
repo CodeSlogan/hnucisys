@@ -29,5 +29,11 @@
     <delete id="delTeamUserById" parameterType="int">
         delete from hnucisys.team_user where tuid = #{tuId};
     </delete>
+    <!--通过用户id查询已参加-->
+    <select id="queryTeamInfoByUserId" resultType="TeamExhibition" parameterType="int">
+        SELECT team.`teamid` AS `teamid`,team.`teamname`AS `teamName` ,competition.`name`AS `name`
+        FROM hnucisys.`team`,hnucisys.`competition` WHERE teamid =
+                                                          (SELECT teamid FROM hnucisys.team_user WHERE userid = #{userId}) AND competition.`cptid` = team.`cptid`
+    </select>
 
 </mapper>
