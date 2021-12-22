@@ -19,4 +19,10 @@ public interface TeamUserService {
 
     //删除组队信息
     int delTeamUserById(int tuId);
+
+    // tuid查对应信息
+    TeamUser queryBytuid(int tuid);
+
+    // 更新role
+    int updateRoleBytuid(int tuid);
 }
