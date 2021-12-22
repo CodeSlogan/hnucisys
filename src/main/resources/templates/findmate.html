@@ -65,7 +65,7 @@
                     <h4 th:text="'比赛名称：'+${team.getName()}"></h4>
                     <div>
                         <h4 th:each="individual:${team.getTeamUsers()}"
-                            th:text="'队员：' + ${individual.getUsername()}">
+                            th:text="'成员：'+ ${individual.getUsername()}">
 
                         </h4>
                     </div>

@@ -14,4 +14,5 @@ public class TeamExhibition {
     private String teamName;
     private String name;//比赛名
     public Collection<User> teamUsers;
+    public Collection<UserRole> userRoles;
 }

@@ -1,6 +1,7 @@
 package com.codeslogan.service;
 
 import com.codeslogan.pojo.User;
+import com.codeslogan.pojo.UserRole;
 
 import java.util.Collection;
 import java.util.List;
@@ -21,4 +22,7 @@ public interface UserService {
 
     // 后台保存用户
     int saveUser(User user);
+
+    // 根据teamid和userid查其role
+    public UserRole queryUserByTeamIdUserId(int teamid, int id);
 }

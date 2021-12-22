@@ -58,9 +58,11 @@ public class TeamMngController {
         teamUser.setUpdateTime(date);
         if (competition != null) {
             teamService.createNewTeam(team);
+            // 倒序查所有队伍，队伍id最大为最新创建
             List<Team> teams = teamService.queryTeamDesc();
             Team team1 = teams.get(0);
             teamUser.setTeamId(team1.getTeamId());
+            // 创建队伍队长
             teamUserService.save(teamUser);
             message = "提示：队伍创建成功！";
         } else {
