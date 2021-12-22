@@ -36,4 +36,12 @@
                                                           (SELECT teamid FROM hnucisys.team_user WHERE userid = #{userId}) AND competition.`cptid` = team.`cptid`
     </select>
 
+    <select id="queryBytuid" resultType="TeamUser">
+        select * from where tuid = #{tuid}
+    </select>
+
+    <update id="updateRoleBytuid" parameterType="int">
+        update hnucisys.team_user set team_user.role = 1 where tuid = #{tuid}
+    </update>
+
 </mapper>

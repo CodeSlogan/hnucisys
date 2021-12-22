@@ -2,14 +2,18 @@ package com.codeslogan.controller;
 
 import com.codeslogan.pojo.TeamUser;
 import com.codeslogan.pojo.User;
+import com.codeslogan.pojo.UserMessage;
 import com.codeslogan.service.TeamUserService;
+import com.codeslogan.service.UserMessageService;
 import com.codeslogan.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
+import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 
 import javax.servlet.http.HttpServletRequest;
+import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.List;
@@ -28,12 +32,24 @@ public class NewsController {
     @Autowired
     UserService userService;
 
+    @Autowired
+    UserMessageService userMessageService;
+
+    // 信息展示接口
     @RequestMapping("/news")
     public String showTeamUser(Model model, HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
+
+        // 入队申请
         List<TeamUser> team = teamUserService.queryByUserId(user.getUserId());
         Iterator<TeamUser> iterator = team.iterator();
+        List<Integer> tuids = new ArrayList<Integer>();
         List<User> zeroUsers = new LinkedList<User>();
+
+        // 信息内容
+        UserMessage message = userMessageService.queryMegByGuid(user.getUserId());
+
+
         while (iterator.hasNext()) {
             TeamUser next = iterator.next();
             // 如果当前用户是此队的队长，根据队伍id查出所有的队员
@@ -42,15 +58,32 @@ public class NewsController {
                 // 遍历需要审核的队员，即role为0
                 for (TeamUser teamUser : users) {
                     if (teamUser.getRole() == 0) {
+                        tuids.add(teamUser.getTuId());
                         zeroUsers.add(userService.queryUserById(teamUser.getUserId()));
                     }
                 }
             }
         }
+        model.addAttribute("tuids", tuids);
         model.addAttribute("users", zeroUsers);
 
-
         return "news";
+    }
+
+    @RequestMapping("/news/acceptMate/{tuid}")
+    public String acceptMate(@PathVariable int tuid) {
+
+        // 若接受，根据tuid更新role为1
+        teamUserService.updateRoleBytuid(tuid);
+        return "redirect:/news";
+    }
+
+    @RequestMapping("/news/refuseMate/{tuid}")
+    public String refuseMate(@PathVariable int tuid) {
+
+        // 若拒绝，直接删除这条记录
+        teamUserService.delTeamUserById(tuid);
+        return "redirect:/news";
     }
 
 }

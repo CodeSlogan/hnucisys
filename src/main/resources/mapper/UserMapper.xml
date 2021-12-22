@@ -20,7 +20,7 @@
     <select id="queryTeamUsersByTeamID" resultType="User" parameterType="int">
         select User.*
         from hnucisys.User, hnucisys.team_user
-        where User.userid = team_user.userid and team_user.teamid = #{id}
+        where User.userid = team_user.userid and team_user.teamid = #{id} and team_user.role != 0
     </select>
 
     <insert id="AddUser" parameterType="User">
@@ -47,5 +47,9 @@
         values (#{username}, #{password}, #{perms}, #{grade}, #{major}, #{sex}, #{qq}, #{introduction}, #{createtime},
                 #{updatetime});
     </insert>
+
+    <select id="queryUserByTeamIdUserId" resultType="UserRole" parameterType="int">
+        select * from team_user where teamid = #{teamid} and userid = #{id}
+    </select>
 
 </mapper>

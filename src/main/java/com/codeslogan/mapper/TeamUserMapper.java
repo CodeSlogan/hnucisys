@@ -27,4 +27,10 @@ public interface TeamUserMapper {
     int delTeamUserById(int tuId);
 
     List<TeamExhibition> queryTeamInfoByUserId(int userId);
+
+    // tuid查对应信息
+    TeamUser queryBytuid(int tuid);
+
+    // 更新role
+    int updateRoleBytuid(int tuid);
 }

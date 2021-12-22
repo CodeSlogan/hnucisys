@@ -11,7 +11,7 @@
  Target Server Version : 50729
  File Encoding         : 65001
 
- Date: 21/12/2021 11:32:40
+ Date: 22/12/2021 19:27:19
 */
 
 SET NAMES utf8mb4;
@@ -77,7 +77,7 @@ CREATE TABLE `team`  (
                          PRIMARY KEY (`teamid`) USING BTREE,
                          INDEX `FORE_CPTID`(`cptid`) USING BTREE,
                          CONSTRAINT `FORE_CPTID` FOREIGN KEY (`cptid`) REFERENCES `competition` (`cptid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1115 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1119 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of team
@@ -85,6 +85,7 @@ CREATE TABLE `team`  (
 INSERT INTO `team` VALUES (1112, 'coi', 1, '2021-12-11 19:47:12', '2021-12-13 19:47:17');
 INSERT INTO `team` VALUES (1113, '星耀', 2, '2021-12-03 19:47:51', '2021-12-13 19:47:55');
 INSERT INTO `team` VALUES (1114, 'dawn', 5, '2021-12-02 19:48:32', '2021-12-13 19:48:36');
+INSERT INTO `team` VALUES (1118, '树上的鸟儿成双队', 6, '2021-12-22 07:34:26', '2021-12-22 07:34:26');
 
 -- ----------------------------
 -- Table structure for team_user
@@ -100,18 +101,20 @@ CREATE TABLE `team_user`  (
                               PRIMARY KEY (`tuid`) USING BTREE,
                               INDEX `FORE_USERID`(`userid`) USING BTREE,
                               INDEX `FORE_TEAMID`(`teamid`) USING BTREE,
-                              CONSTRAINT `FORE_TEAMID` FOREIGN KEY (`teamid`) REFERENCES `team` (`teamid`) ON DELETE CASCADE ON UPDATE CASCADE,
                               CONSTRAINT `FORE_USERID` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 7 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of team_user
 -- ----------------------------
-INSERT INTO `team_user` VALUES (2, 1112, 1003, 0, '2021-12-02 20:38:56', '2021-12-14 20:38:59');
-INSERT INTO `team_user` VALUES (3, 1113, 1002, 0, '2021-12-14 20:39:16', '2021-12-14 20:39:19');
-INSERT INTO `team_user` VALUES (4, 1114, 1006, 0, '2021-12-02 20:39:40', '2021-12-13 20:39:43');
+INSERT INTO `team_user` VALUES (2, 1112, 1003, 2, '2021-12-02 20:38:56', '2021-12-14 20:38:59');
+INSERT INTO `team_user` VALUES (3, 1113, 1002, 2, '2021-12-14 20:39:16', '2021-12-14 20:39:19');
+INSERT INTO `team_user` VALUES (4, 1114, 1006, 2, '2021-12-02 20:39:40', '2021-12-13 20:39:43');
 INSERT INTO `team_user` VALUES (5, 1112, 1002, 0, '2021-12-21 03:26:26', '2021-12-21 03:26:26');
-INSERT INTO `team_user` VALUES (6, 1114, 1004, 0, '2021-12-21 03:29:50', '2021-12-21 03:29:50');
+INSERT INTO `team_user` VALUES (6, 1114, 1004, 1, '2021-12-21 03:29:50', '2021-12-21 03:29:50');
+INSERT INTO `team_user` VALUES (9, 1114, 1018, 0, '2021-12-21 07:13:48', '2021-12-21 07:13:48');
+INSERT INTO `team_user` VALUES (10, 1114, 1017, 0, '2021-12-21 20:05:08', '2021-12-21 20:05:10');
+INSERT INTO `team_user` VALUES (13, 1118, 1001, 2, '2021-12-22 07:34:26', '2021-12-22 07:34:26');
 
 -- ----------------------------
 -- Table structure for user
@@ -130,7 +133,7 @@ CREATE TABLE `user`  (
                          `createtime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
                          `updatetime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
                          PRIMARY KEY (`userid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1018 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1019 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
@@ -145,13 +148,14 @@ INSERT INTO `user` VALUES (1007, 'xuwei', '423897', 'user', 3, '计算机科学�
 INSERT INTO `user` VALUES (1008, 'moliu', '234245', 'user', 1, '软工', 1, '4328948192', '没有什么技能，想参加比赛涨涨经验。', '2021-12-12 17:58:20', '2021-12-12 17:58:20');
 INSERT INTO `user` VALUES (1009, 'sdfa', '123456', 'admin', 0, 'cs', 0, '34311', 'hello', '2021-12-12 17:58:40', '2021-12-12 17:58:40');
 INSERT INTO `user` VALUES (1017, 'jason', '123456', 'user', 1, 'music', 0, '1399838112', 'hello,123445677', '2021-12-20 16:00:00', '2021-12-20 16:00:00');
+INSERT INTO `user` VALUES (1018, 'adam', '123456', 'user', 3, '电子信息', 1, '13712345678', '啥都会', '2021-12-21 11:44:05', '2021-12-21 11:44:03');
 
 -- ----------------------------
 -- Table structure for user_message
 -- ----------------------------
 DROP TABLE IF EXISTS `user_message`;
 CREATE TABLE `user_message`  (
-                                 `messageid` int(5) NOT NULL COMMENT '信息id',
+                                 `messageid` int(5) NOT NULL AUTO_INCREMENT COMMENT '信息id',
                                  `wuid` int(255) NOT NULL COMMENT '发送者id',
                                  `guid` int(255) NOT NULL COMMENT '接收者id',
                                  `messagetext` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '发送内容',
@@ -159,10 +163,11 @@ CREATE TABLE `user_message`  (
                                  `createtime` datetime(0) NOT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
                                  `updatetime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '修改时间',
                                  PRIMARY KEY (`messageid`) USING BTREE
-) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user_message
 -- ----------------------------
+INSERT INTO `user_message` VALUES (1, 1001, 1005, 'test test test', NULL, '2021-12-22 06:42:57', NULL);
 
 SET FOREIGN_KEY_CHECKS = 1;

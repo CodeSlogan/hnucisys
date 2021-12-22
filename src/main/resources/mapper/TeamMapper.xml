@@ -21,4 +21,8 @@
         values(#{teamId}, #{teamName}, #{cptId}, #{createTime}, #{updateTime});
     </insert>
 
+    <select id="queryTeamDesc" resultType="Team">
+        select * from team order by teamid DESC
+    </select>
+
 </mapper>

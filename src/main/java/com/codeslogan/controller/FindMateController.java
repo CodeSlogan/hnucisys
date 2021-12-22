@@ -11,10 +11,7 @@ import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.Collection;
-import java.util.Date;
-import java.util.HashMap;
-import java.util.Iterator;
+import java.util.*;
 
 @Controller
 public class FindMateController {
@@ -109,16 +106,13 @@ public class FindMateController {
 
     @PostMapping("/invitemate")
     @ResponseBody
-    public String inviteMate(@RequestBody int userId, HttpServletRequest request) {
-        System.out.println(userId);
+    public String inviteMate(@RequestBody UserMessage userMessage, HttpServletRequest request) {
+        //System.out.println(userMessage);
         User user = (User) request.getSession().getAttribute("user");
         if(user == null) {
             return "redirect:/login";
         }
-        UserMessage userMessage = new UserMessage();
         userMessage.setWuid(user.getUserId());
-        userMessage.setGuid(userId);
-        userMessage.setMessagetext("test test test");
         userMessage.setCreatetime(new Date());
         userMessageService.addMessage(userMessage);
         return "success";

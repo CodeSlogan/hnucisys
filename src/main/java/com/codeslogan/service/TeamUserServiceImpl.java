@@ -45,4 +45,14 @@ public class TeamUserServiceImpl implements TeamUserService{
     public List<TeamExhibition> queryTeamInfoByUserId(int userId) {
         return teamUserMapper.queryTeamInfoByUserId(userId);
     }
+
+    @Override
+    public TeamUser queryBytuid(int tuid) {
+        return teamUserMapper.queryBytuid(tuid);
+    }
+
+    @Override
+    public int updateRoleBytuid(int tuid) {
+        return teamUserMapper.updateRoleBytuid(tuid);
+    }
 }

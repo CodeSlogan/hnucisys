@@ -6,6 +6,8 @@ import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
 import java.util.Collection;
+import java.util.List;
+
 @Mapper
 @Repository
 public interface TeamMapper {
@@ -14,4 +16,9 @@ public interface TeamMapper {
     public Collection<TeamExhibition> queryAllTeam();
 
     public int createNewTeam(Team team);
+
+    // 降序查所有队伍
+    List<Team> queryTeamDesc();
+
+
 }
