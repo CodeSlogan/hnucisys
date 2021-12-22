@@ -69,9 +69,16 @@
             <h2 class="title">我的队伍</h2>
             <div class="row">
                 <div class="col-s-6">
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    <div th:each="team : ${teams}" >
+                        <p th:text = "'比赛名称：'+ ${team.getName()}"></p>
+                        <p th:text = "'队伍名称：'+${team.getTeamName()}"></p>
+                        <a th:text="查询队友" th:href="@{'/getMates/' + ${team.getTeamid()}}">
+
+                        </a>
+                        <p th:each=" mate:${mates}" th:text="'队友'+${mate.getUsername()}"></p>
+                    </div>
+
+
                     <div class="works-item">
                         <img alt="" src="" bk-image="active">
                     </div>

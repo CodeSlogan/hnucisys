@@ -9,4 +9,16 @@
         insert into hnucisys.user_message(wuid, guid, messagetext, replymessage, createtime, updatetime)
         values (#{wuid}, #{guid}, #{messagetext}, #{replymessage}, #{createtime}, #{updatetime});
     </insert>
+
+    <select id="queryMegByWuid" resultType="UserMessage">
+        select * from hnucisys.user_message where wuid = #{wuid}
+    </select>
+
+    <select id="queryMegByGuid" resultType="UserMessage">
+        select * from hnucisys.user_message where guid = #{guid}
+    </select>
+
+    <select id="queryMegByMegid" resultType="UserMessage">
+        select * from hnucisys.user_message where messageid = #{messageid}
+    </select>
 </mapper>

@@ -1,6 +1,9 @@
 package com.codeslogan.mapper;
 
+import com.codeslogan.pojo.Team;
+import com.codeslogan.pojo.TeamExhibition;
 import com.codeslogan.pojo.TeamUser;
+import com.codeslogan.pojo.User;
 import org.apache.ibatis.annotations.Mapper;
 import org.springframework.stereotype.Repository;
 
@@ -24,9 +27,13 @@ public interface TeamUserMapper {
     //通过tuid删除比赛信息
     int delTeamUserById(int tuId);
 
+    List<TeamExhibition> queryTeamInfoByUserId(int userId);
+
     // tuid查对应信息
     TeamUser queryBytuid(int tuid);
 
     // 更新role
     int updateRoleBytuid(int tuid);
+
+    List<User> queryMatesInfoByTeamId(int teamId);
 }
