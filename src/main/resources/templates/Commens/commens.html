@@ -83,7 +83,33 @@
     </div>
 </nav>
 
-
+<!--用户界面导航栏-->
+<div class="header w" th:fragment="Main_siderbar">
+    <!-- logo部分 -->
+    <div class="logo">
+        竞赛信息系统
+    </div>
+    <!-- 导航栏部分 nav -->
+    <div class="nav">
+        <ul>
+            <li><a th:href="@{/index}">首页</a></li>
+            <li><a th:href="@{/findmate}">队友</a></li>
+            <li><a th:href="@{toUserTeamMng}" th:text="建队" style="color: #dc3545"></a></li>
+        </ul>
+    </div>
+    <!-- 搜索模块 -->
+    <div class="search">
+        <input type="text" placeholder="输入关键词">
+        <button></button>
+    </div>
+    <!-- 用户模块 -->
+    <div class="user">
+        <a th:href="@{/mypage}"> 我的主页</a>
+    </div>
+    <div class="user">
+        <a th:href="@{/news}" target="_blank"><img src="image/bell.jpg" height="48" width="48" alt="消息"></a>
+    </div>
+</div>
 
 
 
