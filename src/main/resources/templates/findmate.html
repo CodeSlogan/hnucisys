@@ -63,15 +63,16 @@
                     <h4 th:text="'队伍编号：'+${team.getTeamid()}"></h4>
                     <h4 th:text="'队伍名称：'+${team.getTeamName()}"></h4>
                     <h4 th:text="'比赛名称：'+${team.getName()}"></h4>
-                    <h4 class="mate">
-                        <ul>
-                            <li th:each="individual:${team.getTeamUsers()}"
-                                th:text="'队员：' + ${individual.getUsername()}"></li>
-                        </ul>
-                    </h4>
-                    <div class="info">
-                        <span>高级</span> • 1125人浏览
+                    <div>
+                        <h4 th:each="individual:${team.getTeamUsers()}"
+                            th:text="'队员：' + ${individual.getUsername()}">
+
+                        </h4>
                     </div>
+
+<!--                    <div class="info">-->
+<!--                        <span>高级</span> • 1125人浏览-->
+<!--                    </div>-->
                     <button th:teamid="${team.getTeamid()}" class="joinBtn inviteBtn">加入</button>
                 </li>
             </tr>
