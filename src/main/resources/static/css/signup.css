@@ -96,7 +96,7 @@ body {
     color: white;
     position: relative;
     left: 6%;
-    bottom: -40px;
+    bottom: -55px;
     right: 0;
     margin-bottom: 10px;
 }
@@ -113,9 +113,6 @@ body {
     position: absolute;
 }
 
-.login a span {
-    position: absolute;
-}
 /*.login a span:first-child {*/
 .first{
     top: 0;
@@ -141,7 +138,6 @@ body {
 
 /*.login a span:nth-child(3) */
 .third{
-
     bottom: 0;
     right: -100%;
     width: 100%;
