@@ -455,7 +455,7 @@ a {
 }
 
 .footer {
-    background: rgb(12, 12, 12);
+    background-color: rgba(225,225,225,.4);
     clear: both;
 }
 
@@ -465,18 +465,24 @@ a {
 }
 
 .common-box {
-    width: 1080px;
+    width: 600px;
     margin: 0 auto;
 }
 
 .ft-info-box {
     width: 180px;
-    padding: 40px 40px 0 0;
+}
+.left{
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.right{
+   margin-top: 20px;
 }
 
 .ft-tit {
     font-size: 20px;
-    color: #fff;
+    color: black;
     font-weight: 600;
     height: 35px;
     line-height: 1;
@@ -642,4 +648,10 @@ input[type=submit]:hover {
     position: absolute;
     bottom:10px;
     margin-left: 20px;
+}
+.footer-wrap .footer .common-box{
+    padding-bottom: 50px;
+}
+.fl{
+    display: inline-block;
 }
