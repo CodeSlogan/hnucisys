@@ -31,13 +31,14 @@
                             <th class="cell100 column4">性别</th>
                             <th class="cell100 column5">qq</th>
                             <th class="cell100 column6">自我介绍</th>
+                            <th class="cell100 column7">是否接受</th>
                         </tr>
                         </thead>
                     </table>
                 </div>
                 <div class="table100-body js-pscroll">
                     <table>
-                        <tbody>
+<!--                        <tbody>-->
                         <tr class="row100 body" th:each="user:${users}">
                             <td class="cell100 column1" th:text="${user.getUsername()}"></td>
                             <td class="cell100 column2" th:text="${user.getGrade()}"></td>
@@ -50,7 +51,7 @@
                                 <a class="btn btn-sm btn-danger" th:href="@{'/news/refuseMate/'}">拒绝</a>
                             </td>
                         </tr>
-                        </tbody>
+<!--                        </tbody>-->
                     </table>
                 </div>
             </div>

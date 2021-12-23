@@ -8,6 +8,7 @@ body, html {
     height: 100%;
     font-family: sans-serif;
 }
+
 .limiter {
     width: 85%;
     margin: 0 auto;
@@ -23,7 +24,7 @@ body, html {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-    align-items: center;
+
     justify-content: center;
     flex-wrap: wrap;
     padding: 33px 30px;
@@ -42,7 +43,6 @@ table {
     border-collapse: collapse;
 }
 th {
-    text-align: left;
     font-weight: bold;
     padding-right: 10px;
 }
@@ -53,30 +53,9 @@ td {
 
 /*[ 单元格宽度 ]*/
 .column1 {
-    width: 33%;
+    /*width: 15%;*/
     padding-left: 40px;
 }
-
-.column2 {
-    width: 13%;
-}
-
-.column3 {
-    width: 22%;
-}
-
-.column4 {
-    width: 19%;
-}
-
-.column5 {
-    width: 13%;
-}
-
-.column6{
-    width: 22%;
-}
-/*---------------------------------------------*/
 
 .table100-head th {
     padding-top: 18px;
@@ -96,7 +75,7 @@ td {
 }
 
 .table100-head {
-    position: absolute;
+    /*position: absolute;*/
     width: 100%;
     top: 0;
     left: 0;
@@ -164,4 +143,3 @@ td {
     background-color: #cccccc;
 }
 
-.btn-primary
