@@ -44,9 +44,11 @@ $(document).ready(function () {
         console.log(target.attr("userId"));
         targetUserId = target.attr("userId");
         document.getElementById("showTe").style.display = 'block';
+        document.getElementById("xuhua").style.filter='blur(5px)';
     })
     $('.cancelBtn').click(function () {
         document.getElementById("showTe").style.display = 'none';
+        document.getElementById("xuhua").style.filter='blur(0px)';
     })
     //发送邀请消息功能
     $('.sentBtn').click(function (e) {
@@ -55,6 +57,7 @@ $(document).ready(function () {
         var txt = document.getElementById("messageTxt").value;
         console.log(txt);
         document.getElementById("showTe").style.display = 'none';
+        document.getElementById("xuhua").style.filter='blur(0px)';
         var userMessage = {
             guid: targetUserId,
             messagetext : txt,

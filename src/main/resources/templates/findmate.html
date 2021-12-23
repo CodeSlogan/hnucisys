@@ -13,7 +13,7 @@
 </head>
 <body>
 <div th:replace="~{Commens/commens::Main_siderbar}"></div>
-<div class="box w">
+<div class="box w" id="xuhua">
     <div class="box-hd">
         <h3>队友推荐</h3>
         <a href="#">查看全部</a>
@@ -39,11 +39,7 @@
                     <button class="invBtn inviteBtn" id="invBtn1" th:userId="${mate.getUserId()}">邀请</button>
                 </li>
 
-                <div id="showTe">
-                    <textarea id="messageTxt" rows="2" cols="22"></textarea><br>
-                    <button class="sentBtn inviteBtn" id="sent">发送</button>
-                    <button class="cancelBtn inviteBtn" id="cancel">取消</button>
-                </div>
+
             </tr>
         </ul>
     </div>
@@ -87,6 +83,12 @@
             <button class="inviteBtn" id="sure">确定</button>
         </div>
     </div>
+</div>
+
+<div id="showTe">
+    <textarea id="messageTxt" rows="2" cols="22"></textarea><br>
+    <button class="sentBtn inviteBtn" id="sent">发送</button>
+    <button class="cancelBtn inviteBtn" id="cancel">取消</button>
 </div>
 </body>
 </html>
