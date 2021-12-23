@@ -10,6 +10,9 @@
         values (#{wuid}, #{guid}, #{messagetext}, #{replymessage}, #{createtime}, #{updatetime});
     </insert>
 
+    <delete id="delMessage"  parameterType="int">
+        delete from hnucisys.user_message where userid = #{id}
+    </delete>
     <select id="queryMegByWuid" resultType="UserMessage">
         select * from hnucisys.user_message where wuid = #{wuid}
     </select>

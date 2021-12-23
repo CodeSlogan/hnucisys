@@ -10,6 +10,7 @@
     <link rel="stylesheet" th:href="@{/css/news.css}">
     <script src="/js/jquery-1.11.3.min.js"></script>
     <script src="/js/JaScript.js"></script>
+    <script src="/js/news.js"></script>
 </head>
 
 <body>
@@ -38,7 +39,7 @@
                 </div>
                 <div class="table100-body js-pscroll">
                     <table>
-<!--                        <tbody>-->
+                        <!--                        <tbody>-->
                         <tr class="row100 body" th:each="user:${users}">
                             <td class="cell100 column1" th:text="${user.getUsername()}"></td>
                             <td class="cell100 column2" th:text="${user.getGrade()}"></td>
@@ -47,11 +48,15 @@
                             <td class="cell100 column5" th:text="${user.getQq()}"></td>
                             <td class="cell100 column6" th:text="${user.getIntroduction()}"></td>
                             <td>
-                                <a  th:href="@{'/news/acceptMate/'}">接受</a>
-                                <a  th:href="@{'/news/refuseMate/'}">拒绝</a>
+                                <!--                                <a  th:href="@{'/news/acceptMate/'}">接受</a>
+                                                                <a  th:href="@{'/news/refuseMate/'}">拒绝</a>-->
+                                <button class="acceptBtn1 acceptBtn" id="acceptBtn1" th:tuid="${tuids[userStat.index]}">接受
+                                </button>
+                                <button class="refuseBtn1 refuseBtn" id="refuseBtn1" th:tuid="${tuids[userStat.index]}">拒绝
+                                </button>
                             </td>
                         </tr>
-<!--                        </tbody>-->
+                        <!--                        </tbody>-->
                     </table>
                 </div>
             </div>

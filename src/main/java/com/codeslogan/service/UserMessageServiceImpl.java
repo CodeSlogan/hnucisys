@@ -5,8 +5,10 @@ import com.codeslogan.pojo.UserMessage;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
+import java.util.Collection;
+
 @Service
-public class UserMessageServiceImpl implements UserMessageService{
+public class UserMessageServiceImpl implements UserMessageService {
 
     @Autowired
     UserMessageMapper userMessageMapper;
@@ -17,12 +19,17 @@ public class UserMessageServiceImpl implements UserMessageService{
     }
 
     @Override
-    public UserMessage queryMegByWuid(int wuid) {
+    public void delMessage(int messageid) {
+        userMessageMapper.delMessage(messageid);
+    }
+
+    @Override
+    public Collection<UserMessage> queryMegByWuid(int wuid) {
         return userMessageMapper.queryMegByWuid(wuid);
     }
 
     @Override
-    public UserMessage queryMegByGuid(int guid) {
+    public Collection<UserMessage> queryMegByGuid(int guid) {
         return userMessageMapper.queryMegByGuid(guid);
     }
 

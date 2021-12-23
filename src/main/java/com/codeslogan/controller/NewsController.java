@@ -9,14 +9,10 @@ import com.codeslogan.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.Model;
-import org.springframework.web.bind.annotation.PathVariable;
-import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.*;
 
 import javax.servlet.http.HttpServletRequest;
-import java.util.ArrayList;
-import java.util.Iterator;
-import java.util.LinkedList;
-import java.util.List;
+import java.util.*;
 
 /**
  * @Author: codeslogan
@@ -47,7 +43,7 @@ public class NewsController {
         List<User> zeroUsers = new LinkedList<User>();
 
         // 信息内容
-        UserMessage message = userMessageService.queryMegByGuid(user.getUserId());
+        Collection<UserMessage> userMessages = userMessageService.queryMegByGuid(user.getUserId());
 
 
         while (iterator.hasNext()) {
@@ -70,16 +66,43 @@ public class NewsController {
         return "news";
     }
 
-    @RequestMapping("/news/acceptMate/{tuid}")
-    public String acceptMate(@PathVariable int tuid) {
+    @RequestMapping("/news/invitations")
+    public String showInvitations(Model model, HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("user");
+        if(user == null) {
+            return "redirect:/login";
+        }
+        Collection<UserMessage> userMessages = userMessageService.queryMegByGuid(user.getUserId());
+        model.addAttribute("invitations", userMessages);
+        return "news";
+    }
+
+    @PostMapping("/news/replyinvitation")
+    @ResponseBody
+    public String replyInvitation(@RequestBody UserMessage userMessage, HttpServletRequest request) {
+        User user = (User) request.getSession().getAttribute("user");
+        if(user == null) {
+            return "redirect:/login";
+        }
+        /*回复邀请*/
+        //先删除再插入
+        userMessageService.delMessage(userMessage.getMessageid());
+        userMessageService.addMessage(userMessage);
+        return "success";
+    }
+
+    @RequestMapping("/news/acceptMate")
+    @ResponseBody
+    public String acceptMate(@RequestBody int tuid) {
 
         // 若接受，根据tuid更新role为1
         teamUserService.updateRoleBytuid(tuid);
         return "redirect:/news";
     }
 
-    @RequestMapping("/news/refuseMate/{tuid}")
-    public String refuseMate(@PathVariable int tuid) {
+    @RequestMapping("/news/refuseMate")
+    @ResponseBody
+    public String refuseMate(@RequestBody int tuid) {
 
         // 若拒绝，直接删除这条记录
         teamUserService.delTeamUserById(tuid);
