@@ -637,3 +637,9 @@ input[type=submit] {
 input[type=submit]:hover {
     background-color: #f4511e;
 }
+
+.pos{
+    position: absolute;
+    bottom:10px;
+    margin-left: 20px;
+}
