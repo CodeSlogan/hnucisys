@@ -547,6 +547,8 @@ a {
 
 textarea {
     resize: none;
+    margin-left: 50px;
+    margin-top: 15px;
 }
 
 #showTe {
@@ -555,10 +557,12 @@ textarea {
     top: 50%;
     right: 50%;
     margin: auto;
-    width: 300px;
-    height: 100px;
+    width: 320px;
+    height: 140px;
     z-index: 6;
     display: none;
+    background-color: rgba(225,225,225,.4);
+    border: solid 1px black;
 }
 
 #showTe button {
@@ -601,6 +605,8 @@ textarea {
     height: 230px;
     z-index: 6;
     display: none;
+    background-color: rgba(225,225,225,.4);
+    border: solid 1px black;
 }
 
 
