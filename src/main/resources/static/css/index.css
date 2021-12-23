@@ -553,15 +553,15 @@ a {
 
 textarea {
     resize: none;
-    margin-left: 50px;
+    margin-left: 73px;
     margin-top: 15px;
 }
 
 #showTe {
     backface-visibility: hidden;
     position: fixed;
-    top: 50%;
-    right: 50%;
+    top: 40%;
+    right: 39%;
     margin: auto;
     width: 320px;
     height: 140px;
