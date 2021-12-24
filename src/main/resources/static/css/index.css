@@ -310,6 +310,7 @@ a {
     box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.1);
     /* 行高会继承， 会继承给3个孩子 */
     line-height: 60px;
+    border-radius: 10px;
 }
 
 .goods h3 {
