@@ -1,17 +1,16 @@
 /*
  Navicat Premium Data Transfer
 
- Source Server         : mysql57
+ Source Server         : mysql80
  Source Server Type    : MySQL
  Source Server Version : 50729
- Source Host           : localhost:3307
+ Source Host           : localhost:3306
  Source Schema         : hnucisys
 
  Target Server Type    : MySQL
- Target Server Version : 50729
  File Encoding         : 65001
 
- Date: 22/12/2021 19:27:19
+ Date: 24/12/2021 21:28:12
 */
 
 SET NAMES utf8mb4;
@@ -77,7 +76,7 @@ CREATE TABLE `team`  (
                          PRIMARY KEY (`teamid`) USING BTREE,
                          INDEX `FORE_CPTID`(`cptid`) USING BTREE,
                          CONSTRAINT `FORE_CPTID` FOREIGN KEY (`cptid`) REFERENCES `competition` (`cptid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 1119 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1121 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of team
@@ -102,7 +101,7 @@ CREATE TABLE `team_user`  (
                               INDEX `FORE_USERID`(`userid`) USING BTREE,
                               INDEX `FORE_TEAMID`(`teamid`) USING BTREE,
                               CONSTRAINT `FORE_USERID` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE = InnoDB AUTO_INCREMENT = 14 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of team_user
@@ -115,6 +114,8 @@ INSERT INTO `team_user` VALUES (6, 1114, 1004, 1, '2021-12-21 03:29:50', '2021-1
 INSERT INTO `team_user` VALUES (9, 1114, 1018, 0, '2021-12-21 07:13:48', '2021-12-21 07:13:48');
 INSERT INTO `team_user` VALUES (10, 1114, 1017, 0, '2021-12-21 20:05:08', '2021-12-21 20:05:10');
 INSERT INTO `team_user` VALUES (13, 1118, 1001, 2, '2021-12-22 07:34:26', '2021-12-22 07:34:26');
+INSERT INTO `team_user` VALUES (14, 1112, 1001, 1, '2021-12-22 12:48:27', '2021-12-22 12:48:27');
+INSERT INTO `team_user` VALUES (15, 1118, 1005, 0, '2021-12-24 21:26:46', '2021-12-24 21:26:48');
 
 -- ----------------------------
 -- Table structure for user
@@ -133,7 +134,7 @@ CREATE TABLE `user`  (
                          `createtime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
                          `updatetime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
                          PRIMARY KEY (`userid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 1019 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 1020 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user
@@ -144,11 +145,12 @@ INSERT INTO `user` VALUES (1003, 'yinhaoran', '123454', 'user', 1, '农学', 1, 
 INSERT INTO `user` VALUES (1004, 'xiejun', '123489', 'user', 2, '计算机科学与技术', 0, '1798428947', '擅长c语言、python、Java、c++等多种语言，擅长网站设计，熟练掌握js、vue、css等技能。', '2021-12-12 17:58:18', '2021-12-12 17:58:18');
 INSERT INTO `user` VALUES (1005, 'xiaoyun', '214899', 'user', 1, '数学', 0, '1789712347', '目前没掌握技能，但踏实肯干、吃苦耐劳，可以认真去学。', '2021-12-12 17:58:19', '2021-12-12 17:58:19');
 INSERT INTO `user` VALUES (1006, 'songyiyi', '317894', 'user', 2, '软工', 0, '1298721478', '擅长软件开发设计，动手能力强，曾开发过微信小程序，获得天梯赛个人赛省级一等奖，蓝桥杯省级一等奖。', '2021-12-12 17:58:19', '2021-12-12 17:58:19');
-INSERT INTO `user` VALUES (1007, 'xuwei', '423897', 'user', 3, '计算机科学与技术', 0, '3472888984', '曾发表过4项论文，其中一项被sci收录，参与过3个项目，获得中国计算机大赛国家二等奖，互联网＋国家一等奖，挑战杯国家一等奖，以及10余个小奖项。', '2021-12-12 17:58:20', '2021-12-12 17:58:20');
+INSERT INTO `user` VALUES (1007, 'xuwei', '423897', 'admin', 3, '计算机科学与技术', 0, '3472888984', '曾发表过4项论文，其中一项被sci收录，参与过3个项目，获得中国计算机大赛国家二等奖，互联网＋国家一等奖，挑战杯国家一等奖，以及10余个小奖项。', '2021-12-24 20:55:13', '2021-12-24 20:55:13');
 INSERT INTO `user` VALUES (1008, 'moliu', '234245', 'user', 1, '软工', 1, '4328948192', '没有什么技能，想参加比赛涨涨经验。', '2021-12-12 17:58:20', '2021-12-12 17:58:20');
 INSERT INTO `user` VALUES (1009, 'sdfa', '123456', 'admin', 0, 'cs', 0, '34311', 'hello', '2021-12-12 17:58:40', '2021-12-12 17:58:40');
 INSERT INTO `user` VALUES (1017, 'jason', '123456', 'user', 1, 'music', 0, '1399838112', 'hello,123445677', '2021-12-20 16:00:00', '2021-12-20 16:00:00');
 INSERT INTO `user` VALUES (1018, 'adam', '123456', 'user', 3, '电子信息', 1, '13712345678', '啥都会', '2021-12-21 11:44:05', '2021-12-21 11:44:03');
+INSERT INTO `user` VALUES (1019, 'ljj', '123456', 'admin', 1, '计算机', 0, '88123456', NULL, '2021-12-24 20:55:22', '2021-12-24 20:55:22');
 
 -- ----------------------------
 -- Table structure for user_message
@@ -163,11 +165,14 @@ CREATE TABLE `user_message`  (
                                  `createtime` datetime(0) NOT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
                                  `updatetime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '修改时间',
                                  PRIMARY KEY (`messageid`) USING BTREE
-) ENGINE = InnoDB AUTO_INCREMENT = 2 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
 -- ----------------------------
 -- Records of user_message
 -- ----------------------------
-INSERT INTO `user_message` VALUES (1, 1001, 1005, 'test test test', NULL, '2021-12-22 06:42:57', NULL);
+INSERT INTO `user_message` VALUES (1, 1001, 1005, 'test test test', NULL, '2021-12-24 21:25:46', '2021-12-24 21:25:45');
+INSERT INTO `user_message` VALUES (2, 1001, 1006, '一起打比赛吧', NULL, '2021-12-24 21:25:49', '2021-12-24 21:25:48');
+INSERT INTO `user_message` VALUES (3, 1004, 1001, '好厉害，组个队吧', NULL, '2021-12-24 21:25:52', '2021-12-24 21:25:50');
+INSERT INTO `user_message` VALUES (4, 1003, 1002, 'hello一起比赛吧', NULL, '2021-12-24 21:26:14', '2021-12-24 21:26:16');
 
 SET FOREIGN_KEY_CHECKS = 1;
