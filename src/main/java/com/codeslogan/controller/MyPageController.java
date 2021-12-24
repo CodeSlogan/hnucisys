@@ -23,11 +23,11 @@ public class MyPageController {
     public String toMyPage(Model model, HttpServletRequest request) {
 
         User user = (User) request.getSession().getAttribute("user");
-//        List<TeamExhibition> teams = teamUserMapper.queryTeamInfoByUserId(user.getUserId());
-        List<User> users = teamUserMapper.queryMatesInfoByTeamId(0);
-//        model.addAttribute("teams",teams);
+        List<TeamExhibition> teams = teamUserMapper.queryTeamInfoByUserId(user.getUserId());
+//        List<User> users = teamUserMapper.queryMatesInfoByTeamId(0);
+        model.addAttribute("teams",teams);
         model.addAttribute("user",user);
-        model.addAttribute("mates",users);
+//        model.addAttribute("mates",users);
         return "mypage";
     }
 //    @RequestMapping("/getMates/{teamId}")
