@@ -3,6 +3,7 @@ a{ color: #c40b00; }
 .wrap{
     max-width: 1000px;
     background: url(../image/white.jpg) fixed;
+    border-radius: 20px;
 }
 
 /* - 侧边栏 */
