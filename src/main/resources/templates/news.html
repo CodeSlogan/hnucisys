@@ -63,5 +63,48 @@
         </div>
     </div>
 </div>
+
+
+<!-- 收到的消息展示-->
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver4 m-b-110">
+                <div class="table100-head">
+                    <table>
+                        <thead>
+                        <tr class="row100 head">
+                            <th class="cell100 column1">来自</th>
+                            <th class="cell100 column2">内容</th>
+                            <th class="cell100 column3">回复</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table100-body js-pscroll">
+                    <table>
+                        <!--                        <tbody>-->
+                        <tr class="row100 body" th:each="invitation:${invitations}">
+                            <td class="cell100 column1" th:text="${invitation.getWuid()}"></td>
+                            <td class="cell100 column2" th:text="${invitation.getMessagetext()}"></td>
+                            <td class="cell100 column3" th:text="${invitation.getReplymessage()}"></td>
+
+                            <td>
+                                <!--                                <a  th:href="@{'/news/acceptMate/'}">接受</a>
+                                                                <a  th:href="@{'/news/refuseMate/'}">拒绝</a>-->
+                                <button class="acceptBtn1 acceptBtn" id="acceptBtn2" th:tuid="${tuids[invitationStat.index]}">接受
+                                </button>
+                                <button class="refuseBtn1 refuseBtn" id="refuseBtn2" th:tuid="${tuids[invitationStat.index]}">拒绝
+                                </button>
+                            </td>
+                        </tr>
+                        <!--                        </tbody>-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
 </body>
 </html>
