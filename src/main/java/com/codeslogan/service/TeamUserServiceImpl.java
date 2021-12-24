@@ -12,7 +12,7 @@ import java.util.Collection;
 import java.util.List;
 
 @Service
-public class TeamUserServiceImpl implements TeamUserService{
+public class TeamUserServiceImpl implements TeamUserService {
 
     @Autowired
     TeamUserMapper teamUserMapper;
@@ -38,8 +38,8 @@ public class TeamUserServiceImpl implements TeamUserService{
     }
 
     @Override
-    public int delTeamUserById(int tuId) {
-        return delTeamUserById(tuId);
+    public int delTeamUserById(int tuid) {
+        return teamUserMapper.delTeamUserById(tuid);
     }
 
     @Override

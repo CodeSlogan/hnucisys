@@ -10,6 +10,8 @@ public interface UserMessageService {
 
     public void delMessage(int messageid);
 
+    public void replyMessage(UserMessage message);
+
     // 根据发送方id查询
     public Collection<UserMessage> queryMegByWuid(int wuid);
 

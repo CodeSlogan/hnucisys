@@ -27,7 +27,7 @@
 
     <!--删除组队信息-->
     <delete id="delTeamUserById" parameterType="int">
-        delete from hnucisys.team_user where tuid = #{tuId};
+        delete from hnucisys.team_user where tuid = #{tuid};
     </delete>
     <!--通过用户id查询已参加-->
     <select id="queryTeamInfoByUserId" resultType="TeamExhibition" parameterType="int">

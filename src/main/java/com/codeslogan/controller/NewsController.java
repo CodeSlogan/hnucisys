@@ -38,16 +38,23 @@ public class NewsController {
 
         // 入队申请
         List<TeamUser> team = teamUserService.queryByUserId(user.getUserId());
-        Iterator<TeamUser> iterator = team.iterator();
+        Iterator<TeamUser> teamItor = team.iterator();
         List<Integer> tuids = new ArrayList<Integer>();
         List<User> zeroUsers = new LinkedList<User>();
 
         // 信息内容
         Collection<UserMessage> userMessages = userMessageService.queryMegByGuid(user.getUserId());
-
-
-        while (iterator.hasNext()) {
-            TeamUser next = iterator.next();
+        /*
+        Iterator<UserMessage> messageItor = userMessages.iterator();
+        while (messageItor.hasNext()) {
+            UserMessage userMessage = messageItor.next();
+            if (userMessage.getReplymessage() != null) {//回复过的剔除
+                userMessages.remove(userMessage);
+            }
+        }
+         */
+        while (teamItor.hasNext()) {
+            TeamUser next = teamItor.next();
             // 如果当前用户是此队的队长，根据队伍id查出所有的队员
             if (next.getRole() == 2) {
                 List<TeamUser> users = teamUserService.queryByTeamId(next.getTeamId());
@@ -62,10 +69,11 @@ public class NewsController {
         }
         model.addAttribute("tuids", tuids);
         model.addAttribute("users", zeroUsers);
-
+        model.addAttribute("invitations", userMessages);
         return "news";
     }
 
+    /*
     @RequestMapping("/news/invitations")
     public String showInvitations(Model model, HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
@@ -77,21 +85,23 @@ public class NewsController {
         return "news";
     }
 
+     */
+
     @PostMapping("/news/replyinvitation")
     @ResponseBody
-    public String replyInvitation(@RequestBody UserMessage userMessage, HttpServletRequest request) {
+    public String acceptInvitation(@RequestBody UserMessage userMessage, HttpServletRequest request) {
         User user = (User) request.getSession().getAttribute("user");
-        if(user == null) {
+        if (user == null) {
             return "redirect:/login";
         }
         /*回复邀请*/
-        //先删除再插入
-        userMessageService.delMessage(userMessage.getMessageid());
-        userMessageService.addMessage(userMessage);
+        userMessage.setUpdatetime(new Date());
+        System.out.println(userMessage.getReplymessage());
+        userMessageService.replyMessage(userMessage);
         return "success";
     }
 
-    @RequestMapping("/news/acceptMate")
+    @PostMapping("/news/acceptMate")
     @ResponseBody
     public String acceptMate(@RequestBody int tuid) {
 
@@ -100,11 +110,12 @@ public class NewsController {
         return "redirect:/news";
     }
 
-    @RequestMapping("/news/refuseMate")
+    @PostMapping("/news/refuseMate")
     @ResponseBody
     public String refuseMate(@RequestBody int tuid) {
 
         // 若拒绝，直接删除这条记录
+
         teamUserService.delTeamUserById(tuid);
         return "redirect:/news";
     }

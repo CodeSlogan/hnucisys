@@ -24,6 +24,11 @@ public class UserMessageServiceImpl implements UserMessageService {
     }
 
     @Override
+    public void replyMessage(UserMessage message) {
+        userMessageMapper.replyMessage(message);
+    }
+
+    @Override
     public Collection<UserMessage> queryMegByWuid(int wuid) {
         return userMessageMapper.queryMegByWuid(wuid);
     }
