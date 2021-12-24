@@ -32,4 +32,5 @@
         select distinct(category) from competition order by category asc
     </select>
 
+
 </mapper>

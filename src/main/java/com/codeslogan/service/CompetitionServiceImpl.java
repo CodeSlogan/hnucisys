@@ -48,4 +48,5 @@ public class CompetitionServiceImpl implements CompetitionService{
     public List<String> getCategory() {
         return competitionMapper.getCategory();
     }
+
 }

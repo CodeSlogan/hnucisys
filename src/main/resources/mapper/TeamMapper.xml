@@ -4,19 +4,6 @@
         "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
 <!--namespace=绑定一个对应的Dao/Mapper接口-->
 <mapper namespace="com.codeslogan.mapper.TeamMapper">
-    <!--
-        <select id="queryTeamById" resultType="TeamExhibition" parameterType="int">
-            select teamname, name, username
-            from hnucisys.Team,
-                 hnucisys.Competition,
-                 hnucisys.User,
-                 hnucisys.team_user
-            where team.cptid = competition.cptid
-              and team.teamid = team_user.teamid
-              and team_user.userid = user.userid
-              and team.teamid >= #{teamid}
-        </select>
-        -->
     <select id="queryTeamById" resultType="TeamExhibition" parameterType="int">
         select teamid, teamname, name
         from hnucisys.Team,
@@ -27,6 +14,15 @@
 
     <select id="queryAllTeam" resultType="TeamExhibition">
         SELECT teamid, teamname, NAME FROM hnucisys.Team,hnucisys.Competition where team.cptid = competition.cptid
+    </select>
+
+    <insert id="createNewTeam" parameterType="Team">
+        insert into hnucisys.team(teamid, teamname, cptid, createtime, updatetime)
+        values(#{teamId}, #{teamName}, #{cptId}, #{createTime}, #{updateTime});
+    </insert>
+
+    <select id="queryTeamDesc" resultType="Team">
+        select * from team order by teamid DESC
     </select>
 
 </mapper>

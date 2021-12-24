@@ -56,7 +56,7 @@ a {
 
 
 .nav {
-    float: left;
+    /*float: left;*/
     margin-left: 60px;
 }
 
@@ -99,9 +99,11 @@ a {
 }
 
 .search button {
-    float: left;
+    position: relative;
+    top: -50px;
+    left: -59px;
     width: 50px;
-    height: 42px;
+    height: 45px;
     /* 按钮button默认有个边框需要手动去掉 */
     border: 0;
     background: url(../image/btn.png);
@@ -118,7 +120,7 @@ a {
 /* banner区域 */
 .banner1 {
     height: 420px;
-    background-image: url("/image/background.png");
+    background-image: url("../image/background.png");
 }
 
 /*轮番图css样式*/
@@ -218,12 +220,11 @@ a {
     display: none;
 }
 
-
 .subnav {
     float: left;
     width: 170px;
     height: 421px;
-    background: url("../image/indexbac.png") no-repeat;
+    background: url("../image/background.png") no-repeat;
 }
 
 .subnav ul li {
@@ -309,6 +310,7 @@ a {
     box-shadow: 0 2px 3px 3px rgba(0, 0, 0, 0.1);
     /* 行高会继承， 会继承给3个孩子 */
     line-height: 60px;
+    border-radius: 10px;
 }
 
 .goods h3 {
@@ -316,6 +318,14 @@ a {
     margin-left: 30px;
     font-size: 16px;
     color: #00a4ff;
+}
+
+.goods .nav-link-active {
+    color: #00a4ff;
+}
+
+.goods .nav-link {
+    color: #333333;
 }
 
 .goods ul {
@@ -377,13 +387,14 @@ a {
     background-color: #fff;
     margin-right: 15px;
     margin-bottom: 15px;
-
-}
-.box-bd .liteam li{
-    height:300px;
+    border-radius: 20px;
 }
 
-.box-bd ul li>a{
+.box-bd .liteam li {
+    height: 300px;
+}
+
+.box-bd ul li > a {
     display: block;
     text-decoration: none;
     color: black;
@@ -395,9 +406,8 @@ a {
 }
 
 
-.box-bd ul li>div{
+.box-bd ul li .info {
     width: 228px;
-    height: 120px;
     margin-bottom: 5px;
 }
 
@@ -446,7 +456,7 @@ a {
 }
 
 .footer {
-    background: rgb(12, 12, 12);
+    background-color: rgba(225,225,225,.4);
     clear: both;
 }
 
@@ -456,18 +466,24 @@ a {
 }
 
 .common-box {
-    width: 1080px;
+    width: 600px;
     margin: 0 auto;
 }
 
 .ft-info-box {
     width: 180px;
-    padding: 40px 40px 0 0;
+}
+.left{
+    margin-top: 20px;
+    margin-right: 100px;
+}
+.right{
+   margin-top: 20px;
 }
 
 .ft-tit {
     font-size: 20px;
-    color: #fff;
+    color: black;
     font-weight: 600;
     height: 35px;
     line-height: 1;
@@ -538,29 +554,37 @@ a {
 
 textarea {
     resize: none;
+    margin-left: 73px;
+    margin-top: 15px;
 }
 
 #showTe {
-    background-color: #c1e2f8;
-    position: absolute;
-    margin:auto;
-    width:200px;
-    height:100px;
+    backface-visibility: hidden;
+    position: fixed;
+    top: 40%;
+    right: 39%;
+    margin: auto;
+    width: 320px;
+    height: 140px;
     z-index: 6;
     display: none;
+    background-color: rgba(225,225,225,.4);
+    border: solid 1px black;
 }
-#showTe button{
+
+#showTe button {
     margin-left: 50px;
 }
 
-.box-bd .clearfix .mate li{
+.box-bd .clearfix .mate li {
     display: inline;
     width: 30px;
     height: 12px;
-    padding:0;
-    margin:0;
+    padding: 0;
+    margin: 0;
 }
-.creatTeam{
+
+.creatTeam {
     position: relative;
     background-color: #f3f5f7;
     border: none;
@@ -574,13 +598,61 @@ textarea {
     vertical-align: center;
 }
 
-#showIn{
-    background-color: #c1e2f8;
-    position: relative;
-    margin:auto;
-    width:200px;
-    height:200px;
-    z-index: 6;
-    display: none;
+#showIn input {
+    display: block;
 }
 
+#showIn {
+    backface-visibility: hidden;
+    position: fixed;
+    top: 50%;
+    right: 50%;
+    margin: auto;
+    width: 150px;
+    height: 230px;
+    z-index: 6;
+    display: none;
+    background-color: rgba(225,225,225,.4);
+    border: solid 1px black;
+}
+
+
+
+
+input[type=text], select {
+    width: 100%;
+    padding: 12px 20px;
+    margin: 8px 0;
+    display: inline-block;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type=submit] {
+    width: 100%;
+    background-color: #ff7c2d;
+    color: white;
+    padding: 20px 10px;
+    margin: 8px 0;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+
+}
+
+input[type=submit]:hover {
+    background-color: #f4511e;
+}
+
+.pos{
+    position: absolute;
+    bottom:10px;
+    margin-left: 20px;
+}
+.footer-wrap .footer .common-box{
+    padding-bottom: 50px;
+}
+.fl{
+    display: inline-block;
+}

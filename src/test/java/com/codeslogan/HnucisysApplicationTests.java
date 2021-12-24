@@ -2,8 +2,7 @@ package com.codeslogan;
 
 import com.codeslogan.mapper.CompetitionMapper;
 import com.codeslogan.mapper.TeamUserMapper;
-import com.codeslogan.pojo.Competition;
-import com.codeslogan.pojo.TeamUser;
+import com.codeslogan.pojo.*;
 import com.codeslogan.service.UserService;
 import com.codeslogan.service.UserServiceImpl;
 import com.mysql.cj.Session;
@@ -14,6 +13,7 @@ import org.springframework.boot.test.context.SpringBootTest;
 import javax.sql.DataSource;
 import java.sql.SQLException;
 import java.util.Date;
+import java.util.List;
 
 @SpringBootTest
 class HnucisysApplicationTests {
@@ -25,6 +25,7 @@ class HnucisysApplicationTests {
     TeamUserMapper teamUserMapper;
     @Autowired
     DataSource dataSource;
+
     @Test
     void contextLoads() throws SQLException {
         System.out.println(dataSource.getClass());
@@ -43,6 +44,13 @@ class HnucisysApplicationTests {
 //    }
     @Test
     void test02(){
-        System.out.println();
+        List<User> users = teamUserMapper.queryMatesInfoByTeamId(1111);
+        System.out.println(users);
+    }
+
+    @Test
+    void text03(){
+        List<User> users = teamUserMapper.queryMatesInfoByTeamId(1111);
+        System.out.println(users);
     }
 }

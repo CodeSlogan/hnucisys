@@ -35,6 +35,7 @@ public class IndexController {
         Collection<String> interests = competitionService.getCategory();
         model.addAttribute("cpts", competitions);
         model.addAttribute("interests", interests);
+        model.addAttribute("active", category);
         return "index";
 
     }

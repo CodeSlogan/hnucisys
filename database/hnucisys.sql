@@ -1,138 +1,178 @@
 /*
-SQLyog Ultimate v12.08 (64 bit)
-MySQL - 5.7.29 : Database - hnucisys
-*********************************************************************
-*/
+ Navicat Premium Data Transfer
 
-/*!40101 SET NAMES utf8 */;
+ Source Server         : mysql80
+ Source Server Type    : MySQL
+ Source Server Version : 50729
+ Source Host           : localhost:3306
+ Source Schema         : hnucisys
 
-/*!40101 SET SQL_MODE=''*/;
+ Target Server Type    : MySQL
+ File Encoding         : 65001
 
-/*!40014 SET @OLD_UNIQUE_CHECKS=@@UNIQUE_CHECKS, UNIQUE_CHECKS=0 */;
-/*!40014 SET @OLD_FOREIGN_KEY_CHECKS=@@FOREIGN_KEY_CHECKS, FOREIGN_KEY_CHECKS=0 */;
-/*!40101 SET @OLD_SQL_MODE=@@SQL_MODE, SQL_MODE='NO_AUTO_VALUE_ON_ZERO' */;
-/*!40111 SET @OLD_SQL_NOTES=@@SQL_NOTES, SQL_NOTES=0 */;
-CREATE DATABASE /*!32312 IF NOT EXISTS*/`hnucisys` /*!40100 DEFAULT CHARACTER SET utf8 */;
+ Date: 24/12/2021 21:28:12
+*/
 
-USE `hnucisys`;
+SET NAMES utf8mb4;
+SET FOREIGN_KEY_CHECKS = 0;
 
-/*Table structure for table `competition` */
-
+-- ----------------------------
+-- Table structure for competition
+-- ----------------------------
 DROP TABLE IF EXISTS `competition`;
+CREATE TABLE `competition`  (
+                                `cptid` int(11) NOT NULL AUTO_INCREMENT COMMENT '比赛id',
+                                `name` varchar(60) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '比赛名称',
+                                `url` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '比赛图片地址',
+                                `category` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '比赛类别',
+                                `time` datetime(0) NOT NULL COMMENT '比赛时间',
+                                `evaluation` int(11) NULL DEFAULT NULL COMMENT '比赛评价，1-5，5为等第最高',
+                                `createtime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+                                `updatetime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
+                                PRIMARY KEY (`cptid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 8 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
-CREATE TABLE `competition` (
-  `cptid` int(11) NOT NULL AUTO_INCREMENT COMMENT '比赛id',
-  `name` varchar(60) NOT NULL COMMENT '比赛名称',
-  `url` varchar(255) NOT NULL COMMENT '比赛图片地址',
-  `category` varchar(20) NOT NULL COMMENT '比赛类别',
-  `time` datetime NOT NULL COMMENT '比赛时间',
-  `evaluation` int(11) DEFAULT NULL COMMENT '比赛评价，1-5，5为等第最高',
-  `createtime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
-  `updatetime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-  PRIMARY KEY (`cptid`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=6 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+-- ----------------------------
+-- Records of competition
+-- ----------------------------
+INSERT INTO `competition` VALUES (1, '2021年MathorCup高校数学建模挑战赛——大数据竞赛', 'https://publicqn.saikr.com/2021/11/10/contest618ba13c51ed93.884670951636540785645.png?imageView2/2/w/1080', '科技类', '2021-12-21 00:00:00', 3, '2021-12-05 00:00:00', '2021-12-05 00:00:00');
+INSERT INTO `competition` VALUES (2, '2021《英语世界》杯全国大学生英语写作大赛——冬奥写作大赛', 'https://publicqn.saikr.com/2021/11/30/contest61a5f405b00627.663666351638265902402.png?imageView2/2/w/1080', '英语', '2021-12-31 00:00:00', 3, '2021-12-05 00:00:00', '2021-12-05 00:00:00');
+INSERT INTO `competition` VALUES (3, '第十三届蓝桥杯全国软件和信息技术专业人才大赛', 'https://publicqn.saikr.com/2021/10/27/contest6178c498595982.910643191635304862590.jpeg?imageView2/2/w/1080', '科技类', '2022-02-28 16:00:00', 5, '2021-12-17 15:41:27', '2021-12-17 15:41:27');
+INSERT INTO `competition` VALUES (5, '第三届中国工业文学作品“光耀杯”大赛', 'https://publicqn.saikr.com/2021/04/27/contest60878d3aa64ac4.387723331619496323410.png?imageView2/2/w/1080', '文化类', '2022-02-01 00:00:00', 3, '2021-12-05 00:00:00', '2021-12-05 00:00:00');
+INSERT INTO `competition` VALUES (6, '2021年第四届“传智杯”全国大学生IT技能大赛', 'https://publicqn.saikr.com/2021/11/02/contest6180ac5f4cb8b7.789260881635822773154.png?imageView2/2/w/1080', '科技类', '2021-11-19 16:00:00', 5, '2021-12-04 16:00:00', '2021-12-04 16:00:00');
 
-/*Data for the table `competition` */
-
-insert  into `competition`(`cptid`,`name`,`url`,`category`,`time`,`evaluation`,`createtime`,`updatetime`) values (1,'2021年MathorCup高校数学建模挑战赛——大数据竞赛','https://publicqn.saikr.com/2021/11/10/contest618ba13c51ed93.884670951636540785645.png?imageView2/2/w/1080','科技类','2021-12-21 00:00:00',3,'2021-12-05 00:00:00','2021-12-05 00:00:00'),(2,'2021《英语世界》杯全国大学生英语写作大赛——冬奥写作大赛','https://publicqn.saikr.com/2021/11/30/contest61a5f405b00627.663666351638265902402.png?imageView2/2/w/1080','英语','2021-12-31 00:00:00',3,'2021-12-05 00:00:00','2021-12-05 00:00:00'),(3,'第十三届蓝桥杯全国软件和信息技术专业人才大赛','https://publicqn.saikr.com/2021/10/27/contest6178c498595982.910643191635304862590.jpeg?imageView2/2/w/1080','科技类','2022-03-01 00:00:00',5,'2021-12-05 00:00:00','2021-12-05 00:00:00'),(4,'2021年第四届“传智杯”全国大学生IT技能大赛','https://publicqn.saikr.com/2021/11/02/contest6180ac5f4cb8b7.789260881635822773154.png?imageView2/2/w/1080','科技类','2021-11-20 00:00:00',2,'2021-12-05 00:00:00','2021-12-05 00:00:00'),(5,'第三届中国工业文学作品“光耀杯”大赛','https://publicqn.saikr.com/2021/04/27/contest60878d3aa64ac4.387723331619496323410.png?imageView2/2/w/1080','文化类','2022-02-01 00:00:00',3,'2021-12-05 00:00:00','2021-12-05 00:00:00');
-
-/*Table structure for table `cpt_content` */
-
+-- ----------------------------
+-- Table structure for cpt_content
+-- ----------------------------
 DROP TABLE IF EXISTS `cpt_content`;
+CREATE TABLE `cpt_content`  (
+                                `cptid` int(11) NOT NULL COMMENT '比赛id',
+                                `content` mediumtext CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '比赛内容',
+                                `createtime` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+                                `updatetime` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+                                PRIMARY KEY (`cptid`) USING BTREE,
+                                CONSTRAINT `FORE_CID` FOREIGN KEY (`cptid`) REFERENCES `competition` (`cptid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
-CREATE TABLE `cpt_content` (
-  `cptid` int(11) NOT NULL COMMENT '比赛id',
-  `content` mediumtext NOT NULL COMMENT '比赛内容',
-  `createtime` datetime DEFAULT NULL COMMENT '创建时间',
-  `updatetime` datetime DEFAULT NULL COMMENT '更新时间',
-  PRIMARY KEY (`cptid`) USING BTREE,
-  CONSTRAINT `FORE_CID` FOREIGN KEY (`cptid`) REFERENCES `competition` (`cptid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+-- ----------------------------
+-- Records of cpt_content
+-- ----------------------------
+INSERT INTO `cpt_content` VALUES (1, '竞赛介绍\r\n教育部《高等学校人工智能创新行动计划》教技〔2018〕3号，鼓励对计算机专业类的智能科学与技术、数据科学与大数据技术等专业进行调整和整合，鼓励各个领域与大数据进行深度融合，通过大数据技术促进各领域的发展。\r\n\r\n为了促进大数据人才培养，向各行业输送具有大数据创新能力和实践能力的高端人才，提升高校毕业生的就业竞争力，全面推动行业发展及人才培养进程，MathorCup高校数学建模挑战赛组委会决定在“MathorCup高校数学建模挑战赛”中增加大数据专题赛项——“大数据竞赛”。竞赛秉承研究会创始人华罗庚教授提出的数学与实践相结合的宗旨，通过大数据分析总结科技、经济与社会发展规律，利用算法工具来高质量解决实际问题。竞赛以企业真实场景数据为基础，面向全国高校研究生、本科生和专科生，共同探索数据科学的应用实践，推动产学研用协同发展。\r\n\r\n \r\n\r\n一、组织机构\r\n主办单位：中国优选法统筹法与经济数学研究会\r\n\r\n \r\n\r\n二、出题单位\r\n【一点资讯】\r\n\r\n一点资讯成立于2013年，以用户“兴趣”为核心，通过业内领先的“人机结合”模式，将品质内容精准推送至用户手中，为用户提供优质的个性化阅读体验，让阅读更有价值，让阅读者更有价值。\r\n\r\n2021年，一点资讯的多元业务齐头并进，在坚守主端信息流的前提下，积极创新、打造创意流--啫喱APP和游戏流--龙图游戏APP，致力于通过不同业务流的有机汇合提升集团竞争优势。\r\n\r\n【58同城】\r\n\r\n58同城，2005年12月创立于北京，并于2013年10月31日，正式于纽交所挂牌上市，2015年58同城先后完成安居客、中华英才网并购，同年11月正式合并赶集网。58同城作为中国领先的生活服务平台，业务覆盖招聘、房产、汽车、二手、本地生活服务及金融等各个领域。在用户服务层面，不仅是一个信息交互的平台，更是一站式的生活服务平台，同时也逐步为商家建立全方位的市场营销解决方案。目前，58同城已经成为了中国全面服务本地商户与用户的线上商业服务平台。\r\n\r\n \r\n\r\n三、参赛对象\r\n大赛面向中国及境外在校学生（包括研究生、本科生和专科生），具体要求如下：\r\n\r\n（1）可以自由组队参赛，每个参赛队伍人数可为1–3人，参赛队员必须全部为在校生，允许跨年级、跨专业、跨校组队。\r\n\r\n（2）参赛组别的确定依据是团队成员中的最高在读学历。\r\n\r\n（3）每支队伍允许最多有一名指导老师，指导教师须为全职高校教师。\r\n\r\n \r\n\r\n四、竞赛形式、规则和纪律\r\n竞赛题目：大赛分为初赛、复赛，竞赛统一命题，竞赛分为两个赛道，题目来自行业资深专家、企事业单位实际应用场景应用题目；\r\n\r\n竞赛组别：大赛分为“研究生组”、“本科组”和“专科组”3个参赛组别；\r\n\r\n参赛费用：每支队伍需缴纳200元参赛费，用于赛题征集、赛题评阅、技术支持等；\r\n\r\n竞赛报名：参赛队伍可在官方主页独立报名，也可由院校相关负责人统一组织集体报名；\r\n\r\n作品提交：参赛队伍要求在竞赛平台上提交结果，根据题目要求，在线提交结果、程序代码和参赛论文，每个队伍每天最多提交1次结果数据；\r\n\r\n知识产权：参赛作品（包含但不限于算法、模型、方案等）知识产权归主办方、参赛者共享，部分解决方案经双方同意后在竞赛平台公布；\r\n\r\n公平竞技：参赛者可以引用公开发表的期刊文献，但是要注明引用来源。禁止在比赛中抄袭他人作品，经发现将取消比赛成绩并严肃处理；\r\n\r\n组织声明：组委会保留对比赛规则进行调整修改的权利、比赛作弊行为的判定权利和处置权利、收回或拒绝授予影响组织及公平性的参赛团队奖项的权利；\r\n\r\n获奖名单：将获奖名单初稿公示在官方主页，公示期为一周，公示期间，接受各校师生申诉和信息修正。专家组负责对申诉的调查、仲裁与回复。公示结束后正式公布获奖名单、电子证书查询系统和发放竞赛获奖队伍奖金。\r\n\r\n \r\n\r\n五、时间及具体安排\r\n（1）2021年11月10日-12月20日 报名阶段\r\n\r\n       参赛选手在大赛报名主页按照步骤进行组队报名。\r\n\r\n（2）2021年12月21日18:00至2022年1月20日20:00，初赛阶段\r\n\r\n         1.竞赛结束前必须在线提交结果数据、论文和代码，提交时系统验证提交数据格式是否正确；\r\n\r\n         2.入围赛成绩不会影响复赛成绩；\r\n\r\n         3.最终按照分组别分赛题从初赛中选拔前10%的队伍进入复赛。\r\n\r\n（3）2022年3月7日18:00-2022年3月14日20:00，复赛阶段\r\n\r\n        复赛为统一命题，不更换题目背景，但可能会更换题目问题和数据，选手网络远程答题，按照分组别分赛题进行排名。\r\n\r\n（4）金银铜奖答辩\r\n\r\n复赛中综合总排名前12的队伍（不分组别，不分赛题）进入金银铜奖答辩环节，答辩采用线上或者线下的方式进行。答辩决出金奖1支队伍、银奖2支队伍、铜奖5支队伍（不分组别，不分赛题）。\r\n\r\n（5）2022年3月，公布竞赛结果、证书发布等。\r\n\r\n         1.公布获奖名单初稿；\r\n\r\n         2.公示结果异议查询；\r\n\r\n         3.终稿获奖名单公布。\r\n\r\n \r\n\r\n六、评测标准\r\n专家组会从四个方面进行评价：\r\n\r\n（1）参赛论文\r\n\r\n根据问题，准备一份论文对项目进行说明，论文中的摘要部分需要简明扼要地概述模型算法的核心思想以及效果，正文部分需要详细阐述模型算法的细节、求解过程、结果以及对应的参考文献。\r\n\r\n（2）项目完成度\r\n\r\n与解决方案匹配的完整代码，可以是Python、Matlab、C++、Java等语言的代码，附详细的操作说明文档和源代码。\r\n\r\n（3）模型泛化性能\r\n\r\n未公开测试数据集验证得到的准确率、召回率等与题目实际背景密切相关的考核指标。\r\n\r\n（4）创新性\r\n\r\n具有创新的系统分析和解题思路，创新的算法设计，跨学科交叉应用能力等。\r\n\r\n \r\n\r\n七、大赛奖励\r\n（1）金银铜奖\r\n\r\n所有参赛队伍（不分组别、不分赛题）中评选：\r\n\r\n金奖1支队伍（奖金10000元税前）\r\n\r\n银奖2支队伍（奖金5000元税前）\r\n\r\n铜奖5支队伍（奖金2000元税前）\r\n\r\n（2）奖项评定\r\n\r\n竞赛分组别分赛题评选出：\r\n\r\n一等奖（5%）\r\n\r\n二等奖（15%）\r\n\r\n三等奖（30%）\r\n\r\n成功参赛奖若干\r\n\r\n颁发“MathorCup高校数学建模挑战赛——大数据竞赛”获奖证书。\r\n\r\n初赛中排名前10%的队伍进入复赛，复赛中排名前50%的队伍评选为一等奖。\r\n\r\n（3）优秀指导教师，优秀组织单位\r\n\r\n根据学校参赛队伍得奖情况和组织参赛队伍数量综合评定。\r\n\r\n（4）企业实习\r\n\r\n获得一等奖的队伍优先推荐至企业实习。\r\n\r\n \r\n\r\n八、竞赛报名\r\n       参赛者以队为单位在大赛官网（https://www.saikr.com/vse/bigdata1） 上自行注册报名。\r\n\r\n \r\n\r\n九、参赛费用\r\n       每队需缴纳报名及评审费用200元，通过大赛官网缴纳；用于大赛组织、命题、评审、赛题讲解、证书制作等工作。\r\n\r\n*注：涉及到出题、评阅准备等，报名截止前7天不可取消比赛。\r\n\r\n \r\n\r\n十、志愿者招募\r\n       为了更好的普及、宣传本次大赛，激发同学们对算法的兴趣，特面向全国高校招募“ 2021年MathorCup高校大数据挑战赛志愿者”，报名请点击：www.saikr.com/act/3029。\r\n\r\n \r\n\r\n十一、联系方式\r\n官方QQ参赛1群：821843124（已满）\r\n\r\n官方QQ参赛2群：697738740\r\n\r\n官方QQ参赛3群：230319948\r\n\r\n官方QQ参赛4群：861370387\r\n\r\n进群可在群公告及群文件内下载历年赛题与优秀论文。\r\n\r\n秘书处郭老师手机/微信：18210922591\r\n\r\n组委会QQ：2135234783\r\n\r\n竞赛官网：http://www.mathorcup.org/\r\n\r\n公众号：更多关于本次大赛的最新消息请关注大赛官方微信公众号：MathorCup', '2021-12-17 16:07:24', '2021-12-17 16:07:27');
+INSERT INTO `cpt_content` VALUES (2, '2021《英语世界》杯全国大学生英语写作大赛——冬奥写作大赛\r\n \r\n\r\n        为了更好地迎接冬奥盛会，引导全国大学生深入了解“2022北京冬奥会”相关知识，学习“冬奥会精神”，增强当代大学生的使命感和责任感，提升实际语言应用能力、文化意识和跨文化交际能力。\r\n\r\n       经研究决定，商务印书馆《英语世界》杂志社特举办2021《英语世界》杯全国大学生英语写作大赛——冬奥写作大赛。以高远的立意和创新的理念 , 顺应时代发展大势，聚焦国家时事热点，把脉外语教育动向，引领外语教育改革。\r\n\r\n       建议各高校紧扣立德树人的根本任务，协助做好本校的组织学习工作，引导大学生群体关注国家时事，在中国从体育大国向体育强国转型的当下，通过写作竞赛引导大学生群体借冬奥会讲好中国故事，助建冬奥会这个世界读懂中国的重要窗口，各高校可将本次竞赛获奖成绩作为本校大学生综合素质方面测定及加分的重要参考依据。\r\n\r\n一、   时间安排\r\n\r\n报名比赛：即日起至2021年12月31日12：00\r\n\r\n赛题发布时间：赛题已发布，请在附件中下载查看\r\n\r\n竞赛时间：即日起至2021年12月31日12：00\r\n\r\n比赛结果公布：2022年1月\r\n\r\n \r\n\r\n 二、   参赛对象\r\n\r\n全国高校全日制在校生（研究生、本科生、专科生）。\r\n\r\n \r\n\r\n三、   内容范围\r\n\r\n冬奥会知识；冬奥会历史回顾；冬奥会项目及运动员；中国与冬奥会；北京之冬。大赛赛题参考《英语世界（北京2022年冬奥会增刊）》等。\r\n\r\n四、参赛等级\r\n\r\nA 类活动适用于研究生参加\r\n\r\nB 类活动适用于英语专业本、专科学生参加\r\n\r\nC 类活动适用于非英语专业本科生参加\r\n\r\nD 类活动适用于体育类和艺术类本科生和非英语专业高职高专类学生参加\r\n\r\n本大赛获奖证书将为大学生升学、留学，教师评职、评优和晋升等提供重要参考依据。\r\n\r\n \r\n\r\n 五、   奖项设置\r\n\r\n设全国一、二、三等奖；一等奖不超过参赛人数的10%，二等奖不超过参赛人数的30%，三等奖不超过参赛人数的50%。\r\n\r\n全国优秀指导老师\r\n\r\n全国优秀组织单位：优秀组织单位、优秀组织社团。\r\n\r\n全国优秀志愿者：按参与度进行登记评定。\r\n\r\n六、参赛须知\r\n1． 参赛方式：\r\nstep1：参赛选手在页面下方自行下载电子版专用作文纸（附件 1）与大赛赛题\r\nstep2：将作文以打字的方式呈现在电子版专用作文纸上\r\nstep3：将Word文件转为PDF文件，PDF文件命名为：报名编号+参赛类别（例如：WOWT21XXXXX+赛题A/B/C/D)\r\nstep4：在2021年12月31日12：00前，将PDF 文件上传到报名网站即为成功参赛，无需邮寄纸质版作品。\r\n2． 作品要求：\r\n参赛作品严禁抄袭，必须为未曾发表、出版过的文章，并由学生本人独立完成。\r\n\r\n参赛作品一经发现作弊情况（包含但不限于使用软件、抄袭、雷同、代写），即取消参赛者参赛资格。\r\n参赛作品无需手写，以打字的方式呈现在电子版专用作文纸上即可。\r\n\r\n \r\n\r\n七、   收费标准\r\n\r\n报名费49元（包含竞赛评审、工本、证书等费用）。\r\n\r\n \r\n\r\n八、   获奖证书\r\n\r\n本次竞赛获奖证书制作费、邮寄费等相关费用从竞赛报名费中列支。\r\n\r\n \r\n\r\n九、   其他事项\r\n\r\n1、大赛唯一指定报名通道：赛氪网（www.saikr.com）。\r\n\r\n2、大赛组委会负责比赛的组织实施等各项工作。\r\n\r\n3、赛题公布后，概不受理退费。\r\n\r\n4、大赛组委会拥有大赛活动的最终解释权。\r\n\r\n \r\n\r\n十、竞赛交流\r\n\r\n联系QQ：3198165617\r\n\r\nQQ交流1群：612314405(已满）\r\n\r\nQQ交流2群：621358580（已满）\r\n\r\nQQ交流3群：962478765\r\n\r\n组委会老师微信：albacy', '2021-12-17 16:06:42', '2021-12-17 16:06:45');
+INSERT INTO `cpt_content` VALUES (3, '关于举办第十三届蓝桥杯\r\n全国软件和信息技术专业人才大赛的通知\r\n \r\n\r\n各高等院校及相关单位：\r\n\r\n       为贯彻落实《中国教育现代化2035》和《国务院关于印发新时期促进集成电路产业和软件产业高质量发展若干政策的通知》有关精神，为我国制造强国和网络强国建设提供人才支持，加快高等院校计算机、软件及电子信息专业教学创新与改革，提高学生自主创新意识和工程实践能力，中心决定举办第十三届蓝桥杯全国软件和信息技术专业人才大赛（以下简称大赛）。大赛入围中国高等教育学会“全国普通高校大学生竞赛排行榜”竞赛项目榜单，现将大赛有关事项通知如下：\r\n\r\n一、大赛赛项\r\n（一）个人赛项\r\n1.软件类\r\n\r\n（1）C/C++程序设计（研究生组、大学 A 组、B 组、C 组）\r\n\r\n（2）Java 软件开发（研究生组、大学 A 组、 B 组、C组）\r\n\r\n（3）Python 程序设计（研究生组、大学 A 组、 B 组、C组）\r\n\r\n（4）Web应用开发（大学组、职业院校组）\r\n\r\n2.电子类\r\n\r\n（1）嵌入式设计与开发\r\n\r\n（2）单片机设计与开发（大学组、职业院校组）\r\n\r\n（3）物联网设计与开发\r\n\r\n（4）EDA设计与开发\r\n\r\n3.青少年创意编程组\r\n\r\n（二）视觉艺术设计赛项\r\n\r\n（三）数字科技创新赛项\r\n\r\n各赛项的具体规则及章程另行通知。\r\n\r\n二、参赛对象及报名方式\r\n具有正式全日制学籍且符合相关科目报名要求的研究生、本科生、高职高专、中职中专学生（以报名时状态为准）可报名参加除青少年创意编程组外的其他各类比赛。全国中小学生可参加青少年创意编程组比赛。请各参赛单位及个人登录大赛官网在线注册并报名。\r\n\r\n大赛官网：www.lanqiao.cn\r\n\r\n三、奖项设置\r\n省赛每个组别设置一、二、三等奖，总决赛每个组别设置一、二、三等奖及优秀奖，具体详见大赛章程。\r\n\r\n四、时间安排\r\n报名：2021年10月12日——2021年12月24日\r\n\r\n省赛：2022年3月底或4月\r\n\r\n总决赛：2022年5月底或6月\r\n\r\n若受疫情影响，大赛时间调整，大赛组委会将另行通知。\r\n\r\n五、其他\r\n1.本届大赛由国信蓝桥教育科技（杭州）股份有限公司承办，并统一收取大赛相关费用。\r\n\r\n2.大赛章程、后续通知、获奖名单等相关信息将由大赛组委会进行发布，请各参赛单位及个人及时关注大赛官网。\r\n\r\n3.请各单位动员学生积极参加比赛，并做好参赛报名、竞赛辅导及赛事组织工作。\r\n\r\n六、组委会联系方式\r\n咨询电话：4006-588-662\r\n\r\n电子邮箱：lanqiao@lanqiao.cn\r\n\r\n中心赛事监督：010-68208714', '2021-12-17 16:04:40', '2021-12-17 16:04:45');
+INSERT INTO `cpt_content` VALUES (5, '竞赛信息\r\n       工业是强国之本，文化是民族之魂。习近平总书记在党的十九大报告中指出：“要繁荣文艺创作，坚持思想精深、艺术精湛、制作精良相统一，加强现实题材创作，不断推出讴歌党、讴歌祖国、讴歌人民、讴歌英雄的精品力作”。文学见证历史，文学记录时代，适逢庆祝建党百年的重要历史时刻，在当前大力发展新基建，推进制造强国、网络强国战略的关键时期，举办大赛的意义，在于激励和鼓舞全社会参与新时代中国特色工业文化建设，培育优秀文艺作品以立体化展示中国工业新形象，展示党领导下我国工业现代化建设的伟大实践；在于激励和鼓舞全社会更加紧密地团结在以习近平同志为核心的党中央周围，担当时代使命，铸就中国工业文化新辉煌，谱写制造强国、网络强国建设的新篇章。\r\n\r\n \r\n\r\n        近年来，中国工业文学作品大赛受到了社会各界人士的广泛关注和积极参与，挖掘了一批代表当代工业文学发展水平的优秀作品，表彰了一批活跃在工业生产一线的文学创作者，形成了关注工业文学弘扬工业文化的良好社会氛围。为进一步鼓励动员社会各界工业文学创作力量，创作更多演绎现代工业为决战脱贫攻坚、全面建成小康社会、实现第一个百年奋斗目标带来深刻影响的作品，加大工业战线文艺骨干培育力度，引导文艺群体鼓励创作有筋骨、有道德、有温度、有思想的优秀工业文学作品，工业和信息化部新闻宣传中心、工业和信息化部工业文化发展中心、中国作家协会创作联络部、中国企业联合会企业文化建设委员会及广东光耀物联科技文化有限公司共同举办第三届中国工业文学作品大赛。\r\n\r\n \r\n\r\n活动流程\r\n\r\n（一）征稿阶段\r\n\r\n1.征稿时间：2021年4月26日0时-2021年12月30日24时\r\n\r\n2.个人参赛：参赛作者须在征稿截止时间前登陆大赛官方网站（www.gongyewenxue.com），在线提交参赛作品。\r\n\r\n3.单位推荐：推荐单位统一填写《第三届中国工业文学作品大赛单位推荐报名表》（见附件），加盖公章后邮寄至大赛组委会秘书处。单位推荐的参赛作品应参照个人参赛的要求提交作品稿件。\r\n\r\n \r\n\r\n（二）评审阶段\r\n\r\n1.评审时间：2022年2月-2022年5月\r\n\r\n2.奖项评审：大赛评委会本着“公开、公正、公平”的原则，评选出每个类别的一、二、三等奖以及优秀作品奖。组委会根据公众网络投票结果，公布网络人气奖；根据推荐单位所推荐的作品数量及质量研究决定最佳组织奖。\r\n\r\n \r\n\r\n（三）颁奖展示\r\n\r\n2022年5月通过大赛官网、新媒体平台及中央媒体向社会正式公布大赛评选结果，并拟在中国工业文化高峰论坛上举行颁奖仪式，邀请获奖作者和单位出席颁奖活动，并现场颁奖。\r\n\r\n赛后，大赛组委会拟甄选优秀作品进行综合开发，部分优秀作品将有机会正式出版或进行影视制作。\r\n\r\n \r\n\r\n活动名称及主题\r\n\r\n活动名称：第三届中国工业文学作品“光耀杯”大赛\r\n\r\n活动主题：聚文化之力    铸工业之魂\r\n\r\n \r\n\r\n组织机构\r\n\r\n主办单位：工业和信息化部工业文化发展中心、工业和信息化部新闻宣传中心、中国作家协会创作联络部、中国企业联合会企业文化建设委员会、广东光耀物联科技文化有限公司\r\n\r\n协办单位：中国台港电影研究会、北京电影学院、北京市国有文化资产管理中心、中国核工业集团有限公司、陕西文化产业投资控股(集团)有限公司、中国科学技术馆、中国科普作家协会\r\n\r\n支持单位：新华社新媒体中心、新华社瞭望智库、人民出版社、电子工业出版社、中国航空工业作家协会、《军工文化》杂志社、中国煤矿作家协会、《博览群书》杂志社、中华版权代理总公司、新华先锋出版科技有限公司、中国工人出版社\r\n\r\n承办单位：工信光耀（北京）文化发展有限公司、北京三达经济技术合作开发中心\r\n\r\n合作媒体：人民日报、光明日报、经济日报、中央广播电视总台、中国新闻社、工人日报、中国青年报、经济参考报、人民政协报、文艺报、人民网、新华网、中国作家网等\r\n\r\n指定法律顾问单位：北京同清律师事务所\r\n\r\n \r\n\r\n参赛作品要求\r\n\r\n（一）内容要求\r\n\r\n参赛作品须于2019年1月1日之后完成创作或公开发表。作品应把握时代脉搏，弘扬富有时代特色的中国工业精神；以“工业文化”视角，展现工业经济各行业特点，体现工业经济全领域生产、分配、交换、消费关系的特征，描绘在中国共产党的领导下我国工业发展的辉煌历程；展现工业为经济、社会、文化、民生带来的深刻变革和巨大进步，讴歌中国工业的人文情怀；刻画为工业发展拼搏奋斗的工人、科研工作者、企业家等典型形象；突出文学性、艺术性和思想性。\r\n\r\n科幻及科普作品均接受投稿。\r\n\r\n为了更加鲜活地反映当前工业文化领域的时代特征，本届大赛对征稿类型做了局部调整，将影视剧本类改为微电影及微电影项目计划书。微电影及项目计划书题材要求为：展示当代我国工业发展进步历程、体现技术创新、工匠精神、工业装备产品更新换代的剧情片、纪录片、科普短片。\r\n\r\n此举旨在引导更多的人去发现、挖掘自己身边的工业故事，用喜闻乐见的方式表现身边的工匠精神 、工业文化。\r\n\r\n本届大赛以文字与视频相结合的多元形式，征集反映时代脉动的优秀作品，便于在更多的平台上广泛传播，培育年轻一代关注工业文化的精神内涵。\r\n\r\n \r\n\r\n（二）体裁篇幅\r\n\r\n限定为小说、报告文学、微电影（短视频）共3种体裁7个类别。包括短篇小说类（3万字以内）、中篇小说类（3万-10万字）、长篇小说类（10万字以上）；中篇报告文学类（2-10万字）、长篇报告文学类（10万字以上）。\r\n\r\n科普、科幻特别奖将从小说、报告文学、微电影（短视频）三种作品体裁中评选出，不单独征稿。\r\n\r\n微电影（短视频）成片：要求：时长可分为5分钟、10分钟、15分钟三种。有完整故事情节段落，画质清晰，格式为rmvb/avi/mp4/mov，作品大小500M--1.5G之间。视频技术指标：分辨率1080p（1920×1080），并附中文简体剧情介绍及职员表）；\r\n\r\n微电影项目创投计划（时长不限）：须提交创意全案（含创意说明、故事大纲、人物描述、完整剧本和视听风格描述）。\r\n\r\n \r\n\r\n评审展示\r\n\r\n（一）评审阶段\r\n\r\n1.评审时间：2022年2月-2022年5月\r\n\r\n2.奖项评审：大赛评委会本着“公开、公正、公平”的原则，评选出每个类别的一、二、三等奖以及优秀作品奖。组委会根据公众网络投票结果，公布网络人气奖；根据推荐单位所推荐的作品数量及质量研究决定最佳组织奖。\r\n\r\n \r\n\r\n（二）颁奖展示\r\n\r\n2022年5月通过大赛官网、新媒体平台及中央媒体向社会正式公布大赛评选结果，并拟在中国工业文化高峰论坛上举行颁奖仪式，邀请获奖作者和单位出席颁奖活动，并现场颁奖。\r\n\r\n \r\n\r\n赛后，大赛组委会拟甄选优秀作品进行综合开发，部分优秀作品将有机会正式出版或进行影视制作。\r\n\r\n \r\n\r\n版权声明\r\n\r\n文字作品：\r\n\r\n1. 参赛者应对参赛作品拥有完整的著作权， 保证无任何权利瑕疵及权属争议。参赛作品如系改编自他人作品，参赛者应出具被改编作品著作权人授权协议等有效书面材料；如系改编自真人真事，参赛者应出具该原型人物或当事人授权、同意或其他类似书面材料。如因参赛作品引起法律纠纷，其全部法律责任及后果均由参赛者承担，给大赛相关方造成损失的，参赛者应当承担赔偿责任。\r\n\r\n2. 参赛作品一经认定属于抄袭、剽窃作品，或出现权属争议等法律纠纷的，大赛组织方有权取消其参赛资格。已经入选的作品和个人，大赛组织方有权直接取消其入选资格。\r\n\r\n3. 大赛组织方不收取参赛费用。参赛者注册并一经投稿，即视为已经知晓大赛相关规则制度，并同意将所提交参赛作品在赛事推广用途范围内的著作权复制权、信息网络传播权等其他相关权利许可给大赛组织方。大赛组织方及其合作方有权使用该参赛作品用于编辑作品集、举办线上线下展览、发布在大赛官方网站和组织方相关网站、接受公众阅读与投票等等与大赛相关的宣传活动，且无须向著作权人另行告知及支付任何报酬。\r\n\r\n4. 如参赛者所提交参赛作品被提名或入围本次大赛奖项，参赛者须承诺将该作品的出版发行、运营开发等经营代理权授予组织方独家享有，具体事宜由参赛者与组织方另行签署协议约定。\r\n\r\n5. 因作品著作权有人身性权利和财产性权利之分，对于在参赛前或参赛过程中已将参赛作品著作权中任何财产性权利（诸如复制权、发行权、表演权、摄制权、改编权、翻译权等等）进行转让、授权许可给第三方的参赛者，大赛组织方仅给予其获奖荣誉、获奖证书等荣誉性奖励，不给予奖金奖励。参赛者应当如实告知参赛作品著作权权利转让、授权情况及变化，否则组织方有权取消奖励并追究因此给大赛造成的损失赔偿。\r\n\r\n6. 参赛者应当保证其参赛作品在整个大赛周期中作品署名、作品名称等主要信息的一致性，如发生任何变化应当及时通知大赛组织方。\r\n\r\n7. 本次大赛结束后2年内，参赛作品作者同意授权大赛官方及其工作网站以无偿刊登、展示等方式宣传使用参赛作品的权利。\r\n\r\n8. 凡投稿参赛的作者均视为同意并遵守上述约定。大赛组织方对本次活动拥有最终解释权。\r\n\r\n \r\n\r\n视频作品：\r\n\r\n1.参赛作品内容不涉及色情、暴力、种族歧视等内容，符合中华人民共和国相关法律、法规。\r\n\r\n2.参赛作品应为参赛者本人或团体自行创作的原创作品，拥有作品的完全著作权，并经创作者或团队同意参赛。保证提交作品中所采用的音乐及剧本创意等已获得版权，或取得该作品版权人授权使用。\r\n\r\n3.全体著作权人同意将此作品整体及附属的所有可提取部分的全部著作权——包括但不限于复制权、发行权、传播权、翻译权、改编权、汇编权、剪辑以及上述权利的转让权和许可使用权，授权给组委会，期限为作品著作权的法定保护期，转让地域范围为全世界，不收取酬金或相关著作权使用费。\r\n\r\n4.授权允许组委会将参赛作品全部或其中某一部分作为该活动当前或未来宣传推广内容的一部分，在互联网、手机、电视以及其它相关传播平台、展览交流或宣传片中使用。允许组委会在任何公众场所展映参赛作品。\r\n\r\n \r\n\r\n奖项设置\r\n\r\n（一）小说类\r\n\r\n长篇小说：一等奖1个，奖金8万元。二等奖2个，每个奖项奖金3万元。三等奖3个，每个奖项奖金2万元。\r\n\r\n中篇小说：一等奖1个，奖金5万元。二等奖2个，每个奖项奖金2万元。三等奖3个，每个奖项奖金1万元。\r\n\r\n短篇小说：一等奖1个，奖金1.5万元。二等奖2个，每个奖项奖金1万元。三等奖3个，每个奖项奖金0.5万元。\r\n\r\n优秀作品奖：经专家评委会选定每个类别“优秀作品奖”6名，每名奖励价值1000元人民币的奖品、获奖证书。\r\n\r\n \r\n\r\n（二）报告文学类\r\n\r\n长篇报告文学：一等奖1个，奖金5万元。二等奖2个，每个奖项奖金3万元。三等奖3个，每个奖项奖金2万元。\r\n\r\n中篇报告文学：一等奖1个，奖金3万元。二等奖2个，每个奖项奖金1.5万元。三等奖3个，每个奖项奖金1万元。\r\n\r\n优秀作品奖：经专家评委会选定每个类别“优秀作品奖”6名，每名奖励价值1000元人民币的奖品、获奖证书。\r\n\r\n \r\n\r\n（三）微电影类\r\n\r\n微电影成片：一等奖1个，奖金5万元。二等奖2个，每个奖项奖金2万元。三等奖3个，每个奖项奖金1万元。\r\n\r\n优秀微电影（短视频）奖：经专家评委会选定15部微电影颁发“优秀微电影（短视频）奖”，获奖者可获得奖杯、证书、3000元奖金。\r\n\r\n微电影项目创投计划：评出1部优秀项目书，给予优秀项目书10万元（分期）资助。并推荐青年明星、名导与其项目书团队组合，新的创作集体将一起深入地方，走进故事原型人物，参与创作。或由著名导演、制作团队执导或指导进行拍摄成片。\r\n\r\n \r\n\r\n（四）科普、科幻类\r\n\r\n科普、科幻特别奖1个，奖金5万元。（科普、科幻特别奖将从小说、报告文学、微电影（短视频）三种作品体裁中评选出，不单独征稿。科普科幻文字作品需5万字以上）。\r\n\r\n \r\n\r\n（五）网络人气奖\r\n\r\n由公众网络投票分别选出每个类别（科普科幻类、微电影项目书类除外）的前5名，每名奖励价值1000元人民币的奖品、获奖证书。\r\n\r\n大赛奖金总额逾100万元人民币。大赛费用由工信光耀（北京）文化发展有限公司提供。\r\n\r\n \r\n\r\n注：以上奖金均为人民币，且为税前金额。大赛组织方将于颁奖典礼结束后30天内，向符合条件的获奖者发放奖金。\r\n\r\n \r\n\r\n中国工业文学作品大赛组委会\r\n\r\n电话： \r\n\r\n周 阳 010-68200660\r\n\r\n68200663，18810251406\r\n\r\n传真： 010-82147081\r\n\r\n邮箱： gongyewenxue@icdc-nmc.org\r\n\r\n监督电话：蒋亦希  010-68209924', '2021-12-17 16:07:56', '2021-12-17 16:07:59');
+INSERT INTO `cpt_content` VALUES (6, '竞赛信息\r\n一、组织机构\r\n\r\n本次大赛由全国高等院校计算机基础教育研究会主办，传智教育高校服务品牌院校邦和各高校计算机相关院系承办。\r\n\r\n\r\n二、指导委员会\r\n\r\n主 任：\r\n\r\n黄心渊（中国传媒大学动画与数字艺术学院院长、教授，全国高等院校计算机基础教育研究会会长）\r\n\r\n副主任：\r\n\r\n李凤霞（北京理工大学计算机学院教授、全国高等院校计算机基础教育研究会资深副会长）\r\n\r\n\r\n杨小平（中国人民大学信息学院教授、全国高等院校计算机基础教育研究会资深副会长）\r\n\r\n\r\n詹国华（杭州师范大学信息科学与工程学院教授、全国高等院校计算机基础教育研究会资深副会长）\r\n\r\n\r\n王移芝（北京交通大学计算机与信息技术学院教授、全国高等院校计算机基础教育研究会常务理事、教育部高等学校大学计算机教学指导委员会副主任委员）\r\n\r\n三、组织委员会\r\n\r\n主任：\r\n\r\n刘开南（三亚学院常务副校长、教授，全国高等院校计算机基础教育研究会常务理事，全国高等院校计算机基础教育研究会数据科学专委会主任）\r\n\r\n副主任：\r\n\r\n曹淑艳（对外经济贸易大学教授、全国高等院校计算机基础教育研究会常务理事、全国高等院校计算机基础教育研究会数据科学专委会副主任）\r\n\r\n袁方（河北大学教授、全国高等院校计算机基础教育研究会常务理事、全国高等院校计算机基础教育研究会数据科学专委会副主任）\r\n\r\n马礼（北方工业大学信息学院院长、教授，中国计算机学会第十一届理事会理事、杰出会员，北京市高等教育学会计算机教育研究会理事）\r\n\r\n\r\n四、仲裁委员会\r\n\r\n主任：\r\n\r\n郑 骏（华东师范大学数据科学与工程学院教授、全国高等院校计算机基础教育研究会常务理事、全国高等院校计算机基础教育研究会青少年信息与智能教育专委会主任、中国教育学会中小学信息技术专委会副理事长）\r\n\r\n仲裁委员会委员：\r\n\r\n黄维通（清华大学计算机科学与技术系教授、全国高等院校计算机基础教育研究会常务理\r\n事、全国高等院校计算机基础教育研究会理工专委会副主任）\r\n\r\n徐鲁雄（福州理工学院应用科学与工程系教授、全国高等院校计算机基础教育研究会常务理事）\r\n\r\n杨 毅（云南农业大学大数据学院教授、全国高等院校计算机基础教育研究会常务理事、云南省计算机基础教学指导委员会主任，云南省计算机教学研究会会长）\r\n\r\n张泽华（中国机器人CR教育培训标准委员会委员，资深培训师，先后任职于Nortel、CIeNET、爱立信等知名企业）\r\n\r\n五、参赛要求\r\n\r\n1.竞赛内容\r\n\r\n第四届“传智杯”全国大学生IT技能大赛分设程序设计赛、人工智能技术创新应用赛、大数据技术与应用三大赛项（具体科目见附件1）。\r\n\r\n2.参赛对象\r\n\r\n全日制高等院校专、本、硕大学生，技工院校学生均可参赛。参赛者在报名时需具有在校学籍，已毕业的学生也可参加体验，但不具备评奖资格。\r\n\r\n参赛者应保证报名时填写的信息准确有效，并依据参赛系统要求完成“在校学生实名认证”。\r\n\r\n参赛者须遵守所在学校、地区关于学生参加校外活动之规定。\r\n\r\n大赛技术支持单位及有机会接触到比赛试题及数据的人员不具备参赛报名资格。\r\n\r\n3.竞赛形式\r\n\r\n程序设计赛、人工智能技术创新应用赛、大数据技术与应用赛项采用区域赛（初赛）和决赛两个赛程。\r\n\r\n在程序设计赛道中，参赛者须以个人名义参赛, 不超过2名指导教师。人工智能技术创新应用赛项为团体赛，以院校为单位组队参赛，不得跨校组队。每个院校可选派多支参赛队伍，每支参赛队由 3 名选手（设队长 1名）和不超过 2名指导教师组成。\r\n\r\n大数据技术与应用赛项为团体赛，以院校为单位组队参赛，不得跨校组队。每个院校可选派多支参赛队伍，每支参赛队由 3 名选手（设队长 1名）和不超过 2名指导教师组成。比赛形式与内容请参见附件2《大赛各赛项规程》。\r\n\r\n各赛项参赛选手须为全日制在籍学生，选手年龄须不超过28周岁；指导教师须为本校专兼职教师。\r\n\r\n六、奖项设置\r\n\r\n程序设计赛、人工智能技术创新应用赛、大数据技术与应用赛分为区域赛（初赛）和决赛。区域赛分为华东、华中、华北、华南、东北、西南、西北七大赛区，根据各区域学生的参赛科目分别排名，分设一等奖、二等奖、三等奖和优秀奖各若干项，如下：\r\n\r\n区域赛一等奖：不超过有效成绩数的5%，颁发荣誉证书；\r\n区域赛二等奖：不超过有效成绩数的15%，颁发荣誉证书；\r\n区域赛三等奖：不超过有效成绩数的20%，颁发荣誉证书；\r\n区域赛优秀奖：不超过有效成绩数的15%，颁发荣誉证书。\r\n区域赛一、二等奖获奖选手将有资格进入决赛。决赛设一等奖、二等奖、三等奖各若干项，总获奖人数不超过总入围人数的10%。分别如下：\r\n\r\n决赛一等奖：不超过有效成绩的2%，颁发荣誉证书；\r\n决赛二等奖：不超过有效成绩的3%，颁发荣誉证书；\r\n决赛三等奖：不超过有效成绩的5%，颁发荣誉证书。\r\n\r\n*大赛主办方有权结合参赛者报名情况、晋级情况等实际因素，调整获奖比率。\r\n\r\n七、评审规则\r\n\r\n1.大赛原则\r\n\r\n秉承“安全、公平、公开、公正”的原则。参赛学生要保证其遵守比赛规则，对违反参赛规则和评奖工作规定的评奖结果，大赛组委会不予承认。\r\n\r\n2.大赛评审程序\r\n\r\n赛事评审分为两个阶段：一是网上初评，二是专家复审。\r\n\r\n评审程序包括检查与分组、专家初评、公示、专家复审等环节。\r\n\r\n检查与分组：大赛组织委员会将组织专家对报名资料、答卷、提交作品等进行形式检查。对所有在规定时间内提交的有效参赛作品分组，并提交初评专家组进行初评。\r\n\r\n专家初评：由大赛组委会聘请专家，对各科目参赛答卷进行网上初评。\r\n\r\n公示：根据专家初评的情况，确定参加决赛的选手名单，在网站上公示，并通知参赛院校，接受申诉并对有异议的答卷安排专家重审。\r\n\r\n专家复审：针对专家初评有较大分歧意见的作品，安排专家进行复审。\r\n\r\n3.违规处理\r\n\r\n以下情况将视为违规，一经发现，大赛组委会有权取消参赛队伍的参赛资格，并在大赛官网进行公示。\r\n\r\n\r\n（1）参赛报名信息作弊或造假；\r\n\r\n（2）在参赛过程中出现违反相关法律、法规、政策规定的行为；\r\n\r\n \r\n\r\n（3）涉嫌抄袭或侵犯他人知识产权的行为；\r\n\r\n（4）在比赛过程中发现或者被举报认定存在的其他违规行为。\r\n\r\n八、竞赛安排\r\n\r\n1．申请赛点\r\n\r\n2021年9月20日起，各高校计算机类院系或社团可在官网申请承办大赛。\r\n\r\n承办单位需要尽可能提供可供本校学生参赛的可上网的机房。申请网址\r\n（https://www.yuque.com/baoyuan/czbk/yoy4hi）\r\n\r\n2．开放报名\r\n\r\n登陆官网(http://dasai.ityxb.com/)，点击立即报名，请在各科目截止时间前完成报名。参赛学生可以根据自己的实际情况选择参赛赛道。\r\n\r\n3. 练习赛\r\n\r\n练习赛（模拟赛）不计入最终的竞赛得分，主要让指导老师及参赛选手体验竞赛流程和熟悉竞赛平台的使用。\r\n\r\n4. 区域赛（初赛）\r\n\r\n程序设计赛、人工智能技术创新应用赛、大数据技术与应用赛设区域赛为初赛。\r\n\r\n程序设计赛道：\r\n初赛时间：2021年12月19日 下午 15:30 - 18:30 （3个小时）\r\n\r\n参赛链接（别点错了呦~）：\r\nA 组 https://www.luogu.com.cn/contest/58541\r\nB 组 https://www.luogu.com.cn/contest/58542 \r\n\r\n参赛邀请码将于今日下午3点起以短信的形式陆续分批发放，请注意查收。\r\n如在本周五下午3点还未收到邀请码，请联系组委会老师单独领取。\r\n\r\n对赛题及平台还不太熟悉的同学，建议快速浏览第四届传智杯练习赛赛题解析&大赛指导回放\r\n链接：https://pan.baidu.com/s/19-TNVcmqGrPOjn5P6ftunA \r\n提取码：1234 \r\n\r\n人工智能技术创新应用赛道安排： \r\n大数据技术与应用赛道安排： \r\nhttps://www.yuque.com/baoyuan/czbk/apn7pf\r\n\r\n5. 总决赛\r\n\r\n程序设计赛和人工智能技术创新应用赛、大数据技术与应用赛晋级决赛的同学，请按照决赛相关通知筹备参赛，具体时间另行通知）。\r\n\r\n6. 获奖公示\r\n\r\n2022年3月底到2022年4月初在官网公布各赛项获奖名单，同期公布优秀组织单位和优秀指导老师名单。公示期为一周，一周后无异议将陆续颁发获奖证书。\r\n\r\n九、申诉与仲裁\r\n\r\n参赛选手和队伍对比赛结果有异议，可以由指导老师向组委会提出书面仲裁请求，需要参赛队员、指导老师的签名。组委会和专家组委托裁判根据比赛规则给出针对申诉内容的裁决依据，仲裁请求和裁决依据2份材料一起提交仲裁委员会。\r\n\r\n仲裁委员会依据比赛规范、规则以及裁判给出的裁决依据对比赛结果进行仲裁，仲裁结果为最终结果。\r\n\r\n十、其他事项\r\n\r\n有关大赛的其他事宜由组委会另行通知。\r\n\r\n附件：\r\n\r\n\r\n2021-2022年第四届传智杯大赛通知\r\n\r\n \r\n\r\n内附：\r\n2022年第四届“传智杯”全国大学生IT技能大赛参赛科目及时间安排\r\n\r\n2022年第四届“传智杯”全国大学生IT技能大赛各赛项规程', '2021-12-17 16:08:30', '2021-12-17 16:08:33');
 
-/*Data for the table `cpt_content` */
-
-/*Table structure for table `team` */
-
+-- ----------------------------
+-- Table structure for team
+-- ----------------------------
 DROP TABLE IF EXISTS `team`;
+CREATE TABLE `team`  (
+                         `teamid` int(11) NOT NULL AUTO_INCREMENT COMMENT '队伍id',
+                         `teamname` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '队伍名',
+                         `cptid` int(11) NOT NULL COMMENT '比赛id',
+                         `createtime` datetime(0) NULL DEFAULT NULL COMMENT '创建时间',
+                         `updatetime` datetime(0) NULL DEFAULT NULL COMMENT '更新时间',
+                         PRIMARY KEY (`teamid`) USING BTREE,
+                         INDEX `FORE_CPTID`(`cptid`) USING BTREE,
+                         CONSTRAINT `FORE_CPTID` FOREIGN KEY (`cptid`) REFERENCES `competition` (`cptid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 1121 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
-CREATE TABLE `team` (
-  `teamid` int(11) NOT NULL AUTO_INCREMENT COMMENT '队伍id',
-  `teamname` varchar(255) NOT NULL COMMENT '队伍名',
-  `cptid` int(11) NOT NULL COMMENT '比赛id',
-  `createtime` datetime DEFAULT NULL COMMENT '创建时间',
-  `updatetime` datetime DEFAULT NULL COMMENT '更新时间',
-  PRIMARY KEY (`teamid`) USING BTREE,
-  KEY `FORE_CPTID` (`cptid`) USING BTREE,
-  CONSTRAINT `FORE_CPTID` FOREIGN KEY (`cptid`) REFERENCES `competition` (`cptid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB AUTO_INCREMENT=1116 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+-- ----------------------------
+-- Records of team
+-- ----------------------------
+INSERT INTO `team` VALUES (1112, 'coi', 1, '2021-12-11 19:47:12', '2021-12-13 19:47:17');
+INSERT INTO `team` VALUES (1113, '星耀', 2, '2021-12-03 19:47:51', '2021-12-13 19:47:55');
+INSERT INTO `team` VALUES (1114, 'dawn', 5, '2021-12-02 19:48:32', '2021-12-13 19:48:36');
+INSERT INTO `team` VALUES (1118, '树上的鸟儿成双队', 6, '2021-12-22 07:34:26', '2021-12-22 07:34:26');
 
-/*Data for the table `team` */
-
-insert  into `team`(`teamid`,`teamname`,`cptid`,`createtime`,`updatetime`) values (1111,'Syn',3,'2021-12-09 19:45:32','2021-12-13 19:45:36'),(1112,'coi',1,'2021-12-11 19:47:12','2021-12-13 19:47:17'),(1113,'星耀',2,'2021-12-03 19:47:51','2021-12-13 19:47:55'),(1114,'dawn',5,'2021-12-02 19:48:32','2021-12-13 19:48:36'),(1115,'L.S.Y',4,'2021-12-04 19:49:14','2021-12-13 19:49:18');
-
-/*Table structure for table `team_user` */
-
+-- ----------------------------
+-- Table structure for team_user
+-- ----------------------------
 DROP TABLE IF EXISTS `team_user`;
+CREATE TABLE `team_user`  (
+                              `tuid` int(11) NOT NULL AUTO_INCREMENT COMMENT 'team_user_id',
+                              `teamid` int(11) NOT NULL COMMENT '队伍id',
+                              `userid` int(11) NOT NULL COMMENT '队员id',
+                              `role` int(11) NOT NULL COMMENT '0代表队长，1代表队员',
+                              `createtime` datetime(0) NOT NULL COMMENT '创建时间',
+                              `updatetime` datetime(0) NOT NULL COMMENT '更新时间',
+                              PRIMARY KEY (`tuid`) USING BTREE,
+                              INDEX `FORE_USERID`(`userid`) USING BTREE,
+                              INDEX `FORE_TEAMID`(`teamid`) USING BTREE,
+                              CONSTRAINT `FORE_USERID` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
+) ENGINE = InnoDB AUTO_INCREMENT = 17 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
-CREATE TABLE `team_user` (
-  `tuid` int(11) NOT NULL COMMENT 'team_user_id',
-  `teamid` int(11) NOT NULL COMMENT '队伍id',
-  `userid` int(11) NOT NULL COMMENT '队员id',
-  `role` int(11) NOT NULL COMMENT '0代表队长，1代表队员',
-  `createtime` datetime NOT NULL COMMENT '创建时间',
-  `updatetime` datetime NOT NULL COMMENT '更新时间',
-  PRIMARY KEY (`tuid`) USING BTREE,
-  KEY `FORE_USERID` (`userid`) USING BTREE,
-  KEY `FORE_TEAMID` (`teamid`) USING BTREE,
-  CONSTRAINT `FORE_TEAMID` FOREIGN KEY (`teamid`) REFERENCES `team` (`teamid`) ON DELETE CASCADE ON UPDATE CASCADE,
-  CONSTRAINT `FORE_USERID` FOREIGN KEY (`userid`) REFERENCES `user` (`userid`) ON DELETE CASCADE ON UPDATE CASCADE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+-- ----------------------------
+-- Records of team_user
+-- ----------------------------
+INSERT INTO `team_user` VALUES (2, 1112, 1003, 2, '2021-12-02 20:38:56', '2021-12-14 20:38:59');
+INSERT INTO `team_user` VALUES (3, 1113, 1002, 2, '2021-12-14 20:39:16', '2021-12-14 20:39:19');
+INSERT INTO `team_user` VALUES (4, 1114, 1006, 2, '2021-12-02 20:39:40', '2021-12-13 20:39:43');
+INSERT INTO `team_user` VALUES (5, 1112, 1002, 0, '2021-12-21 03:26:26', '2021-12-21 03:26:26');
+INSERT INTO `team_user` VALUES (6, 1114, 1004, 1, '2021-12-21 03:29:50', '2021-12-21 03:29:50');
+INSERT INTO `team_user` VALUES (9, 1114, 1018, 0, '2021-12-21 07:13:48', '2021-12-21 07:13:48');
+INSERT INTO `team_user` VALUES (10, 1114, 1017, 0, '2021-12-21 20:05:08', '2021-12-21 20:05:10');
+INSERT INTO `team_user` VALUES (13, 1118, 1001, 2, '2021-12-22 07:34:26', '2021-12-22 07:34:26');
+INSERT INTO `team_user` VALUES (14, 1112, 1001, 1, '2021-12-22 12:48:27', '2021-12-22 12:48:27');
+INSERT INTO `team_user` VALUES (15, 1118, 1005, 0, '2021-12-24 21:26:46', '2021-12-24 21:26:48');
 
-/*Data for the table `team_user` */
-
-insert  into `team_user`(`tuid`,`teamid`,`userid`,`role`,`createtime`,`updatetime`) values (1,1111,1001,0,'2021-12-03 20:38:32','2021-12-14 20:38:36'),(2,1112,1003,0,'2021-12-02 20:38:56','2021-12-14 20:38:59'),(3,1113,1002,0,'2021-12-14 20:39:16','2021-12-14 20:39:19'),(4,1114,1006,0,'2021-12-02 20:39:40','2021-12-13 20:39:43'),(5,1115,1004,0,'2021-12-02 20:40:08','2021-12-14 20:40:11'),(6,1111,1005,1,'2021-12-09 21:16:56','2021-12-15 21:16:59');
-
-/*Table structure for table `user` */
-
+-- ----------------------------
+-- Table structure for user
+-- ----------------------------
 DROP TABLE IF EXISTS `user`;
+CREATE TABLE `user`  (
+                         `userid` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户id',
+                         `username` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '姓名',
+                         `password` varchar(20) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '密码',
+                         `perms` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '用户类型，user or admin',
+                         `grade` int(11) NOT NULL COMMENT '年级',
+                         `major` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '专业',
+                         `sex` int(11) NOT NULL COMMENT '性别，1为男，0为女',
+                         `qq` varchar(12) CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT 'QQ号',
+                         `introduction` varchar(255) CHARACTER SET utf8 COLLATE utf8_general_ci NULL DEFAULT NULL COMMENT '个人简介',
+                         `createtime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+                         `updatetime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '更新时间',
+                         PRIMARY KEY (`userid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 1020 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
-CREATE TABLE `user` (
-  `userid` int(11) NOT NULL AUTO_INCREMENT COMMENT '用户id',
-  `username` varchar(255) NOT NULL COMMENT '姓名',
-  `password` varchar(20) NOT NULL COMMENT '密码',
-  `perms` varchar(255) NOT NULL COMMENT '用户类型，user or admin',
-  `grade` int(11) NOT NULL COMMENT '年级',
-  `major` varchar(255) NOT NULL COMMENT '专业',
-  `sex` int(11) NOT NULL COMMENT '性别，1为男，0为女',
-  `qq` varchar(12) NOT NULL COMMENT 'QQ号',
-  `introduction` varchar(255) DEFAULT NULL COMMENT '个人简介',
-  `createtime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
-  `updatetime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '更新时间',
-  PRIMARY KEY (`userid`) USING BTREE
-) ENGINE=InnoDB AUTO_INCREMENT=1012 DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+-- ----------------------------
+-- Records of user
+-- ----------------------------
+INSERT INTO `user` VALUES (1001, 'sim', '123456', 'user', 4, '材料科学与工程', 1, '1517753785', '擅长深度学习、数据挖掘，有很好的组织能力，曾带领队伍赢得计算机设计大赛国一，互联网＋省级一等奖，挑战杯国三等奖项。', '2021-12-12 17:58:13', '2021-12-12 17:58:13');
+INSERT INTO `user` VALUES (1002, 'xusong', '123455', 'user', 2, '应用数学', 1, '1578426579', '擅长数学方面，专业第二，熟练掌握建模知识，会matlab，lingo，spss等多种建模软件，曾获得全国大学生数学建模国家一等奖，有丰富的参赛经验', '2021-12-12 17:58:16', '2021-12-12 17:58:16');
+INSERT INTO `user` VALUES (1003, 'yinhaoran', '123454', 'user', 1, '农学', 1, '1786878899', '擅长ppt制作，论文编写，以及演讲，曾获世界艾滋病日主题演讲比赛校级一等奖，获得“学党史、强信念、跟党走”征文比赛省级一等奖。', '2021-12-12 17:58:17', '2021-12-12 17:58:17');
+INSERT INTO `user` VALUES (1004, 'xiejun', '123489', 'user', 2, '计算机科学与技术', 0, '1798428947', '擅长c语言、python、Java、c++等多种语言，擅长网站设计，熟练掌握js、vue、css等技能。', '2021-12-12 17:58:18', '2021-12-12 17:58:18');
+INSERT INTO `user` VALUES (1005, 'xiaoyun', '214899', 'user', 1, '数学', 0, '1789712347', '目前没掌握技能，但踏实肯干、吃苦耐劳，可以认真去学。', '2021-12-12 17:58:19', '2021-12-12 17:58:19');
+INSERT INTO `user` VALUES (1006, 'songyiyi', '317894', 'user', 2, '软工', 0, '1298721478', '擅长软件开发设计，动手能力强，曾开发过微信小程序，获得天梯赛个人赛省级一等奖，蓝桥杯省级一等奖。', '2021-12-12 17:58:19', '2021-12-12 17:58:19');
+INSERT INTO `user` VALUES (1007, 'xuwei', '423897', 'admin', 3, '计算机科学与技术', 0, '3472888984', '曾发表过4项论文，其中一项被sci收录，参与过3个项目，获得中国计算机大赛国家二等奖，互联网＋国家一等奖，挑战杯国家一等奖，以及10余个小奖项。', '2021-12-24 20:55:13', '2021-12-24 20:55:13');
+INSERT INTO `user` VALUES (1008, 'moliu', '234245', 'user', 1, '软工', 1, '4328948192', '没有什么技能，想参加比赛涨涨经验。', '2021-12-12 17:58:20', '2021-12-12 17:58:20');
+INSERT INTO `user` VALUES (1009, 'sdfa', '123456', 'admin', 0, 'cs', 0, '34311', 'hello', '2021-12-12 17:58:40', '2021-12-12 17:58:40');
+INSERT INTO `user` VALUES (1017, 'jason', '123456', 'user', 1, 'music', 0, '1399838112', 'hello,123445677', '2021-12-20 16:00:00', '2021-12-20 16:00:00');
+INSERT INTO `user` VALUES (1018, 'adam', '123456', 'user', 3, '电子信息', 1, '13712345678', '啥都会', '2021-12-21 11:44:05', '2021-12-21 11:44:03');
+INSERT INTO `user` VALUES (1019, 'ljj', '123456', 'admin', 1, '计算机', 0, '88123456', NULL, '2021-12-24 20:55:22', '2021-12-24 20:55:22');
 
-/*Data for the table `user` */
-
-insert  into `user`(`userid`,`username`,`password`,`perms`,`grade`,`major`,`sex`,`qq`,`introduction`,`createtime`,`updatetime`) values (1001,'sim','123456','user',4,'材料科学与工程',1,'1517753785','擅长深度学习、数据挖掘，有很好的组织能力，曾带领队伍赢得计算机设计大赛国一，互联网＋省级一等奖，挑战杯国三等奖项。','2021-12-12 17:58:13','2021-12-12 17:58:13'),(1002,'xusong','123455','user',2,'应用数学',1,'1578426579','擅长数学方面，专业第二，熟练掌握建模知识，会matlab，lingo，spss等多种建模软件，曾获得全国大学生数学建模国家一等奖，有丰富的参赛经验','2021-12-12 17:58:16','2021-12-12 17:58:16'),(1003,'yinhaoran','123454','user',1,'农学',1,'1786878899','擅长ppt制作，论文编写，以及演讲，曾获世界艾滋病日主题演讲比赛校级一等奖，获得“学党史、强信念、跟党走”征文比赛省级一等奖。','2021-12-12 17:58:17','2021-12-12 17:58:17'),(1004,'xiejun','123489','user',2,'计算机科学与技术',0,'1798428947','擅长c语言、python、Java、c++等多种语言，擅长网站设计，熟练掌握js、vue、css等技能。','2021-12-12 17:58:18','2021-12-12 17:58:18'),(1005,'xiaoyun','214899','user',1,'数学',0,'1789712347','目前没掌握技能，但踏实肯干、吃苦耐劳，可以认真去学。','2021-12-12 17:58:19','2021-12-12 17:58:19'),(1006,'songyiyi','317894','user',2,'软工',0,'1298721478','擅长软件开发设计，动手能力强，曾开发过微信小程序，获得天梯赛个人赛省级一等奖，蓝桥杯省级一等奖。','2021-12-12 17:58:19','2021-12-12 17:58:19'),(1007,'xuwei','423897','user',3,'计算机科学与技术',0,'3472888984','曾发表过4项论文，其中一项被sci收录，参与过3个项目，获得中国计算机大赛国家二等奖，互联网＋国家一等奖，挑战杯国家一等奖，以及10余个小奖项。','2021-12-12 17:58:20','2021-12-12 17:58:20'),(1008,'moliu','234245','user',1,'软工',1,'4328948192','没有什么技能，想参加比赛涨涨经验。','2021-12-12 17:58:20','2021-12-12 17:58:20'),(1009,'sdfa','123456','admin',0,'cs',0,'34311','hello','2021-12-12 17:58:40','2021-12-12 17:58:40'),(1010,'jason','123456','user',0,'music',0,'1399838112','hello','2021-12-12 17:58:43','2021-12-12 17:58:43'),(1011,'sofia','123456','user',0,'dance',0,'123875345','hello','2021-12-12 17:58:45','2021-12-12 17:58:45');
-
-/*Table structure for table `user_message` */
-
+-- ----------------------------
+-- Table structure for user_message
+-- ----------------------------
 DROP TABLE IF EXISTS `user_message`;
+CREATE TABLE `user_message`  (
+                                 `messageid` int(5) NOT NULL AUTO_INCREMENT COMMENT '信息id',
+                                 `wuid` int(255) NOT NULL COMMENT '发送者id',
+                                 `guid` int(255) NOT NULL COMMENT '接收者id',
+                                 `messagetext` text CHARACTER SET utf8 COLLATE utf8_general_ci NOT NULL COMMENT '发送内容',
+                                 `replymessage` text CHARACTER SET utf8 COLLATE utf8_general_ci NULL COMMENT '回复内容',
+                                 `createtime` datetime(0) NOT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '创建时间',
+                                 `updatetime` datetime(0) NULL DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP(0) COMMENT '修改时间',
+                                 PRIMARY KEY (`messageid`) USING BTREE
+) ENGINE = InnoDB AUTO_INCREMENT = 5 CHARACTER SET = utf8 COLLATE = utf8_general_ci ROW_FORMAT = Dynamic;
 
-CREATE TABLE `user_message` (
-  `messageid` int(5) NOT NULL COMMENT '信息id',
-  `wuid` int(255) NOT NULL COMMENT '发送者id',
-  `guid` int(255) NOT NULL COMMENT '接收者id',
-  `messagetext` text NOT NULL COMMENT '发送内容',
-  `replymessage` text COMMENT '回复内容',
-  `createtime` datetime NOT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '创建时间',
-  `updatetime` datetime DEFAULT NULL ON UPDATE CURRENT_TIMESTAMP COMMENT '修改时间',
-  PRIMARY KEY (`messageid`) USING BTREE
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 ROW_FORMAT=DYNAMIC;
+-- ----------------------------
+-- Records of user_message
+-- ----------------------------
+INSERT INTO `user_message` VALUES (1, 1001, 1005, 'test test test', NULL, '2021-12-24 21:25:46', '2021-12-24 21:25:45');
+INSERT INTO `user_message` VALUES (2, 1001, 1006, '一起打比赛吧', NULL, '2021-12-24 21:25:49', '2021-12-24 21:25:48');
+INSERT INTO `user_message` VALUES (3, 1004, 1001, '好厉害，组个队吧', NULL, '2021-12-24 21:25:52', '2021-12-24 21:25:50');
+INSERT INTO `user_message` VALUES (4, 1003, 1002, 'hello一起比赛吧', NULL, '2021-12-24 21:26:14', '2021-12-24 21:26:16');
 
-/*Data for the table `user_message` */
-
-/*!40101 SET SQL_MODE=@OLD_SQL_MODE */;
-/*!40014 SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS */;
-/*!40014 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS */;
-/*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
+SET FOREIGN_KEY_CHECKS = 1;

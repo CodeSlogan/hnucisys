@@ -2,6 +2,7 @@ package com.codeslogan.service;
 
 import com.codeslogan.mapper.UserMapper;
 import com.codeslogan.pojo.User;
+import com.codeslogan.pojo.UserRole;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -52,5 +53,10 @@ public class UserServiceImpl implements UserService{
     @Override
     public int saveUser(User user) {
         return userMapper.saveUser(user);
+    }
+
+    @Override
+    public UserRole queryUserByTeamIdUserId(int teamid, int id) {
+        return userMapper.queryUserByTeamIdUserId(teamid, id);
     }
 }

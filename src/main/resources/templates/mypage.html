@@ -12,42 +12,17 @@
 </head>
 <body>
 <!-- 1.头部区域开始啦 -->
-<div class="header w">
-    <!-- logo部分 -->
-    <div class="logo">
-        竞赛信息系统
-    </div>
-    <!-- 导航栏部分 nav -->
-    <div class="nav">
-        <ul>
-            <li><a th:href="@{/index}">首页</a></li>
-            <li><a th:href="@{/findmate}">队友</a></li>
-        </ul>
-    </div>
-    <!-- 搜索模块 -->
-    <div class="search">
-        <input type="text" placeholder="输入关键词">
-        <button></button>
-    </div>
-    <!-- 用户模块 -->
-    <div class="user">
-        <a th:href="@{/mypage}"> 我的主页</a>
-    </div>
-    <!-- 编辑资料 -->
-    <div class="file">
-        <a href="" onclick="edit">编辑资料</a>
-    </div>
-</div>
+<div th:replace="~{Commens/commens::Main_siderbar}"></div>
 
 <aside class="sidebar">
     <div class="avatar">
         <img src="image/user.png" title="user">
     </div>
     <nav class="nav">
-        <a href="index.html">首页</a>
-        <a href="#info">资料</a>
-        <a href="#story">经历</a>
-        <a href="#team">队伍</a>
+        <a href="index.html" >首页</a>
+        <a href="#info" >资料</a>
+        <a href="#story" >经历</a>
+        <a href="#team" >队伍</a>
     </nav>
 </aside>
 <main>
@@ -94,9 +69,12 @@
             <h2 class="title">我的队伍</h2>
             <div class="row">
                 <div class="col-s-6">
-                    <p></p>
-                    <p></p>
-                    <p></p>
+                    <div th:each="team : ${teams}" >
+                        <p th:text = "'比赛名称：'+ ${team.getName()}"></p>
+                        <p th:text = "'队伍名称：'+${team.getTeamName()}"></p>
+                    </div>
+
+
                     <div class="works-item">
                         <img alt="" src="" bk-image="active">
                     </div>

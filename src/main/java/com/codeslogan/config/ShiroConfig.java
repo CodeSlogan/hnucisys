@@ -39,6 +39,7 @@ public class ShiroConfig {
         filterMap.put("/","authc");
         //filterMap.put("/findmate","authc");
         filterMap.put("/mypage","authc");
+        filterMap.put("/userTeamMng","authc");
 
         filterMap.put("/tocpt","perms[admin]");
 

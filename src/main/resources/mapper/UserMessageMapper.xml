@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<!--namespace=绑定一个对应的Dao/Mapper接口-->
+<mapper namespace="com.codeslogan.mapper.UserMessageMapper">
+    <!--插入信息-->
+    <insert id="addMessage" parameterType="UserMessage">
+        insert into hnucisys.user_message(wuid, guid, messagetext, replymessage, createtime, updatetime)
+        values (#{wuid}, #{guid}, #{messagetext}, #{replymessage}, #{createtime}, #{updatetime});
+    </insert>
+
+    <delete id="delMessage" parameterType="int">
+        delete
+        from hnucisys.user_message
+        where userid = #{id}
+    </delete>
+
+    <update id="replyMessage" parameterType="UserMessage">
+        update hnucisys.user_message
+        set user_message.replymessage = #{replymessage},
+            user_message.updatetime = #{updatetime}
+        where messageid = #{messageid}
+    </update>
+
+    <select id="queryMegByWuid" resultType="UserMessage">
+        select *
+        from hnucisys.user_message
+        where wuid = #{wuid}
+    </select>
+
+    <select id="queryMegByGuid" resultType="UserMessage">
+        select *
+        from hnucisys.user_message
+        where guid = #{guid}
+    </select>
+
+    <select id="queryMegByMegid" resultType="UserMessage">
+        select *
+        from hnucisys.user_message
+        where messageid = #{messageid}
+    </select>
+</mapper>

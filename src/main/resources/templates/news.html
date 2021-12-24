@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="zh-CN" xmlns:th="http://www.thymeleaf.org"
+      xmlns:shiro="http://www.pollix.at/thymeleaf/shiro">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>消息</title>
+    <link rel="stylesheet" th:href="@{/css/index.css}">
+    <link rel="stylesheet" th:href="@{/css/news.css}">
+    <script src="/js/jquery-1.11.3.min.js"></script>
+    <script src="/js/JaScript.js"></script>
+    <script src="/js/news.js"></script>
+</head>
+
+<body>
+<!-- 1.头部区域开始啦 -->
+<div th:replace="~{Commens/commens::Main_siderbar}"></div>
+<!-- 头部区域结束啦 -->
+<!-- 请求入队信息展示-->
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver4 m-b-110">
+                <div class="table100-head">
+                    <table>
+                        <thead>
+                        <tr class="row100 head">
+                            <th class="cell100 column1">用户名</th>
+                            <th class="cell100 column2">年级</th>
+                            <th class="cell100 column3">专业</th>
+                            <th class="cell100 column4">性别</th>
+                            <th class="cell100 column5">qq</th>
+                            <th class="cell100 column6">自我介绍</th>
+                            <th class="cell100 column7">是否接受</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table100-body js-pscroll">
+                    <table>
+                        <!--                        <tbody>-->
+                        <tr class="row100 body" th:each="user:${users}">
+                            <td class="cell100 column1" th:text="${user.getUsername()}"></td>
+                            <td class="cell100 column2" th:text="${user.getGrade()}"></td>
+                            <td class="cell100 column3" th:text="${user.getMajor()}"></td>
+                            <td class="cell100 column4" th:text="${user.getSex() == 1}?'男':'女'"></td>
+                            <td class="cell100 column5" th:text="${user.getQq()}"></td>
+                            <td class="cell100 column6" th:text="${user.getIntroduction()}"></td>
+                            <td>
+                                <!--                                <a  th:href="@{'/news/acceptMate/'}">接受</a>
+                                                                <a  th:href="@{'/news/refuseMate/'}">拒绝</a>-->
+                                <button class="acceptBtn1 acceptBtn" id="acceptBtn1" th:tuid="${tuids[userStat.index]}">
+                                    接受
+                                </button>
+                                <button class="refuseBtn1 refuseBtn" id="refuseBtn1" th:tuid="${tuids[userStat.index]}">
+                                    拒绝
+                                </button>
+                            </td>
+                        </tr>
+                        <!--                        </tbody>-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<!-- 收到的消息展示-->
+<div class="limiter">
+    <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table100 ver4 m-b-110">
+                <div class="table100-head">
+                    <table>
+                        <thead>
+                        <tr class="row100 head">
+                            <th class="cell100 column1">来自</th>
+                            <th class="cell100 column2">内容</th>
+                            <th class="cell100 column3">回复</th>
+                        </tr>
+                        </thead>
+                    </table>
+                </div>
+                <div class="table100-body js-pscroll">
+                    <table>
+                        <!--                        <tbody>-->
+                        <tr class="row100 body" th:each="invitation:${invitations}">
+                            <td class="cell100 column1" th:text="${invitation.getWuid()}"></td>
+                            <td class="cell100 column2" th:text="${invitation.getMessagetext()}"></td>
+                            <td class="cell100 column3" th:text="${invitation.getReplymessage()}"></td>
+
+                            <td>
+                                <button class="acceptBtn2 acceptBtn" id="acceptBtn2" th:messageId="${invitation.getMessageid()}">
+                                    回复
+                                </button>
+                            </td>
+                        </tr>
+                        <!--                        </tbody>-->
+                    </table>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="showTe">
+    <textarea id="replyMessageTxt" rows="2" cols="22"></textarea><br>
+    <button class="sentBtn acceptBtn" id="sent">发送</button>
+    <button class="cancelBtn refuseBtn" id="cancel">取消</button>
+</div>
+</body>
+</html>

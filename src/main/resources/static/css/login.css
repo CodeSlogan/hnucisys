@@ -85,7 +85,7 @@ body {
 
 .login a {
     overflow: hidden;
-    position: relative;
+    position: absolute;
     padding: 10px 20px;
     color: #03e9f4;
     /* 取消a表现原有的下划线 */
@@ -93,14 +93,20 @@ body {
     /* 同样加个过渡 */
     transition: all 0.5s;
 }
-
+.login .acss{
+    position: absolute;
+    margin-left: 43px;
+}
 .signin {
     color: white;
-    position: absolute;
-    bottom: 10px;
-    right: 93px;
+    position: relative;
+    bottom: -55px;
+    right: -35px;
     margin: auto;
     padding-bottom: 10px;
+}
+.signin .signa{
+    position: relative;
 }
 
 .login a:hover {
@@ -111,7 +117,7 @@ body {
     0 0 100px #03e9f4;
 }
 .login a span {
-    position: relative;
+    position: absolute;
 }
 
 /*.login a span:first-child {*/

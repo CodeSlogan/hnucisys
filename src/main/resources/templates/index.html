@@ -13,28 +13,7 @@
 
 <body>
 <!-- 1.头部区域开始啦 -->
-<div class="header w">
-    <!-- logo部分 -->
-    <div class="logo">
-        竞赛信息系统
-    </div>
-    <!-- 导航栏部分 nav -->
-    <div class="nav">
-        <ul>
-            <li><a th:href="@{/index}">首页</a></li>
-            <li><a th:href="@{/findmate}">队友</a></li>
-        </ul>
-    </div>
-    <!-- 搜索模块 -->
-    <div class="search">
-        <input type="text" placeholder="输入关键词">
-        <button></button>
-    </div>
-    <!-- 用户模块 -->
-    <div class="user">
-        <a th:href="@{/mypage}"> 我的主页</a>
-    </div>
-</div>
+<div th:replace="~{Commens/commens::Main_siderbar}"></div>
 <!-- 头部区域结束啦 -->
 <!-- 2. banner部分start -->
 <div class="banner1">
@@ -57,11 +36,11 @@
         <div class="banner">
             <!--无序列表承载轮播的图片-->
             <ul class="img" >
+                <li><a href="http://data.sd.gov.cn/cmpt/sd/home.html" target="_blank"><img src="http://cdn4.52jingsai.com/211217/20211217140621243.png" alt="DC"></a></li>
                 <li><a href="http://www.nciecc.com/words.php" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Spencer6-7/tupic/202112191308671.png"/></a></li>
                 <li><a href="http://data.sd.gov.cn/cmpt/sd/home.html" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Spencer6-7/tupic/202112191309545.png"/></a></li>
                 <li><a href="http://www.aids0.com/index.php" target="_blank"><img src="https://cdn.jsdelivr.net/gh/Spencer6-7/tupic/202112191311261.png"/></a></li>
                 <li><a href="http://www.52jingsai.com/article-15846-1.html" target="_blank"><img src="http://cdn4.52jingsai.com/211214/20211214142307610.png" alt="期末帮"></a></li>
-                <li><a href="http://data.sd.gov.cn/cmpt/sd/home.html" target="_blank"><img src="http://cdn4.52jingsai.com/211217/20211217140621243.png" alt="DC"></a></li>
                 <li><a href="http://www.52jingsai.com/article-11144-1.html" target="_blank"><img src="http://cdn4.52jingsai.com/211201/20211201163458606.gif" alt="7天新媒体实训营"></a></li>
                 <!--
                 <li><a href="http://www.52jingsai.com/article-15568-1.html" target="_blank"><img class="pic" src="http://cdn4.52jingsai.com/211102/20211102111503820.jpg" alt="我爱竞赛网校园大使精英社招募令"></a></li>
@@ -86,7 +65,7 @@
     <h3>比赛分类</h3>
     <ul>
         <li th:each="interest : ${interests}">
-            <a th:href = "@{'/index/'+ ${interest}}" th:text="${interest}"></a>
+            <a th:class="${active == interest? 'nav-link-active':'nav-link'}" th:href = "@{'/index/'+ ${interest}}" th:text="${interest}"></a>
         </li>
     </ul>
     <a href="#" class="mod">修改兴趣</a>
@@ -122,7 +101,7 @@
 <div class="footer-wrap v-4-2">
     <div class="footer other">
         <div class="common-box footer-box">
-            <div class="fl ft-info-box">
+            <div class="fl ft-info-box left">
                 <div class="ft-tit" title="关于我们">关于我们</div>
                 <ul class="ft-list">
                     <li class="item">
@@ -136,11 +115,17 @@
                     </li>
                 </ul>
             </div>
-            <div class="fl ft-info-box">
+            <div class="fl ft-info-box right">
                 <div class="ft-tit" title="帮助中心">帮助中心</div>
                 <ul class="ft-list">
                     <li class="item">
-                        <a href="#" title="常见问题" target="_blank" rel="nofollow">常见问题</a>
+                        <a href="#" title="有关问题" target="_blank" rel="nofollow">有关问题</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" title="建议与投诉" target="_blank" rel="nofollow">建议与投诉</a>
+                    </li>
+                    <li class="item">
+                        <a href="#" title="客服服务" target="_blank" rel="nofollow">客户服务</a>
                     </li>
                 </ul>
             </div>

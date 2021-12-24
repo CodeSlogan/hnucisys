@@ -3,10 +3,8 @@ a{ color: #c40b00; }
 .wrap{
     max-width: 1000px;
     background: url(../image/white.jpg) fixed;
+    border-radius: 20px;
 }
-
-/* 1 - 页眉
--------------------------------- */
 
 /* - 侧边栏 */
 .sidebar{
@@ -34,6 +32,7 @@ a{ color: #c40b00; }
 .sidebar .avatar:hover{
     transform: rotate(1turn);
 }
+
 .sidebar .avatar img{
     border-radius: 100%;
 }
@@ -44,6 +43,7 @@ a{ color: #c40b00; }
     display: flex;
     list-style: none;
     flex-direction: column;
+    text-align: center;
 }
 .sidebar .nav a{
     color: #fff;

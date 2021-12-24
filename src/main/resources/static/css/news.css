@@ -1,0 +1,222 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body, html {
+    height: 100%;
+    font-family: sans-serif;
+}
+
+.limiter {
+    width: 85%;
+    margin: 0 auto;
+}
+/*---------------------------------------------*/
+
+.container-table100 {
+    width: 100%;
+    min-height: 100vh;
+    background: #fff;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -moz-box;
+    display: -ms-flexbox;
+    display: flex;
+
+    justify-content: center;
+    flex-wrap: wrap;
+    padding: 33px 30px;
+}
+
+.wrap-table100 {
+    width: 100%;
+}
+
+.table100 {
+    background-color: #fff;
+}
+
+table {
+    width: 100%;
+    border-collapse: collapse;
+}
+th {
+    font-weight: bold;
+    padding-right: 10px;
+}
+td {
+    font-weight: unset;
+    padding-right: 10px;
+}
+
+/*[ 单元格宽度 ]*/
+.column1 {
+    /*width: 15%;*/
+    padding-left: 40px;
+}
+
+.table100-head th {
+    padding-top: 18px;
+    padding-bottom: 18px;
+}
+
+.table100-body td {
+    padding-top: 16px;
+    padding-bottom: 16px;
+}
+
+/*==================================================================
+[ Fix header ]*/
+.table100 {
+    position: relative;
+    padding-top: 60px;
+}
+
+.table100-head {
+    /*position: absolute;*/
+    width: 100%;
+    top: 0;
+    left: 0;
+}
+
+.table100-body {
+    max-height: 585px;
+    overflow: auto;
+}
+
+/*==================================================================
+[ Ver4 ]*/
+.table100.ver4 {
+    margin-right: -20px;
+}
+
+.table100.ver4 .table100-head {
+    padding-right: 20px;
+}
+
+.table100.ver4 th {
+    font-family: Lato-Bold;
+    font-size: 18px;
+    color: #4272d7;
+    line-height: 1.4;
+    background-color: transparent;
+    border-bottom: 2px solid #f2f2f2;
+}
+
+.table100.ver4 .column1 {
+    padding-left: 7px;
+}
+
+.table100.ver4 td {
+    font-family: Lato-Regular;
+    font-size: 15px;
+    color: #808080;
+    line-height: 1.4;
+}
+
+.table100.ver4 .table100-body tr {
+    border-bottom: 1px solid #f2f2f2;
+}
+
+/*---------------------------------------------*/
+
+/* 表格盒子样式 */
+.table100.ver4 {
+    overflow: hidden;
+}
+
+.table100.ver4 .table100-body{
+    padding-right: 20px;
+}
+
+.table100.ver4 .ps__rail-y {
+    right: 0px;
+}
+
+.table100.ver4 .ps__rail-y::before {
+    background-color: #ebebeb;
+}
+
+.table100.ver4 .ps__rail-y .ps__thumb-y::before {
+    background-color: #cccccc;
+}
+
+.acceptBtn {
+    position: relative;
+    background-color: #f4511e;
+    border: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.acceptBtn:after {
+    content: "";
+    background: #ff7c2d;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.acceptBtn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
+
+.refuseBtn {
+    position: relative;
+    background-color: #1e85f4;
+    border: none;
+    font-size: 12px;
+    color: #FFFFFF;
+    padding: 10px;
+    width: 80px;
+    height: 40px;
+    text-align: center;
+    margin-left: 20px;
+    margin-top: 10px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    text-decoration: none;
+    overflow: hidden;
+    cursor: pointer;
+}
+
+.refuseBtn:after {
+    content: "";
+    background: #2da8ff;
+    display: block;
+    position: absolute;
+    padding-top: 300%;
+    padding-left: 350%;
+    margin-left: -20px !important;
+    margin-top: -120%;
+    opacity: 0;
+    transition: all 0.8s
+}
+
+.refuseBtn:active:after {
+    padding: 0;
+    margin: 0;
+    opacity: 1;
+    transition: 0s
+}
