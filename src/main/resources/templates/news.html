@@ -26,12 +26,12 @@
                     <table>
                         <thead>
                         <tr class="row100 head">
-                            <th class="cell100 column1">用户名</th>
-                            <th class="cell100 column2">年级</th>
-                            <th class="cell100 column3">专业</th>
-                            <th class="cell100 column4">性别</th>
-                            <th class="cell100 column5">qq</th>
-                            <th class="cell100 column6">自我介绍</th>
+                            <th class="cell100 column1" style="width: 9%;">用户名</th>
+                            <th class="cell100 column2" style="width: 3.5%;">年级</th>
+                            <th class="cell100 column3" style="width: 12%;">专业</th>
+                            <th class="cell100 column4" style="width: 5%;">性别</th>
+                            <th class="cell100 column5" style="width: 17%;">qq</th>
+                            <th class="cell100 column6" style="width: 20%;">自我介绍</th>
                             <th class="cell100 column7">是否接受</th>
                         </tr>
                         </thead>
@@ -76,9 +76,9 @@
                     <table>
                         <thead>
                         <tr class="row100 head">
-                            <th class="cell100 column1">来自</th>
-                            <th class="cell100 column2">内容</th>
-                            <th class="cell100 column3">回复</th>
+                            <th class="cell100 column1" style="width: 23.5%;">来自</th>
+                            <th class="cell100 column2" style="width: 47%;">内容</th>
+                            <th class="cell100 column3" style="width: 30%;">回复</th>
                         </tr>
                         </thead>
                     </table>
@@ -87,11 +87,10 @@
                     <table>
                         <!--                        <tbody>-->
                         <tr class="row100 body" th:each="invitation:${invitations}">
-                            <td class="cell100 column1" th:text="${invitation.getWuid()}"></td>
-                            <td class="cell100 column2" th:text="${invitation.getMessagetext()}"></td>
-                            <td class="cell100 column3" th:text="${invitation.getReplymessage()}"></td>
-
-                            <td>
+                            <td class="cell100 column1" style="width: 23.5%;" th:text="${invitation.getWuid()}"></td>
+                            <td class="cell100 column2" style="width: 47%;" th:text="${invitation.getMessagetext()}"></td>
+                            <td class="cell100 column3"  th:text="${invitation.getReplymessage()}"></td>
+                            <td style="width: 50%">
                                 <button class="acceptBtn2 acceptBtn" id="acceptBtn2" th:messageId="${invitation.getMessageid()}">
                                     回复
                                 </button>
