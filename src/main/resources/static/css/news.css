@@ -13,7 +13,6 @@ body, html {
     width: 85%;
     margin: 0 auto;
 }
-/*---------------------------------------------*/
 
 .container-table100 {
     width: 100%;
@@ -24,7 +23,6 @@ body, html {
     display: -moz-box;
     display: -ms-flexbox;
     display: flex;
-
     justify-content: center;
     flex-wrap: wrap;
     padding: 33px 30px;
@@ -45,18 +43,16 @@ table {
 th {
     font-weight: bold;
     padding-right: 10px;
+
 }
 td {
     font-weight: unset;
     padding-right: 10px;
 }
 
-/*[ 单元格宽度 ]*/
-.column1 {
-    /*width: 15%;*/
-    padding-left: 40px;
+th,td{
+    text-align: center;
 }
-
 .table100-head th {
     padding-top: 18px;
     padding-bottom: 18px;
@@ -67,8 +63,6 @@ td {
     padding-bottom: 16px;
 }
 
-/*==================================================================
-[ Fix header ]*/
 .table100 {
     position: relative;
     padding-top: 60px;
@@ -86,8 +80,6 @@ td {
     overflow: auto;
 }
 
-/*==================================================================
-[ Ver4 ]*/
 .table100.ver4 {
     margin-right: -20px;
 }
@@ -120,9 +112,6 @@ td {
     border-bottom: 1px solid #f2f2f2;
 }
 
-/*---------------------------------------------*/
-
-/* 表格盒子样式 */
 .table100.ver4 {
     overflow: hidden;
 }
